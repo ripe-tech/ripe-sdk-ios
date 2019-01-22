@@ -1,2 +1,3 @@
-# ripe-sdk-ios
-The iOS RIPE SDK
+# RIPE SDK iOS
+
+The iOS RIPE SDK.
