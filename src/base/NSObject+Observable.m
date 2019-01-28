@@ -10,7 +10,6 @@ static void *ObservableCallbackstKey;
 - (NSMutableDictionary *) callbacks {
     NSMutableDictionary *result = objc_getAssociatedObject(self, &ObservableCallbackstKey);
     if (result == nil) {
-        // do a lot of stuff
         result = [NSMutableDictionary new];
         objc_setAssociatedObject(self, &ObservableCallbackstKey, result, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
