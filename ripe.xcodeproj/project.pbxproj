@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7106433B22006DB10002A8EB /* Interactable.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106433A22006DB10002A8EB /* Interactable.h */; };
+		7106433F22006FC30002A8EB /* Visual.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106433D22006FC30002A8EB /* Visual.h */; };
+		7106434022006FC30002A8EB /* Visual.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106433E22006FC30002A8EB /* Visual.m */; };
+		71064341220070F40002A8EB /* Visual.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106433E22006FC30002A8EB /* Visual.m */; };
+		71064344220074C90002A8EB /* Image.h in Headers */ = {isa = PBXBuildFile; fileRef = 71064342220074C90002A8EB /* Image.h */; };
+		71064345220074C90002A8EB /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 71064343220074C90002A8EB /* Image.m */; };
+		71064346220074C90002A8EB /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 71064343220074C90002A8EB /* Image.m */; };
+		7106435022009ADC0002A8EB /* RipeAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106434F22009ADC0002A8EB /* RipeAPI.h */; };
+		7106435322009B5F0002A8EB /* BaseAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106435122009B5F0002A8EB /* BaseAPI.h */; };
+		7106435422009B5F0002A8EB /* BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106435222009B5F0002A8EB /* BaseAPI.m */; };
+		7106435522009B5F0002A8EB /* BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106435222009B5F0002A8EB /* BaseAPI.m */; };
 		712C6C0321FF4E3500D78420 /* ripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712C6BF921FF4E3500D78420 /* ripe.framework */; };
 		712C6C0821FF4E3500D78420 /* ripeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 712C6C0721FF4E3500D78420 /* ripeTests.m */; };
 		712C6C0A21FF4E3500D78420 /* ripe.h in Headers */ = {isa = PBXBuildFile; fileRef = 712C6BFC21FF4E3500D78420 /* ripe.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7106433A22006DB10002A8EB /* Interactable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interactable.h; sourceTree = "<group>"; };
+		7106433D22006FC30002A8EB /* Visual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Visual.h; sourceTree = "<group>"; };
+		7106433E22006FC30002A8EB /* Visual.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Visual.m; sourceTree = "<group>"; };
+		71064342220074C90002A8EB /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		71064343220074C90002A8EB /* Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		7106434F22009ADC0002A8EB /* RipeAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RipeAPI.h; sourceTree = "<group>"; };
+		7106435122009B5F0002A8EB /* BaseAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAPI.h; sourceTree = "<group>"; };
+		7106435222009B5F0002A8EB /* BaseAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAPI.m; sourceTree = "<group>"; };
 		712C6BF921FF4E3500D78420 /* ripe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ripe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		712C6BFC21FF4E3500D78420 /* ripe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ripe.h; sourceTree = "<group>"; };
 		712C6BFD21FF4E3500D78420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +83,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7106433C22006F760002A8EB /* visual */ = {
+			isa = PBXGroup;
+			children = (
+				7106433D22006FC30002A8EB /* Visual.h */,
+				7106433E22006FC30002A8EB /* Visual.m */,
+				71064342220074C90002A8EB /* Image.h */,
+				71064343220074C90002A8EB /* Image.m */,
+			);
+			path = visual;
+			sourceTree = "<group>";
+		};
+		710643472200794B0002A8EB /* api */ = {
+			isa = PBXGroup;
+			children = (
+				7106434F22009ADC0002A8EB /* RipeAPI.h */,
+				7106435122009B5F0002A8EB /* BaseAPI.h */,
+				7106435222009B5F0002A8EB /* BaseAPI.m */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
 		712C6BEF21FF4E3500D78420 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +127,7 @@
 				712C6C1321FF4E7400D78420 /* NSObject+Observable.h */,
 				712C6C1421FF4E7400D78420 /* NSObject+Observable.m */,
 				712C6C1F21FF550900D78420 /* Observable.h */,
+				7106433A22006DB10002A8EB /* Interactable.h */,
 				712C6C2C21FF6BB700D78420 /* Ripe.h */,
 				712C6C2D21FF6BB700D78420 /* Ripe.m */,
 			);
@@ -106,7 +147,9 @@
 		712C6C2821FF691D00D78420 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				710643472200794B0002A8EB /* api */,
 				712C6BFB21FF4E3500D78420 /* base */,
+				7106433C22006F760002A8EB /* visual */,
 				712C6C0621FF4E3500D78420 /* test */,
 				712C6BFC21FF4E3500D78420 /* ripe.h */,
 				712C6BFD21FF4E3500D78420 /* Info.plist */,
@@ -122,9 +165,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				712C6C2E21FF6BB700D78420 /* Ripe.h in Headers */,
+				7106433B22006DB10002A8EB /* Interactable.h in Headers */,
+				7106433F22006FC30002A8EB /* Visual.h in Headers */,
 				712C6C0A21FF4E3500D78420 /* ripe.h in Headers */,
 				712C6C2621FF68E000D78420 /* NSObject+Observable.h in Headers */,
+				71064344220074C90002A8EB /* Image.h in Headers */,
 				712C6C2721FF68E000D78420 /* Observable.h in Headers */,
+				7106435322009B5F0002A8EB /* BaseAPI.h in Headers */,
+				7106435022009ADC0002A8EB /* RipeAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7106434022006FC30002A8EB /* Visual.m in Sources */,
+				7106435422009B5F0002A8EB /* BaseAPI.m in Sources */,
+				71064345220074C90002A8EB /* Image.m in Sources */,
 				712C6C2421FF68D700D78420 /* NSObject+Observable.m in Sources */,
 				712C6C2F21FF6BB700D78420 /* Ripe.m in Sources */,
 			);
@@ -234,7 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				712C6C2221FF68C400D78420 /* NSObject+Observable.m in Sources */,
+				7106435522009B5F0002A8EB /* BaseAPI.m in Sources */,
 				712C6C3021FF6BB700D78420 /* Ripe.m in Sources */,
+				71064341220070F40002A8EB /* Visual.m in Sources */,
+				71064346220074C90002A8EB /* Image.m in Sources */,
 				712C6C1821FF4EB600D78420 /* ObservableTests.m in Sources */,
 				712C6C0821FF4E3500D78420 /* ripeTests.m in Sources */,
 			);
