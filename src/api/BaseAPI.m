@@ -11,7 +11,7 @@
 }
 
 - (NSString *)url {
-    return self.options[@"url"] ?: @"http://sandbox.platforme.com/api/";
+    return self.options[@"url"] ?: @"https://sandbox.platforme.com/api/";
 }
 
 - (NSDictionary *)_getImageOptions:(NSDictionary *)options {

@@ -1,6 +1,6 @@
 #import <XCTest/XCTest.h>
-#import "../base/Ripe.h"
-#import "../visual/Image.h"
+#import "RipeObject.h"
+#import "Image.h"
 
 @interface ripeTests : XCTestCase
 

@@ -1,10 +1,11 @@
 #import <Foundation/Foundation.h>
 #import "Observable.h"
 #import "BaseAPI.h"
+#import "RipeAPI.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Ripe : NSObject <Observable, RipeAPI>
+@interface RipeObject : Observable <RipeAPI>
 
 @property NSString *brand;
 @property NSString *model;
