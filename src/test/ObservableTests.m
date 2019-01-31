@@ -1,5 +1,5 @@
 #import <XCTest/XCTest.h>
-#import "RipeObject.h"
+#import "Ripe.h"
 
 @interface ObservableTests : XCTestCase
 
@@ -9,7 +9,7 @@
 
 
 - (void)testBindAndUnbind {
-    RipeObject *observable = [RipeObject new];
+    Ripe *observable = [Ripe new];
     void (^callback)(NSDictionary *response) = ^(NSDictionary *response) {};
     void (^_callback)(NSDictionary *response) = [observable bindToEvent:@"test" withCallback:callback];
     XCTAssertEqual(callback, _callback);

@@ -1,11 +1,11 @@
 #import <Foundation/Foundation.h>
-#import "RipeObject.h"
+#import "Ripe.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol Interactable <NSObject>
 
-@property (nonatomic, weak) RipeObject *owner;
+@property (nonatomic, weak) Ripe *owner;
 
 - (void)update:(NSDictionary *)state;
 

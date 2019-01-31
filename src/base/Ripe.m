@@ -1,6 +1,6 @@
-#import "RipeObject.h"
+#import "Ripe.h"
 
-@implementation RipeObject
+@implementation Ripe
 
 -(id)initWithBrand:(NSString *)brand andModel:(NSString *)model andOptions:(NSDictionary *)options {
     self = [super init];
