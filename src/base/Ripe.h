@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property BaseAPI *api;
 
 -(id)initWithBrand:(NSString *)brand andModel: (NSString *)model andOptions:(NSDictionary *)options;
+-(void)configWithBrand:(NSString *)brand andModel: (NSString *)model andOptions:(NSDictionary *)options;
+
 
 @end
 
