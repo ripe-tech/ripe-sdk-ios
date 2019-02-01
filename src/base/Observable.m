@@ -1,19 +1,14 @@
-#import <objc/runtime.h>
-#import "NSObject+Observable.h"
+#import "Observable.h"
 
-static void *ObservableCallbackstKey;
+@implementation Observable
 
-@implementation NSObject (Observable)
-
-@dynamic callbacks;
-
-- (NSMutableDictionary *) callbacks {
-    NSMutableDictionary *result = objc_getAssociatedObject(self, &ObservableCallbackstKey);
-    if (result == nil) {
-        result = [NSMutableDictionary new];
-        objc_setAssociatedObject(self, &ObservableCallbackstKey, result, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.callbacks = [NSMutableDictionary new];
     }
-    return result;
+    return self;
 }
 
 - (void (^)(NSDictionary *response))bindToEvent:(NSString *)event withCallback:(void (^)(NSDictionary *response))callback {

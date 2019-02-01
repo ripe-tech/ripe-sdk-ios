@@ -2,7 +2,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol Observable <NSObject>
+@interface Observable : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary *callbacks;
 
