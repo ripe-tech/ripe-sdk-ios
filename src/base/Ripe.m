@@ -12,6 +12,7 @@
         self.model = model;
         self.options = options;
         self.api = [[BaseAPI alloc] initWithOptions:options];
+        self.children = [NSMutableArray new];
     }
     return self;
 }
@@ -38,6 +39,10 @@
     self.brand = brand;
     self.model = model;
     self.options = options;
+}
+
+- (void)bindInteractable:(Interactable *)interactable {
+    [self.children addObject:interactable];
 }
 
 @end
