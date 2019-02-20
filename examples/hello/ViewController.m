@@ -1,6 +1,5 @@
 #import "ViewController.h"
 #import <ripe/Ripe.h>
-#import <ripe/Image.h>
 
 @interface ViewController ()
 
@@ -12,7 +11,7 @@
     [super viewDidLoad];
 
     Ripe *ripe = [[Ripe alloc] initWithBrand:@"dummy" andModel:@"dummy"];
-    Image *image = [ripe bindImageWithImageView:self.imageView];
+    [ripe bindImageWithImageView:self.imageView];
     [ripe update];
 }
 

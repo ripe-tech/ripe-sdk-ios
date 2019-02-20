@@ -80,12 +80,12 @@
 
 - (void)update:(NSDictionary *)state {
     state = state != nil ? state : [self _getstate];
-    
+
     for (id<Interactable> child in self.children) {
         [child update:state];
     }
 }
-         
+
 - (NSDictionary *)_getstate {
     //TODO
     return [NSDictionary new];
