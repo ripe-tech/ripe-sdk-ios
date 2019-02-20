@@ -11,10 +11,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    Ripe *ripe = [[Ripe alloc] initWithBrand:@"dummy" andModel:@"dummy" andOptions:[NSDictionary new]];
-    Image *image = [[Image alloc] initWithImageView:self.imageView andOwner:ripe andOptions:[NSDictionary new]];
-    [image update:[NSDictionary new]];
+    Ripe *ripe = [[Ripe alloc] initWithBrand:@"dummy" andModel:@"dummy"];
+    Image *image = [ripe bindImageWithImageView:self.imageView];
+    [ripe update];
 }
-
 
 @end
