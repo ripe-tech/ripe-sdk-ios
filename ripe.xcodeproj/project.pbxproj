@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71016B44221F1D160071EFCC /* BaseAPI+BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 71016B42221F1D160071EFCC /* BaseAPI+BrandAPI.h */; };
+		71016B45221F1D160071EFCC /* BaseAPI+BrandAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 71016B43221F1D160071EFCC /* BaseAPI+BrandAPI.m */; };
+		71016B46221F1E990071EFCC /* BaseAPI+BrandAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 71016B43221F1D160071EFCC /* BaseAPI+BrandAPI.m */; };
+		71016B48221F21FA0071EFCC /* BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 71016B47221F21FA0071EFCC /* BrandAPI.h */; };
 		7106433B22006DB10002A8EB /* Interactable.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106433A22006DB10002A8EB /* Interactable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106433F22006FC30002A8EB /* Visual.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106433D22006FC30002A8EB /* Visual.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106434022006FC30002A8EB /* Visual.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106433E22006FC30002A8EB /* Visual.m */; };
@@ -48,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71016B42221F1D160071EFCC /* BaseAPI+BrandAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseAPI+BrandAPI.h"; sourceTree = "<group>"; };
+		71016B43221F1D160071EFCC /* BaseAPI+BrandAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BaseAPI+BrandAPI.m"; sourceTree = "<group>"; };
+		71016B47221F21FA0071EFCC /* BrandAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrandAPI.h; sourceTree = "<group>"; };
 		7106433A22006DB10002A8EB /* Interactable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interactable.h; sourceTree = "<group>"; };
 		7106433D22006FC30002A8EB /* Visual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Visual.h; sourceTree = "<group>"; };
 		7106433E22006FC30002A8EB /* Visual.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Visual.m; sourceTree = "<group>"; };
@@ -123,6 +130,9 @@
 				7106434F22009ADC0002A8EB /* RipeAPI.h */,
 				7106435122009B5F0002A8EB /* BaseAPI.h */,
 				7106435222009B5F0002A8EB /* BaseAPI.m */,
+				71016B42221F1D160071EFCC /* BaseAPI+BrandAPI.h */,
+				71016B43221F1D160071EFCC /* BaseAPI+BrandAPI.m */,
+				71016B47221F21FA0071EFCC /* BrandAPI.h */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -225,7 +235,9 @@
 				7106433B22006DB10002A8EB /* Interactable.h in Headers */,
 				7106433F22006FC30002A8EB /* Visual.h in Headers */,
 				710643792201C3ED0002A8EB /* Observable.h in Headers */,
+				71016B48221F21FA0071EFCC /* BrandAPI.h in Headers */,
 				7106435322009B5F0002A8EB /* BaseAPI.h in Headers */,
+				71016B44221F1D160071EFCC /* BaseAPI+BrandAPI.h in Headers */,
 				7106435022009ADC0002A8EB /* RipeAPI.h in Headers */,
 				712C6C0A21FF4E3500D78420 /* ripe.h in Headers */,
 			);
@@ -371,6 +383,7 @@
 			files = (
 				7106434022006FC30002A8EB /* Visual.m in Sources */,
 				7106435422009B5F0002A8EB /* BaseAPI.m in Sources */,
+				71016B45221F1D160071EFCC /* BaseAPI+BrandAPI.m in Sources */,
 				71064345220074C90002A8EB /* Image.m in Sources */,
 				7106437A2201C3ED0002A8EB /* Observable.m in Sources */,
 				712C6C2F21FF6BB700D78420 /* Ripe.m in Sources */,
@@ -387,6 +400,7 @@
 				7106437B2201C3ED0002A8EB /* Observable.m in Sources */,
 				71064346220074C90002A8EB /* Image.m in Sources */,
 				712C6C1821FF4EB600D78420 /* ObservableTests.m in Sources */,
+				71016B46221F1E990071EFCC /* BaseAPI+BrandAPI.m in Sources */,
 				712C6C0821FF4E3500D78420 /* ripeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

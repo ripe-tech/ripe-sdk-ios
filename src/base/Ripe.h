@@ -2,8 +2,8 @@
 #import <UIKit/UIKit.h>
 #import "Observable.h"
 #import "RipeAPI.h"
-#import "BaseAPI.h"
 
+@class BaseAPI;
 @class Interactable;
 @class Image;
 
@@ -11,12 +11,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Ripe : Observable <RipeAPI>
 
+@property BaseAPI *api;
 @property NSString *brand;
 @property NSString *model;
 @property NSDictionary *options;
-@property BaseAPI *api;
 @property NSMutableArray *children;
+@property NSString *initials;
+@property NSString *engraving;
+@property NSMutableDictionary *parts;
+@property NSDictionary *loadedConfig;
+@property BOOL ready;
+@property BOOL useDefaults;
+@property BOOL usePrice;
 
+-(id)initWithOptions:(NSDictionary *)options;
 -(id)initWithBrand:(NSString *)brand andModel: (NSString *)model;
 -(id)initWithBrand:(NSString *)brand andModel: (NSString *)model andOptions:(NSDictionary *)options;
 -(void)configWithBrand:(NSString *)brand andModel: (NSString *)model;

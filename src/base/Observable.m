@@ -23,4 +23,16 @@
     [_callbacks removeObject:callback];
 }
 
+- (void)triggerEvent:(NSString *)event withArgs:(NSDictionary *)args {
+    NSArray *callbacks = self.callbacks[event];
+    for (id value in callbacks) {
+        void (^callback)(NSDictionary *response) = value;
+        callback(args);
+    }
+}
+
+- (void)triggerEvent:(NSString *)event {
+    [self triggerEvent:event withArgs:nil];
+}
+
 @end
