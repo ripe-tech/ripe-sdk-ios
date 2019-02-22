@@ -20,6 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *engraving;
 @property NSMutableDictionary *parts;
 @property NSDictionary *loadedConfig;
+@property NSString *country;
+@property NSString *currency;
+@property NSString *locale;
+@property NSString *flag;
 @property BOOL ready;
 @property BOOL useDefaults;
 @property BOOL usePrice;

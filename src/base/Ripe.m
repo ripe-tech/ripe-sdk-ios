@@ -31,15 +31,15 @@
     id parts = options[@"parts"];
     id useDefaults = options[@"useDefaults"];
     id usePrice = options[@"usePrice"];
-    
+
     if ([parts isKindOfClass:[NSDictionary class]]) {
         self.parts = [parts mutableCopy];
     }
-    
+
     if (useDefaults != nil) {
         self.useDefaults = [useDefaults boolValue];
     }
-    
+
     if (usePrice != nil) {
         self.useDefaults = [usePrice boolValue];
     }
@@ -65,7 +65,7 @@
     // request (update before remote update)
     self.brand = brand;
     self.model = model;
-    
+
     // sets the new options using the current options
     // as default values and sets the update flag to
     // true if it is not set
@@ -73,32 +73,32 @@
     newOptions[@"update"] = @(true);
     [newOptions setValuesForKeysWithDictionary:options];
     [self setOptions:newOptions];
-    
+
     // determines if a valid model is currently defined for the ripe
     // instance, as this is going to change some logic behaviour
     BOOL hasModel = self.brand != nil && self.model != nil;
-    
+
     // retrieves the configuration for the currently loaded model so
     // that others may use it freely (cache mechanism)
     void (^callback)(NSDictionary *) = ^void (NSDictionary *response) {
         self.loadedConfig = response;
-        
+
         // determines if the defaults for the selected model should
         // be loaded so that the parts structure is initially populated
         BOOL hasParts = [self.parts count] == 0;
         BOOL loadDefaults = !hasParts && self.useDefaults && hasModel;
-        
+
         // in case the current instance already contains configured parts
         // the instance is marked as ready (for complex resolution like price)
         // for cases where this is the first configuration (not an update)
         id optionsUpdate = self.options[@"options"];
         BOOL update = optionsUpdate != nil ? [optionsUpdate boolValue] : true;
         self.ready = update ? self.ready : hasParts;
-        
+
         // triggers the config event notifying any listener that the (base)
         // configuration for this main RIPE instance has changed
         [self triggerEvent:@"config" withArgs:self.loadedConfig];
-        
+
         // determines the proper initial parts for the model taking into account
         // if the defaults should be loaded
         NSDictionary *parts = loadDefaults ? self.loadedConfig[@"defaults"] : self.parts;
@@ -106,13 +106,13 @@
             self.ready = true;
             [self triggerEvent:@"ready"];
         }
-        
+
         // in case there's no model defined in the current instance then there's
         // nothing more possible to be done, reeturns the control flow
         if (!hasModel) {
             return;
         }
-        
+
         // updates the parts of the current instance and triggers the remove and
         // local update operations, as expected
         [self setParts:parts.mutableCopy];
@@ -154,11 +154,13 @@
     for (id<Interactable> child in self.children) {
         [child update:state];
     }
-    
+
     if (self.ready) [self triggerEvent:@"update"];
-    
+
     if (self.ready && self.usePrice) {
-        // TODO self.api getPriceWithCallback
+        [self.api getConfigWithCallback:^(NSDictionary *response) {
+
+        }];
     }
 }
 
