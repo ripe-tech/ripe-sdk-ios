@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(id)initWithOptions:(NSDictionary *)options;
 -(id)initWithBrand:(NSString *)brand andModel: (NSString *)model;
--(id)initWithBrand:(NSString *)brand andModel: (NSString *)model andOptions:(NSDictionary *)options;
+-(id)initWithBrand:(NSString * _Nullable)brand andModel: (NSString * _Nullable)model andOptions:(NSDictionary *)options;
 -(void)configWithBrand:(NSString *)brand andModel: (NSString *)model;
 -(void)configWithBrand:(NSString *)brand andModel: (NSString *)model andOptions:(NSDictionary *)options;
 -(Interactable *)bindInteractable:(Interactable *)interactable;

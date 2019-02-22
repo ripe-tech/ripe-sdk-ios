@@ -7,6 +7,10 @@
 
 @synthesize options = _options;
 
+- (id)initWithOptions:(NSDictionary *)options {
+    return [self initWithBrand:nil andModel:nil andOptions:options];
+}
+
 - (id)initWithBrand:(NSString *)brand andModel:(NSString *)model {
     return [self initWithBrand:brand andModel:model andOptions:[NSDictionary new]];
 }
@@ -53,8 +57,12 @@
         return self.api;
     }
     else {
-        return nil;
+        return [super forwardingTargetForSelector:aSelector];
     }
+}
+
+- (BOOL)respondsToSelector:(SEL)aSelector {
+    return [super respondsToSelector:aSelector] || [self.api respondsToSelector:aSelector];
 }
 
 - (void)configWithBrand:(NSString *)brand andModel:(NSString *)model {
