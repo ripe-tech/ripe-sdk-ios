@@ -7,21 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71016B44221F1D160071EFCC /* BaseAPI+BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 71016B42221F1D160071EFCC /* BaseAPI+BrandAPI.h */; };
+		71016B44221F1D160071EFCC /* BaseAPI+BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 71016B42221F1D160071EFCC /* BaseAPI+BrandAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71016B45221F1D160071EFCC /* BaseAPI+BrandAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 71016B43221F1D160071EFCC /* BaseAPI+BrandAPI.m */; };
-		71016B46221F1E990071EFCC /* BaseAPI+BrandAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 71016B43221F1D160071EFCC /* BaseAPI+BrandAPI.m */; };
-		71016B48221F21FA0071EFCC /* BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 71016B47221F21FA0071EFCC /* BrandAPI.h */; };
+		71016B48221F21FA0071EFCC /* BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 71016B47221F21FA0071EFCC /* BrandAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106433B22006DB10002A8EB /* Interactable.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106433A22006DB10002A8EB /* Interactable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106433F22006FC30002A8EB /* Visual.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106433D22006FC30002A8EB /* Visual.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106434022006FC30002A8EB /* Visual.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106433E22006FC30002A8EB /* Visual.m */; };
-		71064341220070F40002A8EB /* Visual.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106433E22006FC30002A8EB /* Visual.m */; };
 		71064344220074C90002A8EB /* Image.h in Headers */ = {isa = PBXBuildFile; fileRef = 71064342220074C90002A8EB /* Image.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71064345220074C90002A8EB /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 71064343220074C90002A8EB /* Image.m */; };
-		71064346220074C90002A8EB /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 71064343220074C90002A8EB /* Image.m */; };
 		7106435022009ADC0002A8EB /* RipeAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106434F22009ADC0002A8EB /* RipeAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106435322009B5F0002A8EB /* BaseAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106435122009B5F0002A8EB /* BaseAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106435422009B5F0002A8EB /* BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106435222009B5F0002A8EB /* BaseAPI.m */; };
-		7106435522009B5F0002A8EB /* BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106435222009B5F0002A8EB /* BaseAPI.m */; };
 		710643622200ADA10002A8EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 710643612200ADA10002A8EB /* AppDelegate.m */; };
 		710643652200ADA10002A8EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710643642200ADA10002A8EB /* ViewController.m */; };
 		710643682200ADA10002A8EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 710643662200ADA10002A8EB /* Main.storyboard */; };
@@ -31,17 +27,20 @@
 		710643752200B75A0002A8EB /* ripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712C6BF921FF4E3500D78420 /* ripe.framework */; };
 		710643792201C3ED0002A8EB /* Observable.h in Headers */ = {isa = PBXBuildFile; fileRef = 710643772201C3ED0002A8EB /* Observable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106437A2201C3ED0002A8EB /* Observable.m in Sources */ = {isa = PBXBuildFile; fileRef = 710643782201C3ED0002A8EB /* Observable.m */; };
-		7106437B2201C3ED0002A8EB /* Observable.m in Sources */ = {isa = PBXBuildFile; fileRef = 710643782201C3ED0002A8EB /* Observable.m */; };
 		712B20C92201F27200575CE8 /* ripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712C6BF921FF4E3500D78420 /* ripe.framework */; };
-		712C6C0821FF4E3500D78420 /* ripeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 712C6C0721FF4E3500D78420 /* ripeTests.m */; };
-		712C6C0A21FF4E3500D78420 /* ripe.h in Headers */ = {isa = PBXBuildFile; fileRef = 712C6BFC21FF4E3500D78420 /* ripe.h */; };
-		712C6C1821FF4EB600D78420 /* ObservableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 712C6C1721FF4EB600D78420 /* ObservableTests.m */; };
+		712C6C0A21FF4E3500D78420 /* ripe.h in Headers */ = {isa = PBXBuildFile; fileRef = 712C6BFC21FF4E3500D78420 /* ripe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		712C6C2E21FF6BB700D78420 /* Ripe.h in Headers */ = {isa = PBXBuildFile; fileRef = 712C6C2C21FF6BB700D78420 /* Ripe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		712C6C2F21FF6BB700D78420 /* Ripe.m in Sources */ = {isa = PBXBuildFile; fileRef = 712C6C2D21FF6BB700D78420 /* Ripe.m */; };
-		712C6C3021FF6BB700D78420 /* Ripe.m in Sources */ = {isa = PBXBuildFile; fileRef = 712C6C2D21FF6BB700D78420 /* Ripe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		71016B4922206D5D0071EFCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 712C6BF021FF4E3500D78420 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 712C6BF821FF4E3500D78420;
+			remoteInfo = ripe;
+		};
 		712C6C0421FF4E3500D78420 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 712C6BF021FF4E3500D78420 /* Project object */;
@@ -257,6 +256,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				71016B4A22206D5D0071EFCC /* PBXTargetDependency */,
 			);
 			name = hello;
 			productName = hello;
@@ -394,20 +394,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7106435522009B5F0002A8EB /* BaseAPI.m in Sources */,
-				712C6C3021FF6BB700D78420 /* Ripe.m in Sources */,
-				71064341220070F40002A8EB /* Visual.m in Sources */,
-				7106437B2201C3ED0002A8EB /* Observable.m in Sources */,
-				71064346220074C90002A8EB /* Image.m in Sources */,
-				712C6C1821FF4EB600D78420 /* ObservableTests.m in Sources */,
-				71016B46221F1E990071EFCC /* BaseAPI+BrandAPI.m in Sources */,
-				712C6C0821FF4E3500D78420 /* ripeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		71016B4A22206D5D0071EFCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 712C6BF821FF4E3500D78420 /* ripe */;
+			targetProxy = 71016B4922206D5D0071EFCC /* PBXContainerItemProxy */;
+		};
 		712C6C0521FF4E3500D78420 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 712C6BF821FF4E3500D78420 /* ripe */;
@@ -441,6 +438,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = platforme;
 				INFOPLIST_FILE = "$(SRCROOT)/examples/hello/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = platforme;
 				INFOPLIST_FILE = "$(SRCROOT)/examples/hello/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -656,6 +655,7 @@
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = platforme;
 				INFOPLIST_FILE = src/test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -677,6 +677,7 @@
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = platforme;
 				INFOPLIST_FILE = src/test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

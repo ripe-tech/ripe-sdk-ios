@@ -11,3 +11,5 @@ FOUNDATION_EXPORT const unsigned char ripeVersionString[];
 #import "Interactable.h"
 #import "Visual.h"
 #import "Image.h"
+#import "BaseAPI+BrandAPI.h"
+#import "Image.h"

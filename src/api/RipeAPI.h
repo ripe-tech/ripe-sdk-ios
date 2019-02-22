@@ -6,6 +6,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSString *url;
 
+@optional
 - (void)getPriceWithCallback:(void (^)(NSDictionary *response))callback;
 - (void)getPriceWithOptions:(NSDictionary * _Nullable)options andCallback:(void (^)(NSDictionary *response))callback;
 - (NSURLSessionDataTask *)_cacheURL:(NSString *)url withOptions:(NSDictionary *)options andCallback:(void (^)(NSDictionary *response))callback;

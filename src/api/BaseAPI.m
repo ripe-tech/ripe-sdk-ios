@@ -1,5 +1,4 @@
 #import "BaseAPI.h"
-#import "BaseAPI+BrandAPI.h"
 
 @implementation BaseAPI
 
@@ -50,13 +49,16 @@
     }
 
     NSURL *urlNS = [NSURL URLWithString:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:urlNS];
+    [request.allHTTPHeaderFields setValuesForKeysWithDictionary:headers];
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *task = [session dataTaskWithURL:urlNS completionHandler: ^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler: ^(NSData *data, NSURLResponse *response, NSError *error) {
         NSDictionary *config = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         dispatch_async(dispatch_get_main_queue(), ^{
             callback(config);
         });
     }];
+
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         [task resume];

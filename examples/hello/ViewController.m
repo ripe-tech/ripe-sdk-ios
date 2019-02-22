@@ -1,5 +1,5 @@
 #import "ViewController.h"
-#import <ripe/Ripe.h>
+#import <ripe/ripe.h>
 
 @interface ViewController ()
 

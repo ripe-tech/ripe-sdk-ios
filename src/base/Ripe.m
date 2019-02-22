@@ -1,9 +1,12 @@
 #import "Interactable.h"
 #import "Image.h"
 #import "BaseAPI.h"
+#import "BaseAPI+BrandAPI.h"
 #import "Ripe.h"
 
 @implementation Ripe
+
+@dynamic url;
 
 @synthesize options = _options;
 
@@ -128,7 +131,6 @@
         [self setParts:parts.mutableCopy];
         [self update];
     };
-
     hasModel ? [self.api getConfigWithCallback:callback] : callback(nil);
 }
 
@@ -178,5 +180,6 @@
     //TODO
     return [NSDictionary new];
 }
+
 
 @end
