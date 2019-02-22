@@ -13,8 +13,11 @@
     Ripe *ripe = [[Ripe alloc] initWithBrand:@"dummy" andModel:@"dummy"];
     [ripe bindImageWithImageView:self.imageView];
     [ripe update];
-    [ripe bindToEvent:@"config" withCallback:^(NSDictionary *response) {
-        NSDictionary *parts = ripe.parts;
+    [ripe bindToEvent:@"price" withCallback:^(NSDictionary *price) {
+        NSDictionary *total = price[@"total"];
+        NSNumber *priceFinal = total[@"price_final"];
+        NSString *currency = total[@"currency"];
+        [self.labelView setText:[NSString stringWithFormat:@"%@ %@", priceFinal, currency]];
     }];
 }
 

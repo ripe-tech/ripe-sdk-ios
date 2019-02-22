@@ -16,6 +16,8 @@
     if (self) {
         self.api = [[BaseAPI alloc] initWithOwner:self andOptions:options];
         self.children = [NSMutableArray new];
+        self.usePrice = true;
+        self.useDefaults = true;
         [self setOptions:options];
         [self configWithBrand:brand andModel:model andOptions:options];
     }
@@ -85,7 +87,7 @@
 
         // determines if the defaults for the selected model should
         // be loaded so that the parts structure is initially populated
-        BOOL hasParts = [self.parts count] == 0;
+        BOOL hasParts = self.parts.count > 0;
         BOOL loadDefaults = !hasParts && self.useDefaults && hasModel;
 
         // in case the current instance already contains configured parts
@@ -158,8 +160,8 @@
     if (self.ready) [self triggerEvent:@"update"];
 
     if (self.ready && self.usePrice) {
-        [self.api getConfigWithCallback:^(NSDictionary *response) {
-
+        [self getPriceWithCallback:^(NSDictionary *response) {
+            [self triggerEvent:@"price" withArgs:response];
         }];
     }
 }

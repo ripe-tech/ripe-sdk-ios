@@ -16,6 +16,16 @@
     return self.options[@"url"] ?: @"https://sandbox.platforme.com/api/";
 }
 
+- (void)getPriceWithCallback:(void (^)(NSDictionary * ))callback {
+    return [self getPriceWithOptions:nil andCallback:callback];
+}
+
+- (void)getPriceWithOptions:(NSDictionary *)options andCallback:(void (^)(NSDictionary *))callback {
+    NSDictionary *resultOptions = [self _getPriceOptions:options];
+    resultOptions = [self _build:resultOptions];
+    [self _cacheURL:resultOptions[@"url"] withOptions:resultOptions andCallback:callback];
+}
+
 - (NSURLSessionDataTask *)_cacheURL:(NSString *)url withOptions:(NSDictionary *)options andCallback:(void (^)(NSDictionary *))callback {
     // TODO
     return [self _requestURL:url withOptions:options andCallback:callback];
@@ -54,6 +64,22 @@
     return task;
 }
 
+- (NSDictionary *)_getPriceOptions:(NSDictionary *)options {
+    NSMutableDictionary *result = [options mutableCopy] ?: [NSMutableDictionary new];
+    result = [[self _getQueryOptions:result] mutableCopy];
+
+    NSMutableDictionary *params = result[@"params"] ?: [NSMutableDictionary new];
+    result[@"params"] = params;
+    NSString *initials = [result[@"initials"] isEqualToString:@""] ? @"$empty" : result[@"initials"];
+    if (initials != nil) {
+        params[@"initials"] = initials;
+    }
+
+    NSString *url = [NSString stringWithFormat:@"%@%@", self.owner.url, @"config/price"];
+    [result setValuesForKeysWithDictionary:@{@"url": url, @"method": @"GET"}];
+    return result;
+}
+
 - (NSDictionary *)_getImageOptions:(NSDictionary *)options {
     NSMutableDictionary *_options = [NSMutableDictionary dictionaryWithDictionary:[self _getQueryOptions: options]];
     NSDictionary *params = _options[@"params"];
@@ -77,18 +103,48 @@
 - (NSDictionary *)_getQueryOptions:(NSDictionary *)options {
     NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:options];
     NSMutableDictionary *params = options[@"params"] ?: [NSMutableDictionary dictionaryWithDictionary:options];
-    params[@"brand"] = options[@"brand"];
-    params[@"model"] = options[@"model"];
     result[@"params"] = params;
+    NSString *brand = options[@"brand"] ?: self.owner.brand;
+    NSString *model = options[@"model"] ?: self.owner.model;
+    NSDictionary *parts = options[@"parts"] ?: self.owner.parts;
+    // TODO params
+
+    if (brand != nil) {
+        params[@"brand"] = brand;
+    }
+
+    if (model != nil) {
+        params[@"model"] = model;
+    }
+
+    NSMutableArray *partsL = [NSMutableArray new];
+    for (id key in parts) {
+        NSString *part = (NSString *)key;
+        NSDictionary *value = parts[key];
+        NSString *material = value[@"material"];
+        NSString *color = value[@"color"];
+        if (material == nil || color == nil) {
+            continue;
+        }
+        [partsL addObject:[NSString stringWithFormat:@"%@:%@:%@", part, material, color]];
+    }
+    params[@"p"] = partsL;
     return result;
 }
 
 - (NSString *)_buildQuery:(NSDictionary *)params {
     __block NSMutableArray *buffer = [NSMutableArray new];
-    [params enumerateKeysAndObjectsUsingBlock:^(id  key, id  obj, BOOL *stop) {
+    [params enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *keyS = [key stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
-        NSString *valueS = [obj stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
-        [buffer addObject:[NSString stringWithFormat:@"%@=%@", keyS, valueS]];
+        if ([obj isKindOfClass:NSString.class]) {
+            NSString *valueS = [obj stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+            [buffer addObject:[NSString stringWithFormat:@"%@=%@", keyS, valueS]];
+        } else if ([obj isKindOfClass:NSArray.class]) {
+            for(id objKey in obj) {
+                NSString *valueS = [objKey stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+                [buffer addObject:[NSString stringWithFormat:@"%@=%@", keyS, valueS]];
+            }
+        }
     }];
     return [buffer componentsJoinedByString:@"&"];
 }
