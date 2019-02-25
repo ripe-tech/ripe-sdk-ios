@@ -13,6 +13,7 @@
 		71016B5122207E340071EFCC /* Promise.h in Headers */ = {isa = PBXBuildFile; fileRef = 71016B4F22207E340071EFCC /* Promise.h */; };
 		71016B5222207E340071EFCC /* Promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 71016B5022207E340071EFCC /* Promise.m */; };
 		71016B562224021F0071EFCC /* PromiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71016B53222401690071EFCC /* PromiseTests.m */; };
+		71016B57222456910071EFCC /* ObservableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 712C6C1721FF4EB600D78420 /* ObservableTests.m */; };
 		7106433B22006DB10002A8EB /* Interactable.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106433A22006DB10002A8EB /* Interactable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106433F22006FC30002A8EB /* Visual.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106433D22006FC30002A8EB /* Visual.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106434022006FC30002A8EB /* Visual.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106433E22006FC30002A8EB /* Visual.m */; };
@@ -405,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71016B57222456910071EFCC /* ObservableTests.m in Sources */,
 				71016B562224021F0071EFCC /* PromiseTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

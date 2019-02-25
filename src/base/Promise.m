@@ -8,6 +8,7 @@
         self.executor = executor;
         self.resultObservers = [NSMutableArray new];
         self.errorObservers = [NSMutableArray new];
+        self.resolved = false;
         [self execute];
     }
     return self;
@@ -15,6 +16,7 @@
 
 - (void)resolve:(id)result {
     self.result = result;
+    self.resolved = true;
     [self update];
 }
 
@@ -39,8 +41,11 @@
         NSMutableArray *results = [NSMutableArray arrayWithCapacity:count];
         for(int index = 0; index < count; index++) {
             Promise *promise = promises[index];
-            [promise then:^(id result) {
+            [promise then:^(id _Nullable result) {
                 [lock lock];
+                if (result == nil) {
+                    result = [NSNull null];
+                }
                 [results addObject:result];
                 if (results.count == count) {
                     resolve(results);
@@ -58,7 +63,7 @@
 -(void)execute {
     dispatch_queue_t queue = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0);
     dispatch_async(queue, ^{
-        self.executor(^(id  _Nonnull result) {
+        self.executor(^(id result) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self resolve:result];
             });
@@ -71,17 +76,17 @@
 }
 
 -(void)update {
-    if(self.result != nil) {
+    if (self.resolved) {
         for (id resolution in self.resultObservers) {
             Resolved resolved = (Resolved) resolution;
             resolved(self.result);
         }
         [self.resultObservers removeAllObjects];
-    } else if(self.error != nil) {
+    } else if (self.error != nil) {
         if (self.errorObservers.count == 0) {
             @throw self.error;
         }
-        
+
         for (id rejection in self.errorObservers) {
             Rejected rejected = (Rejected) rejection;
             rejected(self.error);
