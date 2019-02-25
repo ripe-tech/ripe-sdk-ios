@@ -6,6 +6,7 @@ FOUNDATION_EXPORT const unsigned char ripeVersionString[];
 
 #import "BaseAPI.h"
 #import "RipeAPI.h"
+#import "Promise.h"
 #import "Observable.h"
 #import "Ripe.h"
 #import "Interactable.h"
