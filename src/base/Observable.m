@@ -11,28 +11,50 @@
     return self;
 }
 
-- (void (^)(NSDictionary *response))bindToEvent:(NSString *)event withCallback:(void (^)(NSDictionary *response))callback {
+- (Callback)addCallbackForEvent:(NSString *)event withCallback:(Callback)callback {
     NSMutableArray *_callbacks = [self.callbacks objectForKey:event] ?: [NSMutableArray new];
     [_callbacks addObject:callback];
     [self.callbacks setObject:_callbacks forKey:event];
     return callback;
 }
 
-- (void)unbindFromEvent:(NSString *)event withCallback:(void (^)(NSDictionary *response))callback {
+- (Callback)bindToEvent:(NSString *)event withCallback:(void (^)(NSDictionary *response))callback {
+    return [self bindSyncToEvent:event withCallback:callback];
+}
+
+- (Callback)bindSyncToEvent:(NSString *)event withCallback:(void (^)(NSDictionary *))callback {
+    Callback _callback = ^Promise *(NSDictionary *response) {
+        callback(response);
+        Promise *promise = [[Promise alloc] initWithExecutor:^(Resolve resolve, Reject reject) {
+            resolve([NSDictionary new]);
+        }];
+        return promise;
+    };
+    return [self addCallbackForEvent:event withCallback:_callback];
+}
+
+- (Callback)bindAsyncToEvent:(NSString *)event withCallback:(Callback)callback {
+    return [self addCallbackForEvent:event withCallback:callback];
+}
+
+- (void)unbindFromEvent:(NSString *)event withCallback:(Callback)callback {
     NSMutableArray *_callbacks = [self.callbacks objectForKey:event] ?: [NSMutableArray new];
     [_callbacks removeObject:callback];
 }
 
-- (void)triggerEvent:(NSString *)event withArgs:(NSDictionary *)args {
+- (Promise *)triggerEvent:(NSString *)event withArgs:(NSDictionary *)args {
     NSArray *callbacks = self.callbacks[event];
+    NSMutableArray *promises = [NSMutableArray arrayWithCapacity:callbacks.count];
     for (id value in callbacks) {
-        void (^callback)(NSDictionary *response) = value;
-        callback(args);
+        Callback callback = (Callback) value;
+        Promise *promise = callback(args);
+        [promises addObject:promise];
     }
+    return [Promise all:promises];
 }
 
-- (void)triggerEvent:(NSString *)event {
-    [self triggerEvent:event withArgs:nil];
+- (Promise *)triggerEvent:(NSString *)event {
+    return [self triggerEvent:event withArgs:nil];
 }
 
 @end

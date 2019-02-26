@@ -10,6 +10,10 @@
 		71016B44221F1D160071EFCC /* BaseAPI+BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 71016B42221F1D160071EFCC /* BaseAPI+BrandAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71016B45221F1D160071EFCC /* BaseAPI+BrandAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 71016B43221F1D160071EFCC /* BaseAPI+BrandAPI.m */; };
 		71016B48221F21FA0071EFCC /* BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 71016B47221F21FA0071EFCC /* BrandAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71016B5122207E340071EFCC /* Promise.h in Headers */ = {isa = PBXBuildFile; fileRef = 71016B4F22207E340071EFCC /* Promise.h */; };
+		71016B5222207E340071EFCC /* Promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 71016B5022207E340071EFCC /* Promise.m */; };
+		71016B562224021F0071EFCC /* PromiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71016B53222401690071EFCC /* PromiseTests.m */; };
+		71016B57222456910071EFCC /* ObservableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 712C6C1721FF4EB600D78420 /* ObservableTests.m */; };
 		7106433B22006DB10002A8EB /* Interactable.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106433A22006DB10002A8EB /* Interactable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106433F22006FC30002A8EB /* Visual.h in Headers */ = {isa = PBXBuildFile; fileRef = 7106433D22006FC30002A8EB /* Visual.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7106434022006FC30002A8EB /* Visual.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106433E22006FC30002A8EB /* Visual.m */; };
@@ -55,6 +59,9 @@
 		71016B42221F1D160071EFCC /* BaseAPI+BrandAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseAPI+BrandAPI.h"; sourceTree = "<group>"; };
 		71016B43221F1D160071EFCC /* BaseAPI+BrandAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BaseAPI+BrandAPI.m"; sourceTree = "<group>"; };
 		71016B47221F21FA0071EFCC /* BrandAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrandAPI.h; sourceTree = "<group>"; };
+		71016B4F22207E340071EFCC /* Promise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Promise.h; sourceTree = "<group>"; };
+		71016B5022207E340071EFCC /* Promise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Promise.m; sourceTree = "<group>"; };
+		71016B53222401690071EFCC /* PromiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PromiseTests.m; sourceTree = "<group>"; };
 		7106433A22006DB10002A8EB /* Interactable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interactable.h; sourceTree = "<group>"; };
 		7106433D22006FC30002A8EB /* Visual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Visual.h; sourceTree = "<group>"; };
 		7106433E22006FC30002A8EB /* Visual.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Visual.m; sourceTree = "<group>"; };
@@ -197,6 +204,8 @@
 				712C6C2D21FF6BB700D78420 /* Ripe.m */,
 				710643772201C3ED0002A8EB /* Observable.h */,
 				710643782201C3ED0002A8EB /* Observable.m */,
+				71016B4F22207E340071EFCC /* Promise.h */,
+				71016B5022207E340071EFCC /* Promise.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -207,6 +216,7 @@
 				712C6C0721FF4E3500D78420 /* ripeTests.m */,
 				712C6C0921FF4E3500D78420 /* Info.plist */,
 				712C6C1721FF4EB600D78420 /* ObservableTests.m */,
+				71016B53222401690071EFCC /* PromiseTests.m */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -234,6 +244,7 @@
 			files = (
 				716C9556222593BA0026AC7C /* Dependencies.h in Headers */,
 				712C6C2E21FF6BB700D78420 /* Ripe.h in Headers */,
+				71016B5122207E340071EFCC /* Promise.h in Headers */,
 				71064344220074C90002A8EB /* Image.h in Headers */,
 				7106433B22006DB10002A8EB /* Interactable.h in Headers */,
 				7106433F22006FC30002A8EB /* Visual.h in Headers */,
@@ -390,6 +401,7 @@
 				71016B45221F1D160071EFCC /* BaseAPI+BrandAPI.m in Sources */,
 				71064345220074C90002A8EB /* Image.m in Sources */,
 				7106437A2201C3ED0002A8EB /* Observable.m in Sources */,
+				71016B5222207E340071EFCC /* Promise.m in Sources */,
 				712C6C2F21FF6BB700D78420 /* Ripe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +410,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71016B57222456910071EFCC /* ObservableTests.m in Sources */,
+				71016B562224021F0071EFCC /* PromiseTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
