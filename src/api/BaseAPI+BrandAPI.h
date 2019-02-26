@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+#import "Dependencies.h"
 #import "BaseAPI.h"
 
 NS_ASSUME_NONNULL_BEGIN

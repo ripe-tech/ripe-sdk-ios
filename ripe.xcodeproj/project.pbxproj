@@ -31,6 +31,7 @@
 		712C6C0A21FF4E3500D78420 /* ripe.h in Headers */ = {isa = PBXBuildFile; fileRef = 712C6BFC21FF4E3500D78420 /* ripe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		712C6C2E21FF6BB700D78420 /* Ripe.h in Headers */ = {isa = PBXBuildFile; fileRef = 712C6C2C21FF6BB700D78420 /* Ripe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		712C6C2F21FF6BB700D78420 /* Ripe.m in Sources */ = {isa = PBXBuildFile; fileRef = 712C6C2D21FF6BB700D78420 /* Ripe.m */; };
+		716C9556222593BA0026AC7C /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = 716C9555222593BA0026AC7C /* Dependencies.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		712C6C1721FF4EB600D78420 /* ObservableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObservableTests.m; sourceTree = "<group>"; };
 		712C6C2C21FF6BB700D78420 /* Ripe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ripe.h; sourceTree = "<group>"; };
 		712C6C2D21FF6BB700D78420 /* Ripe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ripe.m; sourceTree = "<group>"; };
+		716C9555222593BA0026AC7C /* Dependencies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				712C6C0621FF4E3500D78420 /* test */,
 				712C6BFC21FF4E3500D78420 /* ripe.h */,
 				712C6BFD21FF4E3500D78420 /* Info.plist */,
+				716C9555222593BA0026AC7C /* Dependencies.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716C9556222593BA0026AC7C /* Dependencies.h in Headers */,
 				712C6C2E21FF6BB700D78420 /* Ripe.h in Headers */,
 				71064344220074C90002A8EB /* Image.h in Headers */,
 				7106433B22006DB10002A8EB /* Interactable.h in Headers */,
