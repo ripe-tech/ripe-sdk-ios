@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+#import "Dependencies.h"
 #import "RipeAPI.h"
 #import "BrandAPI.h"
 #import "Ripe.h"

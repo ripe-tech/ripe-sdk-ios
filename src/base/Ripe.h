@@ -1,5 +1,4 @@
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import "Dependencies.h"
 #import "Observable.h"
 #import "RipeAPI.h"
 #import "BrandAPI.h"

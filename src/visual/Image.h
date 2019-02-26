@@ -1,4 +1,3 @@
-#import <UIKit/UIKit.h>
 #import "Visual.h"
 
 NS_ASSUME_NONNULL_BEGIN
