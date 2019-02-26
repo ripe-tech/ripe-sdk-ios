@@ -25,9 +25,10 @@
     [self update];
 }
 
-- (void)then:(Resolved)resolved {
+- (Promise *)then:(Resolved)resolved {
     [self.resultObservers addObject:resolved];
     [self update];
+    return self;
 }
 
 - (void)catch:(Rejected)rejected {
@@ -35,17 +36,17 @@
 }
 
 + (Promise *)all:(NSArray *)promises {
-    NSLock *lock = [NSLock new];
     Promise *promise = [[Promise alloc] initWithExecutor:^(Resolve resolve, Reject reject) {
+        NSLock *lock = [NSLock new];
         NSUInteger count = promises.count;
         NSMutableArray *results = [NSMutableArray arrayWithCapacity:count];
-        for(int index = 0; index < count; index++) {
-            Promise *promise = promises[index];
+        for(id value in promises) {
+            Promise *promise = (Promise *)value;
             [promise then:^(id _Nullable result) {
-                [lock lock];
                 if (result == nil) {
                     result = [NSNull null];
                 }
+                [lock lock];
                 [results addObject:result];
                 if (results.count == count) {
                     resolve(results);

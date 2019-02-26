@@ -20,7 +20,7 @@ typedef void (^Executor)(Resolve resolve, Reject reject);
 - (instancetype)initWithExecutor:(Executor)executor;
 - (void)resolve:(id _Nullable)result;
 - (void)reject:(NSError *)error;
-- (void)then:(Resolved)resolved;
+- (Promise *)then:(Resolved)resolved;
 - (void)catch:(Rejected)rejected;
 + (Promise *)all:(NSArray *)promises;
 
