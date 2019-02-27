@@ -11,22 +11,22 @@
 @synthesize options = _options;
 
 - (id)initWithOptions:(NSDictionary *)options {
-    return [self initWithBrand:nil andModel:nil andOptions:options];
+    return [self initWithBrand:nil model:nil options:options];
 }
 
-- (id)initWithBrand:(NSString *)brand andModel:(NSString *)model {
-    return [self initWithBrand:brand andModel:model andOptions:[NSDictionary new]];
+- (id)initWithBrand:(NSString *)brand model:(NSString *)model {
+    return [self initWithBrand:brand model:model options:[NSDictionary new]];
 }
 
--(id)initWithBrand:(NSString *)brand andModel:(NSString *)model andOptions:(NSDictionary *)options {
+-(id)initWithBrand:(NSString *)brand model:(NSString *)model options:(NSDictionary *)options {
     self = [super init];
     if (self) {
-        self.api = [[BaseAPI alloc] initWithOwner:self andOptions:options];
+        self.api = [[BaseAPI alloc] initWithOwner:self options:options];
         self.children = [NSMutableArray new];
         self.usePrice = true;
         self.useDefaults = true;
         [self setOptions:options];
-        [self configWithBrand:brand andModel:model andOptions:options];
+        [self config:brand model:model options:options];
     }
     return self;
 }
@@ -68,11 +68,11 @@
     return [super respondsToSelector:aSelector] || [self.api respondsToSelector:aSelector];
 }
 
-- (void)configWithBrand:(NSString *)brand andModel:(NSString *)model {
-    [self configWithBrand:brand andModel:model andOptions:[NSDictionary new]];
+- (void)config:(NSString *)brand model:(NSString *)model {
+    [self config:brand model:model options:[NSDictionary new]];
 }
 
-- (void)configWithBrand:(NSString *)brand andModel:(NSString *)model andOptions:(NSDictionary *)options {
+- (void)config:(NSString *)brand model:(NSString *)model options:(NSDictionary *)options {
     // updates the current references to both the brand
     // and the model according to the new configuration
     // request (update before remote update)
@@ -110,14 +110,14 @@
 
         // triggers the config event notifying any listener that the (base)
         // configuration for this main RIPE instance has changed
-        [self triggerEvent:@"config" withArgs:self.loadedConfig];
+        [self trigger:@"config" args:self.loadedConfig];
 
         // determines the proper initial parts for the model taking into account
         // if the defaults should be loaded
         NSDictionary *parts = loadDefaults ? self.loadedConfig[@"defaults"] : self.parts;
         if (!self.ready) {
             self.ready = true;
-            [self triggerEvent:@"ready"];
+            [self trigger:@"ready"];
         }
 
         // in case there's no model defined in the current instance then there's
@@ -131,7 +131,7 @@
         [self setParts:parts.mutableCopy];
         [self update];
     };
-    hasModel ? [self.api getConfigWithCallback:callback] : callback(nil);
+    hasModel ? [self.api getConfig:callback] : callback(nil);
 }
 
 - (Interactable *)bindInteractable:(Interactable *)interactable {
@@ -139,12 +139,12 @@
     return interactable;
 }
 
-- (Image *)bindImageWithImageView:(UIImageView *)imageView {
-    return [self bindImageWithImageView:imageView andOptions:[NSDictionary new]];
+- (Image *)bindImage:(UIImageView *)imageView {
+    return [self bindImage:imageView options:[NSDictionary new]];
 }
 
-- (Image *)bindImageWithImageView:(UIImageView *)imageView andOptions:(NSDictionary *)options {
-    Image *image = [[Image alloc] initWithImageView:imageView andOwner:self andOptions:options];
+- (Image *)bindImage:(UIImageView *)imageView options:(NSDictionary *)options {
+    Image *image = [[Image alloc] initWithImageView:imageView owner:self options:options];
     [self bindInteractable:(Interactable *)image];
     return image;
 }
@@ -167,18 +167,19 @@
         [child update:state];
     }
 
-    if (self.ready) [self triggerEvent:@"update"];
+    if (self.ready) [self trigger:@"update"];
 
     if (self.ready && self.usePrice) {
-        [self getPriceWithCallback:^(NSDictionary *response) {
-            [self triggerEvent:@"price" withArgs:response];
+        [self getPrice:^(NSDictionary *response) {
+            [self trigger:@"price" args:response];
         }];
     }
 }
 
 - (NSDictionary *)_getstate {
     //TODO
-    return [NSDictionary new];
+    NSDictionary *parts = self.parts ?: [NSDictionary new];
+    return @{ @"parts": parts };
 }
 
 

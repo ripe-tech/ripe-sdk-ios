@@ -14,7 +14,7 @@
     XCTAssertEqual([observable.callbacks[@"test"] count], 1);
     XCTAssertEqual((Callback) observable.callbacks[@"test"][0], callback);
 
-    [observable unbindFromEvent:@"test" withCallback:callback];
+    [observable unbind:@"test" callback:callback];
     XCTAssertEqual([observable.callbacks[@"test"] count], 0);
 }
 
@@ -29,7 +29,7 @@
         [expectationSync fulfill];
     }];
 
-    [observable bindAsyncToEvent:@"test" withCallback:^Promise *(NSDictionary *response) {
+    [observable bindAsync:@"test" callback:^Promise *(NSDictionary *response) {
         return [[Promise alloc] initWithExecutor:^(Resolve resolve, Reject reject) {
             [NSThread sleepForTimeInterval:1];
             resolve(response);
@@ -37,7 +37,7 @@
         }];
     }];
 
-    Promise *promise = [observable triggerEvent:@"test"];
+    Promise *promise = [observable trigger:@"test"];
     [promise then:^(id result) {
         NSArray *results = (NSArray *)result;
         XCTAssertEqual(results.count, 2);

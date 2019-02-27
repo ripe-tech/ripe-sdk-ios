@@ -10,10 +10,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    Ripe *ripe = [[Ripe alloc] initWithBrand:@"dummy" andModel:@"dummy"];
-    [ripe bindImageWithImageView:self.imageView];
-    [ripe update];
-    [ripe bindToEvent:@"price" withCallback:^(NSDictionary *price) {
+    Ripe *ripe = [[Ripe alloc] initWithBrand:@"dummy" model:@"dummy"];
+    [ripe bindImage:self.imageView];
+    [ripe bind:@"price" callback:^(NSDictionary *price) {
         NSDictionary *total = price[@"total"];
         NSNumber *priceFinal = total[@"price_final"];
         NSString *currency = total[@"currency"];
