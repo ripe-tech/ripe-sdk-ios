@@ -62,7 +62,7 @@
 };
 
 -(void)execute {
-    dispatch_queue_t queue = dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0);
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         self.executor(^(id result) {
             dispatch_async(dispatch_get_main_queue(), ^{
