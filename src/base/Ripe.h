@@ -29,13 +29,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property BOOL usePrice;
 
 -(id)initWithOptions:(NSDictionary *)options;
--(id)initWithBrand:(NSString *)brand andModel: (NSString *)model;
--(id)initWithBrand:(NSString * _Nullable)brand andModel: (NSString * _Nullable)model andOptions:(NSDictionary *)options;
--(void)configWithBrand:(NSString *)brand andModel: (NSString *)model;
--(void)configWithBrand:(NSString *)brand andModel: (NSString *)model andOptions:(NSDictionary *)options;
+-(id)initWithBrand:(NSString *)brand model: (NSString *)model;
+-(id)initWithBrand:(NSString * _Nullable)brand model: (NSString * _Nullable)model options:(NSDictionary *)options;
+-(void)config:(NSString *)brand model: (NSString *)model;
+-(void)config:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options;
 -(Interactable *)bindInteractable:(Interactable *)interactable;
--(Image *)bindImageWithImageView:(UIImageView *)imageView;
--(Image *)bindImageWithImageView:(UIImageView *)imageView andOptions:(NSDictionary *)options;
+-(Image *)bindImage:(UIImageView *)imageView;
+-(Image *)bindImage:(UIImageView *)imageView options:(NSDictionary *)options;
 -(void)unbindInteractable:(Interactable *)interactable;
 -(void)unbindImage:(Image *)image;
 -(void)update;

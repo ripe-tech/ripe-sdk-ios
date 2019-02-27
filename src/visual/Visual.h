@@ -7,7 +7,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSDictionary *options;
 
-- (id)initWithOwner:(Ripe *)owner andOptions:(NSDictionary *)options;
+- (id)initWithOwner:(Ripe *)owner options:(NSDictionary *)options;
 
 @end
 

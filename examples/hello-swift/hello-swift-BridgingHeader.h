@@ -1,1 +1,2 @@
-#import <ripe/ripe.h>
+#import "Ripe.h"
+#import "Image.h"

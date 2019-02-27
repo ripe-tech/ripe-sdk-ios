@@ -2,7 +2,7 @@
 
 @implementation BaseAPI
 
-- (id)initWithOwner:(Ripe *)owner andOptions:(NSDictionary *)options {
+- (id)initWithOwner:(Ripe *)owner options:(NSDictionary *)options {
     self = [super init];
     if (self) {
         self.owner = owner;
@@ -15,22 +15,22 @@
     return self.options[@"url"] ?: @"https://sandbox.platforme.com/api/";
 }
 
-- (void)getPriceWithCallback:(void (^)(NSDictionary * ))callback {
-    return [self getPriceWithOptions:nil andCallback:callback];
+- (void)getPrice:(void (^)(NSDictionary * ))callback {
+    return [self getPrice:nil callback:callback];
 }
 
-- (void)getPriceWithOptions:(NSDictionary *)options andCallback:(void (^)(NSDictionary *))callback {
+- (void)getPrice:(NSDictionary *)options callback:(void (^)(NSDictionary *))callback {
     NSDictionary *resultOptions = [self _getPriceOptions:options];
     resultOptions = [self _build:resultOptions];
-    [self _cacheURL:resultOptions[@"url"] withOptions:resultOptions andCallback:callback];
+    [self _cacheURL:resultOptions[@"url"] options:resultOptions callback:callback];
 }
 
-- (NSURLSessionDataTask *)_cacheURL:(NSString *)url withOptions:(NSDictionary *)options andCallback:(void (^)(NSDictionary *))callback {
+- (NSURLSessionDataTask *)_cacheURL:(NSString *)url options:(NSDictionary *)options callback:(void (^)(NSDictionary *))callback {
     // TODO
-    return [self _requestURL:url withOptions:options andCallback:callback];
+    return [self _requestURL:url options:options callback:callback];
 }
 
-- (NSURLSessionDataTask *)_requestURL:(NSString *)url withOptions:(NSDictionary *)options andCallback:(void (^)(NSDictionary *))callback {
+- (NSURLSessionDataTask *)_requestURL:(NSString *)url options:(NSDictionary *)options callback:(void (^)(NSDictionary *))callback {
     NSString *method = options[@"method"] ?: @"GET";
     NSDictionary *params = options[@"params"] ?: [NSDictionary new];
     NSDictionary *headers = options[@"headers"] ?: [NSDictionary new];
