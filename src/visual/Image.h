@@ -1,5 +1,4 @@
-#import <UIKit/UIKit.h>
-#import <ripe/Visual.h>
+#import "Visual.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -7,7 +6,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) UIImageView *imageView;
 
--(id)initWithImageView:(UIImageView *)imageView andOwner:(Ripe *)owner andOptions:(NSDictionary *)options;
+-(id)initWithImageView:(UIImageView *)imageView owner:(Ripe *)owner options:(NSDictionary *)options;
 
 @end
 

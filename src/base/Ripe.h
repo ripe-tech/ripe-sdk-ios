@@ -1,20 +1,46 @@
-#import <Foundation/Foundation.h>
+#import "Dependencies.h"
 #import "Observable.h"
 #import "RipeAPI.h"
-#import "BaseAPI.h"
+#import "BrandAPI.h"
+
+@class BaseAPI;
+@class Interactable;
+@class Image;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Ripe : Observable <RipeAPI>
+@interface Ripe : Observable <RipeAPI, BrandAPI>
 
+@property BaseAPI *api;
 @property NSString *brand;
 @property NSString *model;
 @property NSDictionary *options;
-@property BaseAPI *api;
+@property NSMutableArray *children;
+@property NSString *initials;
+@property NSString *engraving;
+@property NSMutableDictionary *parts;
+@property NSDictionary *loadedConfig;
+@property NSString *country;
+@property NSString *currency;
+@property NSString *locale;
+@property NSString *flag;
+@property BOOL ready;
+@property BOOL useDefaults;
+@property BOOL usePrice;
 
--(id)initWithBrand:(NSString *)brand andModel: (NSString *)model andOptions:(NSDictionary *)options;
--(void)configWithBrand:(NSString *)brand andModel: (NSString *)model andOptions:(NSDictionary *)options;
-
+-(id)initWithOptions:(NSDictionary *)options;
+-(id)initWithBrand:(NSString *)brand model: (NSString *)model;
+-(id)initWithBrand:(NSString * _Nullable)brand model: (NSString * _Nullable)model options:(NSDictionary *)options;
+-(void)config:(NSString *)brand model: (NSString *)model;
+-(void)config:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options;
+-(Interactable *)bindInteractable:(Interactable *)interactable;
+-(Image *)bindImage:(UIImageView *)imageView;
+-(Image *)bindImage:(UIImageView *)imageView options:(NSDictionary *)options;
+-(void)unbindInteractable:(Interactable *)interactable;
+-(void)unbindImage:(Image *)image;
+-(void)update;
+-(void)update:(NSDictionary *)state;
+-(NSDictionary *)_getstate;
 
 @end
 

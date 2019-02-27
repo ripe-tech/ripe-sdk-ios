@@ -1,15 +1,13 @@
-#import <Foundation/Foundation.h>
-#import "Observable.h"
+#import "Dependencies.h"
 #import "Interactable.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Visual : Observable <Interactable>
 
-@property (nonatomic, weak) Ripe *owner;
 @property (nonatomic) NSDictionary *options;
 
-- (id)initWithOwner:(Ripe *)owner andOptions:(NSDictionary *)options;
+- (id)initWithOwner:(Ripe *)owner options:(NSDictionary *)options;
 
 @end
 

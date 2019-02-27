@@ -2,8 +2,8 @@
 
 @implementation Image
 
-- (id)initWithImageView:(UIImageView *)imageView andOwner:(Ripe *)owner andOptions:(NSDictionary *)options {
-    self = [self initWithOwner:owner andOptions:options];
+- (id)initWithImageView:(UIImageView *)imageView owner:(Ripe *)owner options:(NSDictionary *)options {
+    self = [self initWithOwner:owner options:options];
     self.imageView = imageView;
     return self;
 }

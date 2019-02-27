@@ -1,6 +1,5 @@
 #import "ViewController.h"
-#import <ripe/Ripe.h>
-#import <ripe/Image.h>
+#import <ripe/ripe.h>
 
 @interface ViewController ()
 
@@ -11,10 +10,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    Ripe *ripe = [[Ripe alloc] initWithBrand:@"dummy" andModel:@"dummy" andOptions:[NSDictionary new]];
-    Image *image = [[Image alloc] initWithImageView:self.imageView andOwner:ripe andOptions:[NSDictionary new]];
-    [image update:[NSDictionary new]];
+    Ripe *ripe = [[Ripe alloc] initWithBrand:@"dummy" model:@"dummy"];
+    [ripe bindImage:self.imageView];
+    [ripe bind:@"price" callback:^(NSDictionary *price) {
+        NSDictionary *total = price[@"total"];
+        NSNumber *priceFinal = total[@"price_final"];
+        NSString *currency = total[@"currency"];
+        [self.labelView setText:[NSString stringWithFormat:@"%@ %@", priceFinal, currency]];
+    }];
 }
-
 
 @end

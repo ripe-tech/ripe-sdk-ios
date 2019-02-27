@@ -1,13 +1,20 @@
-#import <Foundation/Foundation.h>
+#import "Dependencies.h"
+#import "Promise.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Observable : NSObject
 
+typedef Promise * (^Callback)(NSDictionary *response);
+
 @property (nonatomic, strong) NSMutableDictionary *callbacks;
 
-- (void (^)(NSDictionary *response))bindToEvent:(NSString *)event withCallback:(void (^)(NSDictionary *response))callback;
-- (void)unbindFromEvent:(NSString *)event withCallback:(void (^)(NSDictionary *response))callback;
+- (Callback)bind:(NSString *)event callback:(void (^)(NSDictionary *response))callback;
+- (Callback)bindSync:(NSString *)event callback:(void (^)(NSDictionary *response))callback;
+- (Callback)bindAsync:(NSString *)event callback:(Callback)callback;
+- (void)unbind:(NSString *)event callback:(Callback)callback;
+- (Promise *)trigger:(NSString *)event args:(NSDictionary * _Nullable)args;
+- (Promise *)trigger:(NSString *)event;
 
 @end
 

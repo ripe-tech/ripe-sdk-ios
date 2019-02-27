@@ -2,7 +2,9 @@
 
 @implementation Visual
 
--(id)initWithOwner:(Ripe *)owner andOptions:(NSDictionary *)options {
+@synthesize owner;
+
+-(id)initWithOwner:(Ripe *)owner options:(NSDictionary *)options {
     self = [super init];
     if (self) {
         self.owner = owner;
