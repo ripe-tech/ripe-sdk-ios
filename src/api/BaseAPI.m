@@ -84,7 +84,17 @@
 
 - (NSDictionary *)_getImageOptions:(NSDictionary *)options {
     NSMutableDictionary *_options = [NSMutableDictionary dictionaryWithDictionary:[self _getQueryOptions: options]];
-    NSDictionary *params = _options[@"params"];
+    NSMutableDictionary *params = _options[@"params"];
+
+    NSString *initials = options[@"initials"];
+    NSArray *profile = options[@"profile"];
+    if (initials != nil) {
+        params[@"initials"] = initials;
+    }
+    if (profile != nil) {
+        params[@"profile"] = [profile componentsJoinedByString:@","];
+    }
+
     NSString *url = [NSString stringWithFormat:@"%@compose", self.url];
     [_options setValuesForKeysWithDictionary:@{
                                                @"url": url,

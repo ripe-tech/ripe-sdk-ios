@@ -33,6 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(id)initWithBrand:(NSString * _Nullable)brand model: (NSString * _Nullable)model options:(NSDictionary *)options;
 -(void)config:(NSString *)brand model: (NSString *)model;
 -(void)config:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options;
+-(void)setInitials:(NSString *)initials engraving: (NSString *)engraving;
+-(void)setInitials:(NSString *)initials engraving: (NSString *)engraving noUpdate: (BOOL)noUpdate;
 -(Interactable *)bindInteractable:(Interactable *)interactable;
 -(Image *)bindImage:(UIImageView *)imageView;
 -(Image *)bindImage:(UIImageView *)imageView options:(NSDictionary *)options;
