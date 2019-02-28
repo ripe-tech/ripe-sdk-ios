@@ -9,12 +9,12 @@ typedef Promise * (^Callback)(NSDictionary *response);
 
 @property (nonatomic, strong) NSMutableDictionary *callbacks;
 
-- (Callback)bindToEvent:(NSString *)event withCallback:(void (^)(NSDictionary *response))callback;
-- (Callback)bindSyncToEvent:(NSString *)event withCallback:(void (^)(NSDictionary *response))callback;
-- (Callback)bindAsyncToEvent:(NSString *)event withCallback:(Callback)callback;
-- (void)unbindFromEvent:(NSString *)event withCallback:(Callback)callback;
-- (Promise *)triggerEvent:(NSString *)event withArgs:(NSDictionary * _Nullable)args;
-- (Promise *)triggerEvent:(NSString *)event;
+- (Callback)bind:(NSString *)event callback:(void (^)(NSDictionary *response))callback;
+- (Callback)bindSync:(NSString *)event callback:(void (^)(NSDictionary *response))callback;
+- (Callback)bindAsync:(NSString *)event callback:(Callback)callback;
+- (void)unbind:(NSString *)event callback:(Callback)callback;
+- (Promise *)trigger:(NSString *)event args:(NSDictionary * _Nullable)args;
+- (Promise *)trigger:(NSString *)event;
 
 @end
 

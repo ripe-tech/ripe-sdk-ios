@@ -4,7 +4,7 @@
 
 @synthesize owner;
 
--(id)initWithOwner:(Ripe *)owner andOptions:(NSDictionary *)options {
+-(id)initWithOwner:(Ripe *)owner options:(NSDictionary *)options {
     self = [super init];
     if (self) {
         self.owner = owner;

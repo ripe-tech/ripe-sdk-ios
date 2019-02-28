@@ -2,14 +2,14 @@
 
 @implementation BaseAPI (BrandAPI)
 
-- (void)getConfigWithCallback:(void (^)(NSDictionary *))callback {
-    [self getConfigWithOptions:nil andCallback:callback];
+- (void)getConfig:(void (^)(NSDictionary *))callback {
+    [self getConfig:nil callback:callback];
 }
 
-- (void)getConfigWithOptions:(NSDictionary *)options andCallback:(void (^)(NSDictionary *))callback {
+- (void)getConfig:(NSDictionary *)options callback:(void (^)(NSDictionary *))callback {
     NSDictionary *configOptions = [self _getConfigOptions:options];
     configOptions = [self _build:configOptions];
-    [self _cacheURL:configOptions[@"url"] withOptions:configOptions andCallback:callback];
+    [self _cacheURL:configOptions[@"url"] options:configOptions callback:callback];
 }
 
 - (NSDictionary *)_getConfigOptions:(NSDictionary *)options {

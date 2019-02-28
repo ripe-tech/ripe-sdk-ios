@@ -7,10 +7,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly) NSString *url;
 
 @optional
-- (void)getPriceWithCallback:(void (^)(NSDictionary *response))callback;
-- (void)getPriceWithOptions:(NSDictionary * _Nullable)options andCallback:(void (^)(NSDictionary *response))callback;
-- (NSURLSessionDataTask *)_cacheURL:(NSString *)url withOptions:(NSDictionary *)options andCallback:(void (^)(NSDictionary *response))callback;
-- (NSURLSessionDataTask *)_requestURL:(NSString *)url withOptions:(NSDictionary *)options andCallback:(void (^)(NSDictionary *response))callback;
+- (void)getPrice:(void (^)(NSDictionary *response))callback;
+- (void)getPrice:(NSDictionary * _Nullable)options callback:(void (^)(NSDictionary *response))callback;
+- (NSURLSessionDataTask *)_cacheURL:(NSString *)url options:(NSDictionary *)options callback:(void (^)(NSDictionary *response))callback;
+- (NSURLSessionDataTask *)_requestURL:(NSString *)url options:(NSDictionary *)options callback:(void (^)(NSDictionary *response))callback;
 - (NSString *)_getImageUrl:(NSDictionary *)options;
 - (NSDictionary *)_getPriceOptions:(NSDictionary *)options;
 - (NSDictionary *)_getImageOptions:(NSDictionary *)options;
