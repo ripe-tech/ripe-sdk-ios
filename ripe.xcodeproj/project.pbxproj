@@ -163,8 +163,8 @@
 				710643662200ADA10002A8EB /* Main.storyboard */,
 				710643692200ADA30002A8EB /* Assets.xcassets */,
 				7106436B2200ADA30002A8EB /* LaunchScreen.storyboard */,
-				7106436E2200ADA30002A8EB /* Info.plist */,
 				7106436F2200ADA30002A8EB /* main.m */,
+				7106436E2200ADA30002A8EB /* Info.plist */,
 			);
 			path = hello;
 			sourceTree = "<group>";
