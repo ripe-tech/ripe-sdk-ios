@@ -10,7 +10,7 @@
 
 - (void)testBindAndUnbind {
     Observable *observable = [Observable new];
-    Callback callback = [observable bindToEvent:@"test" withCallback:^(NSDictionary * response) {}];
+    Callback callback = [observable bind:@"test" callback:^(NSDictionary * response) {}];
     XCTAssertEqual([observable.callbacks[@"test"] count], 1);
     XCTAssertEqual((Callback) observable.callbacks[@"test"][0], callback);
 
@@ -25,7 +25,7 @@
 
     Observable *observable = [Observable new];
 
-    [observable bindSyncToEvent:@"test" withCallback:^(NSDictionary *response) {
+    [observable bindSync:@"test" callback:^(NSDictionary *response) {
         [expectationSync fulfill];
     }];
 

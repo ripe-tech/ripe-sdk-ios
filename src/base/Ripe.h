@@ -31,8 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 -(id)initWithOptions:(NSDictionary *)options;
 -(id)initWithBrand:(NSString *)brand model: (NSString *)model;
 -(id)initWithBrand:(NSString * _Nullable)brand model: (NSString * _Nullable)model options:(NSDictionary *)options;
--(void)config:(NSString *)brand model: (NSString *)model;
--(void)config:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options;
+-(Promise *)config:(NSString *)brand model: (NSString *)model;
+-(Promise *)config:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options;
+-(Promise *)config:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options callback: (void(^_Nullable)(NSDictionary * _Nullable))callback ;
 -(Interactable *)bindInteractable:(Interactable *)interactable;
 -(Image *)bindImage:(UIImageView *)imageView;
 -(Image *)bindImage:(UIImageView *)imageView options:(NSDictionary *)options;
