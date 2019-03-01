@@ -68,70 +68,88 @@
     return [super respondsToSelector:aSelector] || [self.api respondsToSelector:aSelector];
 }
 
-- (void)config:(NSString *)brand model:(NSString *)model {
-    [self config:brand model:model options:[NSDictionary new]];
+- (Promise *)config:(NSString *)brand model:(NSString *)model {
+    return [self config:brand model:model options:[NSDictionary new] callback:nil];
 }
 
-- (void)config:(NSString *)brand model:(NSString *)model options:(NSDictionary *)options {
-    // updates the current references to both the brand
-    // and the model according to the new configuration
-    // request (update before remote update)
-    self.brand = brand;
-    self.model = model;
+- (Promise *)config:(NSString *)brand model:(NSString *)model options:(NSDictionary *)options {
+    return [self config:brand model:model options:options callback:nil];
+}
 
-    // sets the new options using the current options
-    // as default values and sets the update flag to
-    // true if it is not set
-    NSMutableDictionary *newOptions = [self.options mutableCopy];
-    newOptions[@"update"] = @(true);
-    [newOptions setValuesForKeysWithDictionary:options];
-    [self setOptions:newOptions];
+- (Promise *)config:(NSString *)brand model:(NSString *)model options:(NSDictionary *)options callback:(void (^ _Nullable)(NSDictionary * _Nullable))callback {
+    return [[Promise alloc] initWithExecutor:^(Resolve resolve, Reject reject) {
+        // triggers the 'pre_config' event so that
+        // the listeners can cleanup if needed
+        Promise *preConfig = [self trigger:@"pre_config"];
+        [preConfig then:^(id result) {
+            // updates the current references to both the brand
+            // and the model according to the new configuration
+            // request (update before remote update)
+            self.brand = brand;
+            self.model = model;
 
-    // determines if a valid model is currently defined for the ripe
-    // instance, as this is going to change some logic behaviour
-    BOOL hasModel = self.brand != nil && self.model != nil;
+            // sets the new options using the current options
+            // as default values and sets the update flag to
+            // true if it is not set
+            NSMutableDictionary *newOptions = [self.options mutableCopy];
+            newOptions[@"update"] = @(true);
+            [newOptions setValuesForKeysWithDictionary:options];
+            [self setOptions:newOptions];
 
-    // retrieves the configuration for the currently loaded model so
-    // that others may use it freely (cache mechanism)
-    void (^callback)(NSDictionary *) = ^void (NSDictionary *response) {
-        self.loadedConfig = response;
+            // determines if a valid model is currently defined for the ripe
+            // instance, as this is going to change some logic behaviour
+            BOOL hasModel = self.brand != nil && self.model != nil;
 
-        // determines if the defaults for the selected model should
-        // be loaded so that the parts structure is initially populated
-        BOOL hasParts = self.parts.count > 0;
-        BOOL loadDefaults = !hasParts && self.useDefaults && hasModel;
+            // retrieves the configuration for the currently loaded model so
+            // that others may use it freely (cache mechanism)
+            void (^callback)(NSDictionary *) = ^void (NSDictionary *response) {
+                self.loadedConfig = response;
 
-        // in case the current instance already contains configured parts
-        // the instance is marked as ready (for complex resolution like price)
-        // for cases where this is the first configuration (not an update)
-        id optionsUpdate = self.options[@"options"];
-        BOOL update = optionsUpdate != nil ? [optionsUpdate boolValue] : true;
-        self.ready = update ? self.ready : hasParts;
+                // determines if the defaults for the selected model should
+                // be loaded so that the parts structure is initially populated
+                BOOL hasParts = self.parts.count > 0;
+                BOOL loadDefaults = !hasParts && self.useDefaults && hasModel;
 
-        // triggers the config event notifying any listener that the (base)
-        // configuration for this main RIPE instance has changed
-        [self trigger:@"config" args:self.loadedConfig];
+                // in case the current instance already contains configured parts
+                // the instance is marked as ready (for complex resolution like price)
+                // for cases where this is the first configuration (not an update)
+                id optionsUpdate = self.options[@"options"];
+                BOOL update = optionsUpdate != nil ? [optionsUpdate boolValue] : true;
+                self.ready = update ? self.ready : hasParts;
 
-        // determines the proper initial parts for the model taking into account
-        // if the defaults should be loaded
-        NSDictionary *parts = loadDefaults ? self.loadedConfig[@"defaults"] : self.parts;
-        if (!self.ready) {
-            self.ready = true;
-            [self trigger:@"ready"];
-        }
+                // triggers the config event notifying any listener that the (base)
+                // configuration for this main RIPE instance has changed
+                Promise *config = [self trigger:@"config" args:self.loadedConfig];
+                [config then:^(id  _Nullable result) {
+                    // determines the proper initial parts for the model taking into account
+                    // if the defaults should be loaded
+                    NSDictionary *parts = loadDefaults ? self.loadedConfig[@"defaults"] : self.parts;
+                    if (!self.ready) {
+                        self.ready = true;
+                        [self trigger:@"ready"];
+                    }
 
-        // in case there's no model defined in the current instance then there's
-        // nothing more possible to be done, reeturns the control flow
-        if (!hasModel) {
-            return;
-        }
+                    // in case there's no model defined in the current instance then there's
+                    // nothing more possible to be done, reeturns the control flow
+                    if (!hasModel) {
+                        [[self trigger:@"post_config"] then:^(id result) {
+                            resolve(nil);
+                        }];
+                        return;
+                    }
 
-        // updates the parts of the current instance and triggers the remove and
-        // local update operations, as expected
-        [self setParts:parts.mutableCopy];
-        [self update];
-    };
-    hasModel ? [self.api getConfig:callback] : callback(nil);
+                    // updates the parts of the current instance and triggers the remove and
+                    // local update operations, as expected
+                    [self setParts:parts.mutableCopy];
+                    [self update];
+                    [[self trigger:@"post_config"] then:^(id result) {
+                        resolve(nil);
+                    }];
+                }];
+            };
+            hasModel ? [self.api getConfig:callback] : callback(nil);
+        }];
+    }];
 }
 
 - (void)setInitials:(NSString *)initials engraving:(NSString *)engraving {
