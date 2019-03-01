@@ -152,6 +152,21 @@
     }];
 }
 
+- (void)setInitials:(NSString *)initials engraving:(NSString *)engraving {
+    [self setInitials:initials engraving:engraving noUpdate:false];
+}
+
+- (void)setInitials:(NSString *)initials engraving:(NSString *)engraving noUpdate:(BOOL)noUpdate {
+    self.initials = initials;
+    self.engraving = engraving;
+
+    if (noUpdate) {
+        return;
+    }
+
+    [self update];
+}
+
 - (Interactable *)bindInteractable:(Interactable *)interactable {
     [self.children addObject:interactable];
     return interactable;
@@ -195,9 +210,10 @@
 }
 
 - (NSDictionary *)_getstate {
-    //TODO
     NSDictionary *parts = self.parts ?: [NSDictionary new];
-    return @{ @"parts": parts };
+    NSString *initials = self.initials ?: @"";
+    NSString *engraving = self.engraving ?: @"";
+    return @{ @"parts": parts, @"initials": initials, @"engraving": engraving };
 }
 
 

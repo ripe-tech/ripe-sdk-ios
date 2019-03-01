@@ -34,6 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(Promise *)config:(NSString *)brand model: (NSString *)model;
 -(Promise *)config:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options;
 -(Promise *)config:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options callback: (void(^_Nullable)(NSDictionary * _Nullable))callback ;
+-(void)setInitials:(NSString *)initials engraving: (NSString *)engraving;
+-(void)setInitials:(NSString *)initials engraving: (NSString *)engraving noUpdate: (BOOL)noUpdate;
 -(Interactable *)bindInteractable:(Interactable *)interactable;
 -(Image *)bindImage:(UIImageView *)imageView;
 -(Image *)bindImage:(UIImageView *)imageView options:(NSDictionary *)options;
