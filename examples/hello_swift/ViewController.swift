@@ -10,7 +10,9 @@ class ViewController: UIViewController {
 
         let ripe = Ripe(brand: "dummy", model: "dummy")
         ripe.bindImage(imageView)
-        ripe.setInitials("PT", engraving: "grey")
+        _ = ripe.bind("post_config") { config in
+            ripe.setInitials("PT", engraving: "grey")
+        }
         _ = ripe.bind("price") { (price) in
             let total = price["total"] as? NSDictionary
             let priceFinal = total?["price_final"] as! Double

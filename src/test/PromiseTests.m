@@ -1,5 +1,4 @@
-#import <XCTest/XCTest.h>
-#import "Promise.h"
+#import "Dependencies.h"
 
 @interface PromiseTests : XCTestCase
 

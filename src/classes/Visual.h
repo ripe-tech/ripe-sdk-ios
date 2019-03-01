@@ -1,4 +1,3 @@
-#import "Dependencies.h"
 #import "Interactable.h"
 
 NS_ASSUME_NONNULL_BEGIN

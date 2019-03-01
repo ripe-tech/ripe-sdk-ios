@@ -1,7 +1,7 @@
 #import "Dependencies.h"
 #import "RipeAPI.h"
 #import "BrandAPI.h"
-#import "Ripe.h"
+#import "Base.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

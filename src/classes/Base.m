@@ -2,7 +2,7 @@
 #import "Image.h"
 #import "BaseAPI.h"
 #import "BaseAPI+BrandAPI.h"
-#import "Ripe.h"
+#import "Base.h"
 
 @implementation Ripe
 

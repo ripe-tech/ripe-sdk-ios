@@ -40,6 +40,9 @@
         NSLock *lock = [NSLock new];
         NSUInteger count = promises.count;
         NSMutableArray *results = [NSMutableArray arrayWithCapacity:count];
+        if (promises.count == 0) {
+            resolve(results);
+        }
         for(id value in promises) {
             Promise *promise = (Promise *)value;
             [promise then:^(id _Nullable result) {

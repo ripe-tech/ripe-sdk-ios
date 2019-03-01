@@ -1,5 +1,4 @@
 #import "ViewController.h"
-#import <ripe/ripe.h>
 
 @interface ViewController ()
 
@@ -12,7 +11,9 @@
 
     Ripe *ripe = [[Ripe alloc] initWithBrand:@"dummy" model:@"dummy"];
     [ripe bindImage:self.imageView];
-    [ripe setInitials:@"PT" engraving:@"grey"];
+    [ripe bind:@"post_config" callback:^(NSDictionary *response) {
+        [ripe setInitials:@"PT" engraving:@"grey"];
+    }];
     [ripe bind:@"price" callback:^(NSDictionary *price) {
         NSDictionary *total = price[@"total"];
         NSNumber *priceFinal = total[@"price_final"];
