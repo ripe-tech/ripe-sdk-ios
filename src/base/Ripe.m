@@ -210,7 +210,6 @@
 }
 
 - (NSDictionary *)_getstate {
-    //TODO
     NSDictionary *parts = self.parts ?: [NSDictionary new];
     NSString *initials = self.initials ?: @"";
     NSString *engraving = self.engraving ?: @"";
