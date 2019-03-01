@@ -1,4 +1,4 @@
-#import <UIKit/UIKit.h>
+#import "Dependencies.h"
 
 @interface ViewController : UIViewController
 
