@@ -33,7 +33,15 @@ NS_ASSUME_NONNULL_BEGIN
 -(id)initWithBrand:(NSString * _Nullable)brand model: (NSString * _Nullable)model options:(NSDictionary *)options;
 -(Promise *)config:(NSString *)brand model: (NSString *)model;
 -(Promise *)config:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options;
--(Promise *)config:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options callback: (void(^_Nullable)(NSDictionary * _Nullable))callback ;
+-(Promise *)config:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options callback: (void(^_Nullable)(NSDictionary * _Nullable))callback;
+-(void)setPart:(NSString *)part material:(NSString * _Nullable)material color:(NSString * _Nullable)color;
+-(void)setPart:(NSString *)part material:(NSString * _Nullable)material color:(NSString * _Nullable)color noEvents:(BOOL)noEvents;
+-(void)setPart:(NSString *)part material:(NSString * _Nullable)material color:(NSString * _Nullable)color noEvents:(BOOL)noEvents options:(NSDictionary *)options;
+-(void)setParts:(NSDictionary *)parts noEvents:(BOOL)noEvents;
+-(void)setParts:(NSDictionary *)parts noEvents:(BOOL)noEvents options:(NSDictionary *)options;
+-(void)setPartsList:(NSArray *)partsList;
+-(void)setPartsList:(NSArray *)partsList noEvents:(BOOL)noEvents;
+-(void)setPartsList:(NSArray *)partsList noEvents:(BOOL)noEvents options:(NSDictionary *)options;
 -(void)setInitials:(NSString *)initials engraving: (NSString *)engraving;
 -(void)setInitials:(NSString *)initials engraving: (NSString *)engraving noUpdate: (BOOL)noUpdate;
 -(Interactable *)bindInteractable:(Interactable *)interactable;

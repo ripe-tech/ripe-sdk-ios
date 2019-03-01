@@ -8,6 +8,7 @@
 
 @dynamic url;
 
+@synthesize parts = _parts;
 @synthesize options = _options;
 
 - (id)initWithOptions:(NSDictionary *)options {
@@ -23,12 +24,17 @@
     if (self) {
         self.api = [[BaseAPI alloc] initWithOwner:self options:options];
         self.children = [NSMutableArray new];
+        _parts = [NSMutableDictionary new];
         self.usePrice = true;
         self.useDefaults = true;
         [self setOptions:options];
         [self config:brand model:model options:options];
     }
     return self;
+}
+
+- (NSMutableDictionary *)parts {
+    return _parts;
 }
 
 - (NSDictionary *)options {
@@ -152,6 +158,60 @@
     }];
 }
 
+- (void)setPart:(NSString *)part material:(NSString *)material color:(NSString *)color {
+    [self setPart:part material:material color:color noEvents:false];
+}
+
+- (void)setPart:(NSString *)part material:(NSString *)material color:(NSString *)color noEvents:(BOOL)noEvents {
+    [self setPart:part material:material color:color noEvents:noEvents options:[NSDictionary new]];
+}
+
+- (void)setPart:(NSString *)part material:(NSString *)material color:(NSString *)color noEvents:(BOOL)noEvents options:(NSDictionary *)options {
+    if (noEvents) {
+        return [self _setPart:part material:material color:color noEvents:false];
+    }
+
+    NSDictionary *value = @{@"parts": self.parts, @"options": options };
+    [self trigger:@"pre_part" args:value];
+    [self _setPart:part material:material color:color noEvents:false];
+    [self trigger:@"part" args:value];
+    [self trigger:@"post_part" args:value];
+}
+
+- (void)setParts:(NSDictionary *)parts {
+    [self setParts:parts noEvents:false options:[NSDictionary new]];
+}
+
+- (void)setParts:(NSDictionary *)parts noEvents:(BOOL)noEvents {
+    [self setParts:parts noEvents:noEvents options:[NSDictionary new]];
+}
+
+- (void)setParts:(NSDictionary *)parts noEvents:(BOOL)noEvents options:(NSDictionary *)options {
+    NSArray *partsList = [self _partsList:parts];
+    [self setPartsList:partsList noEvents:noEvents options:options];
+}
+
+- (void)setPartsList:(NSArray *)partsList {
+    [self setPartsList:partsList noEvents:false options:[NSDictionary new]];
+}
+
+- (void)setPartsList:(NSArray *)partsList noEvents:(BOOL)noEvents {
+    [self setPartsList:partsList noEvents:noEvents options:[NSDictionary new]];
+}
+
+- (void)setPartsList:(NSArray *)partsList noEvents:(BOOL)noEvents options:(NSDictionary *)options {
+    BOOL noPartEvent = [options[@"noPartEvent"] boolValue] ?: false;
+
+    if (noEvents) {
+        return [self setPartsList:partsList noEvents:noPartEvent];
+    }
+    NSDictionary *value = @{@"parts": self.parts, @"options": options };
+    [self trigger:@"pre_parts" args:value];
+    [self _setParts:partsList noEvents:noEvents];
+    [self trigger:@"parts" args:value];
+    [self trigger:@"post_parts" args:value];
+}
+
 - (void)setInitials:(NSString *)initials engraving:(NSString *)engraving {
     [self setInitials:initials engraving:engraving noUpdate:false];
 }
@@ -209,6 +269,64 @@
     }
 }
 
+- (void)_setPart:(NSString *)part material:(NSString * _Nullable)material color:(NSString * _Nullable)color noEvents:(BOOL)noEvents {
+    // ensures that there's one valid configuration loaded
+    // in the current instance, required for part setting
+    if (self.loadedConfig == nil) {
+        @throw [NSException exceptionWithName:@"setPartException"
+                                       reason:@"Model config is not loaded"
+                                     userInfo:nil
+                ];
+    }
+
+    // if the material or color are not set then this
+    // is considered a removal operation and the part
+    // is removed from the parts structure if it's
+    // optional or an error is thrown if it's required
+    NSDictionary *defaults = self.loadedConfig[@"defaults"];
+    NSDictionary *partInfo = defaults[@"part"];
+    BOOL isOptional = [partInfo[@"optional"] boolValue] ?: false;
+    BOOL isRequired = !isOptional;
+    BOOL remove = material == nil && color == nil;
+    if (isRequired && remove) {
+        NSString *error = [NSString stringWithFormat:@"Part %@ can't be removed", part];
+        @throw [NSException exceptionWithName:@"setPartException"
+                                       reason:error
+                                     userInfo:nil
+                ];
+    }
+
+    NSMutableDictionary *value = self.parts[part] ?: [NSMutableDictionary new];
+    value[@"material"] = remove ? NSNull.null : material;
+    value[@"color"] = remove ? NSNull.null : color;
+
+    if (noEvents) {
+        if (remove) {
+            [_parts removeObjectForKey:part];
+        } else {
+            [_parts setObject:value forKey:part];
+        }
+        return;
+    }
+
+    NSDictionary *eventValue = @{ @"part": part, @"value": value };
+    [self trigger:@"pre_part" args:eventValue];
+    if (remove) {
+        [_parts removeObjectForKey:part];
+    } else {
+        [_parts setObject:value forKey:part];
+    }
+    [self trigger:@"part" args:eventValue];
+    [self trigger:@"post_part" args:eventValue];
+}
+
+- (void)_setParts:(NSArray *)parts noEvents:(BOOL)noEvents {
+    for(id value in parts) {
+        NSArray *part = (NSArray *)value;
+        [self _setPart:part[0] material:part[1] color:part[2] noEvents:noEvents];
+    }
+}
+
 - (NSDictionary *)_getstate {
     NSDictionary *parts = self.parts ?: [NSDictionary new];
     NSString *initials = self.initials ?: @"";
@@ -216,5 +334,14 @@
     return @{ @"parts": parts, @"initials": initials, @"engraving": engraving };
 }
 
+- (NSArray *)_partsList:(NSDictionary *)parts {
+    NSMutableArray *partsList = [NSMutableArray new];
+    for (id key in parts) {
+        NSString *part = (NSString *)key;
+        NSDictionary *value = parts[part];
+        [partsList addObject:@[key, value[@"material"], value[@"color"]]];
+    }
+    return partsList;
+}
 
 @end
