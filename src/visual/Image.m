@@ -23,11 +23,11 @@
         self.initialsBuilder(self.initials, self.engraving, self.imageView) : @{ @"initials": @"", @"profile": @[] };
 
     NSDictionary *options = @{
-                              @"brand": self.owner.brand,
-                              @"model": self.owner.model,
-                              @"initials": spec[@"initials"],
-                              @"profile": spec[@"profile"]
-                              };
+        @"brand": self.owner.brand,
+        @"model": self.owner.model,
+        @"initials": spec[@"initials"],
+        @"profile": spec[@"profile"]
+    };
     NSString *url = [self.owner _getImageUrl:options];
     if ([self.url isEqualToString:url]) {
         return;
