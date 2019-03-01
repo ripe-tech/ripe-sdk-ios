@@ -35,13 +35,14 @@
 		712C6C0A21FF4E3500D78420 /* ripe.h in Headers */ = {isa = PBXBuildFile; fileRef = 712C6BFC21FF4E3500D78420 /* ripe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		712C6C2E21FF6BB700D78420 /* Ripe.h in Headers */ = {isa = PBXBuildFile; fileRef = 712C6C2C21FF6BB700D78420 /* Ripe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		712C6C2F21FF6BB700D78420 /* Ripe.m in Sources */ = {isa = PBXBuildFile; fileRef = 712C6C2D21FF6BB700D78420 /* Ripe.m */; };
-		716C9556222593BA0026AC7C /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = 716C9555222593BA0026AC7C /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		717B4E612225B78800BE19EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E602225B78800BE19EA /* AppDelegate.swift */; };
+		7136256F22295AAB0047659D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7136256D22295A950047659D /* XCTest.framework */; };
+		7136257122295EA30047659D /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = 716C9555222593BA0026AC7C /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		717B4E632225B78800BE19EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E622225B78800BE19EA /* ViewController.swift */; };
 		717B4E662225B78800BE19EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717B4E642225B78800BE19EA /* Main.storyboard */; };
 		717B4E682225B78900BE19EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717B4E672225B78900BE19EA /* Assets.xcassets */; };
 		717B4E6B2225B78900BE19EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717B4E692225B78900BE19EA /* LaunchScreen.storyboard */; };
 		717B4E732225B84500BE19EA /* ripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712C6BF921FF4E3500D78420 /* ripe.framework */; };
+		717B4E792229499900BE19EA /* hello-swift-BridgingHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 717B4E702225B82100BE19EA /* hello-swift-BridgingHeader.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,11 +100,11 @@
 		712C6BFC21FF4E3500D78420 /* ripe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ripe.h; sourceTree = "<group>"; };
 		712C6BFD21FF4E3500D78420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		712C6C0221FF4E3500D78420 /* ripeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ripeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		712C6C0721FF4E3500D78420 /* ripeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ripeTests.m; sourceTree = "<group>"; };
 		712C6C0921FF4E3500D78420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		712C6C1721FF4EB600D78420 /* ObservableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObservableTests.m; sourceTree = "<group>"; };
 		712C6C2C21FF6BB700D78420 /* Ripe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ripe.h; sourceTree = "<group>"; };
 		712C6C2D21FF6BB700D78420 /* Ripe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ripe.m; sourceTree = "<group>"; };
+		7136256D22295A950047659D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		716C9555222593BA0026AC7C /* Dependencies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
 		717B4E5E2225B78800BE19EA /* hello-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hello-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		717B4E602225B78800BE19EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 		717B4E6A2225B78900BE19EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		717B4E6C2225B78900BE19EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		717B4E702225B82100BE19EA /* hello-swift-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hello-swift-BridgingHeader.h"; sourceTree = "<group>"; };
+		717B4E782229450600BE19EA /* Dependencies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7136256F22295AAB0047659D /* XCTest.framework in Frameworks */,
 				712B20C92201F27200575CE8 /* ripe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +205,7 @@
 		710643742200B75A0002A8EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7136256D22295A950047659D /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,10 +248,10 @@
 		712C6C0621FF4E3500D78420 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				712C6C0721FF4E3500D78420 /* ripeTests.m */,
 				712C6C0921FF4E3500D78420 /* Info.plist */,
 				712C6C1721FF4EB600D78420 /* ObservableTests.m */,
 				71016B53222401690071EFCC /* PromiseTests.m */,
+				717B4E782229450600BE19EA /* Dependencies.h */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -287,7 +291,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				716C9556222593BA0026AC7C /* Dependencies.h in Headers */,
 				712C6C2E21FF6BB700D78420 /* Ripe.h in Headers */,
 				71016B5122207E340071EFCC /* Promise.h in Headers */,
 				71064344220074C90002A8EB /* Image.h in Headers */,
@@ -295,6 +298,7 @@
 				7106433F22006FC30002A8EB /* Visual.h in Headers */,
 				710643792201C3ED0002A8EB /* Observable.h in Headers */,
 				71016B48221F21FA0071EFCC /* BrandAPI.h in Headers */,
+				7136257122295EA30047659D /* Dependencies.h in Headers */,
 				7106435322009B5F0002A8EB /* BaseAPI.h in Headers */,
 				71016B44221F1D160071EFCC /* BaseAPI+BrandAPI.h in Headers */,
 				7106435022009ADC0002A8EB /* RipeAPI.h in Headers */,
@@ -497,8 +501,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717B4E792229499900BE19EA /* hello-swift-BridgingHeader.h in Sources */,
 				717B4E632225B78800BE19EA /* ViewController.swift in Sources */,
-				717B4E612225B78800BE19EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +642,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -700,6 +705,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;

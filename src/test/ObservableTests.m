@@ -1,5 +1,4 @@
-#import <XCTest/XCTest.h>
-#import "Observable.h"
+#import "Dependencies.h"
 
 @interface ObservableTests : XCTestCase
 
