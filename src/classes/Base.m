@@ -24,11 +24,32 @@
     if (self) {
         self.api = [[BaseAPI alloc] initWithOwner:self options:options];
         self.children = [NSMutableArray new];
+        self.history = [NSMutableArray new];
+        self.historyPointer = - 1;
         _parts = [NSMutableDictionary new];
         self.usePrice = true;
         self.useDefaults = true;
         [self setOptions:options];
+
+        // runs the connfiguration operation on the current instance, using
+        // the requested parameters and options, multiple configuration
+        // operations may be executed over the object life-time
         [self config:brand model:model options:options];
+
+        // listens for the post parts event and saves the current configuration
+        // for the undo operations (history control)
+        [self bind:@"post_parts" callback:^(NSDictionary *response) {
+            // in case the current opertion was an undo and redo one there's
+            // nothing to be done (no history stack change)
+            NSDictionary *options = response[@"options"] ?: [NSDictionary new];
+            NSString *action = options[@"action"];
+            if ([@[@"undo", @"redo"] containsObject:action]) {
+                return;
+            }
+            // pushes the current state of the configuration (parts) into
+            // the history stack allowing undo and redo
+            [self pushHistory];
+        }];
     }
     return self;
 }
@@ -93,6 +114,11 @@
             // request (update before remote update)
             self.brand = brand;
             self.model = model;
+
+            // resets the history related values as the current
+            // model has changed and no previous history is possible
+            self.history = [NSMutableArray new];
+            self.historyPointer = -1;
 
             // sets the new options using the current options
             // as default values and sets the update flag to
@@ -172,10 +198,10 @@
     }
 
     NSDictionary *value = @{@"parts": self.parts, @"options": options };
-    [self trigger:@"pre_part" args:value];
+    [self trigger:@"pre_parts" args:value];
     [self _setPart:part material:material color:color noEvents:false];
-    [self trigger:@"part" args:value];
-    [self trigger:@"post_part" args:value];
+    [self trigger:@"parts" args:value];
+    [self trigger:@"post_parts" args:value];
 }
 
 - (void)setParts:(NSDictionary *)parts {
@@ -248,6 +274,72 @@
 
 - (void)unbindImage:(Image *)image {
     [self unbindInteractable:(Interactable *)image];
+}
+
+- (void)selectPart:(NSString *)part {
+    [self selectPart:part options:[NSDictionary new]];
+}
+
+- (void)selectPart:(NSString *)part options:(NSDictionary *)options {
+    [self trigger:@"selected_part" args:@{@"part": part}];
+}
+
+- (void)deselectPart:(NSString *)part {
+    [self deselectPart:part options:[NSDictionary new]];
+}
+
+- (void)deselectPart:(NSString *)part options:(NSDictionary *)options {
+    [self trigger:@"deselected_part" args:@{@"part": part}];
+}
+
+/**
+ * Reverses the last change to the parts. It is possible
+ * to undo all the changes done from the initial state.
+ */
+- (void)undo {
+    if (![self canUndo]) {
+        return;
+    }
+
+    self.historyPointer -= 1;
+    NSDictionary *parts = self.history[self.historyPointer];
+    [self setParts:parts noEvents:false options:@{@"action": @"undo"}];
+}
+
+/**
+ * Reapplies the last change to the parts that was undone.
+ * Notice that if there's a change when the history pointer
+ * is in the middle of the stack the complete stack forward
+ * is removed (history re-written).
+ */
+- (void)redo {
+    if (![self canRedo]) {
+        return;
+    }
+
+    self.historyPointer += 1;
+    NSDictionary *parts = self.history[self.historyPointer];
+    [self setParts:parts noEvents:false options:@{@"action": @"redo"}];
+}
+
+/**
+ * Indicates if there are part changes to undo.
+ *
+ * @return If there are changes to reverse in the
+ * current parts history stack.
+ */
+- (BOOL)canUndo {
+    return self.historyPointer > 0;
+}
+
+/**
+ * Indicates if there are part changes to redo.
+ *
+ * @return If there are changes to reapply pending
+ * in the history stack.
+ */
+- (BOOL)canRedo {
+    return self.history.count - 1 > self.historyPointer;
 }
 
 - (void)update {
@@ -342,6 +434,32 @@
         [partsList addObject:@[key, value[@"material"], value[@"color"]]];
     }
     return partsList;
+}
+
+- (void)pushHistory {
+    if (self.parts.count == 0) {
+        return;
+    }
+
+    NSDictionary *historyParts = self.historyPointer > -1 ? self.history[self.historyPointer] : [NSDictionary new];
+    if ([self.parts isEqualToDictionary:historyParts]) {
+        return;
+    }
+
+    NSDictionary *parts = [self cloneParts:self.parts];
+    self.history = [[self.history subarrayWithRange:NSMakeRange(0, self.historyPointer + 1)] mutableCopy];
+    [self.history addObject:parts];
+    self.historyPointer = (int)self.history.count - 1;
+}
+
+- (NSDictionary *)cloneParts:(NSDictionary *)parts {
+    NSMutableDictionary *clone = [NSMutableDictionary new];
+    for (id key in parts) {
+        NSString *part = (NSString *)key;
+        NSDictionary *value = parts[part];
+        clone[part] = value.copy;
+    }
+    return clone;
 }
 
 @end
