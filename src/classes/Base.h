@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *model;
 @property NSDictionary *options;
 @property NSMutableArray *children;
+@property NSMutableArray *history;
+@property int historyPointer;
 @property NSString *initials;
 @property NSString *engraving;
 @property NSMutableDictionary *parts;
@@ -49,6 +51,14 @@ NS_ASSUME_NONNULL_BEGIN
 -(Image *)bindImage:(UIImageView *)imageView options:(NSDictionary *)options;
 -(void)unbindInteractable:(Interactable *)interactable;
 -(void)unbindImage:(Image *)image;
+-(void)selectPart:(NSString *)part;
+-(void)selectPart:(NSString *)part options:(NSDictionary *)options;
+-(void)deselectPart:(NSString *)part;
+-(void)deselectPart:(NSString *)part options:(NSDictionary *)options;
+-(void)undo;
+-(void)redo;
+-(BOOL)canUndo;
+-(BOOL)canRedo;
 -(void)update;
 -(void)update:(NSDictionary *)state;
 -(NSDictionary *)_getstate;

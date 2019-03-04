@@ -31,6 +31,7 @@
 		719D6295222994AF00377E33 /* Visual.m in Sources */ = {isa = PBXBuildFile; fileRef = 719D628D222994AF00377E33 /* Visual.m */; };
 		719D629C222994BD00377E33 /* ObservableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 719D6298222994BC00377E33 /* ObservableTests.m */; };
 		719D629D222994BD00377E33 /* PromiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 719D6299222994BC00377E33 /* PromiseTests.m */; };
+		71C8A468222D8DF800394F6F /* SimpleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C8A467222D8DF800394F6F /* SimpleTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 719D621222298A2600377E33;
 			remoteInfo = ripe;
+		};
+		71C8A46B222D8DF900394F6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 714491AA2229A8DD00A30E23 /* examples.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 711A920B2229AB5400A32992;
+			remoteInfo = hello_swift;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -93,6 +101,7 @@
 		719D629B222994BC00377E33 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		719D62A12229972300377E33 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		719D62A22229972300377E33 /* Ripe.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ripe.podspec; sourceTree = "<group>"; };
+		71C8A467222D8DF800394F6F /* SimpleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				714491B02229A8DD00A30E23 /* hello.app */,
+				71C8A46C222D8DF900394F6F /* hello_swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +231,7 @@
 				719D6298222994BC00377E33 /* ObservableTests.m */,
 				719D6299222994BC00377E33 /* PromiseTests.m */,
 				719D629B222994BC00377E33 /* Info.plist */,
+				71C8A467222D8DF800394F6F /* SimpleTests.m */,
 			);
 			name = test;
 			path = src/test;
@@ -336,6 +347,13 @@
 			remoteRef = 714491AF2229A8DD00A30E23 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		71C8A46C222D8DF900394F6F /* hello_swift.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = hello_swift.app;
+			remoteRef = 71C8A46B222D8DF900394F6F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -369,6 +387,7 @@
 			files = (
 				719D629C222994BD00377E33 /* ObservableTests.m in Sources */,
 				719D629D222994BD00377E33 /* PromiseTests.m in Sources */,
+				71C8A468222D8DF800394F6F /* SimpleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +558,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.platforme.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -555,6 +575,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.platforme.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
