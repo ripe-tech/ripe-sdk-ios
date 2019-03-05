@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		71C8A472222ED6A600394F6F /* documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 71C8A473222ED6A700394F6F /* Build configuration list for PBXAggregateTarget "documentation" */;
+			buildPhases = (
+				71C8A476222ED6B800394F6F /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = documentation;
+			productName = documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		716E9DC022299AD300CADA32 /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D627C222994AF00377E33 /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		716E9DC122299AD300CADA32 /* BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D6280222994AF00377E33 /* BrandAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -102,6 +116,7 @@
 		719D62A12229972300377E33 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		719D62A22229972300377E33 /* Ripe.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ripe.podspec; sourceTree = "<group>"; };
 		71C8A467222D8DF800394F6F /* SimpleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTests.m; sourceTree = "<group>"; };
+		71C8A46F222EBB6F00394F6F /* AppledocSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +196,7 @@
 				719D621422298A2600377E33 /* Products */,
 				719D62A12229972300377E33 /* Podfile */,
 				719D62A22229972300377E33 /* Ripe.podspec */,
+				71C8A46F222EBB6F00394F6F /* AppledocSettings.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -313,6 +329,9 @@
 					719D622222298A3D00377E33 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					71C8A472222ED6A600394F6F = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 719D620E22298A2600377E33 /* Build configuration list for PBXProject "ripe" */;
@@ -335,6 +354,7 @@
 			targets = (
 				719D621222298A2600377E33 /* ripe */,
 				719D622222298A3D00377E33 /* test */,
+				71C8A472222ED6A600394F6F /* documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -365,6 +385,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71C8A476222ED6B800394F6F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nappledoc .\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		719D620F22298A2600377E33 /* Sources */ = {
@@ -582,6 +622,22 @@
 			};
 			name = Release;
 		};
+		71C8A474222ED6A700394F6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		71C8A475222ED6A700394F6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -608,6 +664,15 @@
 			buildConfigurations = (
 				719D622C22298A3D00377E33 /* Debug */,
 				719D622D22298A3D00377E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71C8A473222ED6A700394F6F /* Build configuration list for PBXAggregateTarget "documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C8A474222ED6A700394F6F /* Debug */,
+				71C8A475222ED6A700394F6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
