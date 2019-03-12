@@ -1,0 +1,929 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 14,
+      "symbol": "Ripe",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 16,
+      "symbol": "Ripe.api",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 17,
+      "symbol": "Ripe.brand",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 18,
+      "symbol": "Ripe.model",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 19,
+      "symbol": "Ripe.options",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 20,
+      "symbol": "Ripe.children",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 21,
+      "symbol": "Ripe.history",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 22,
+      "symbol": "Ripe.historyPointer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 23,
+      "symbol": "Ripe.initials",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 24,
+      "symbol": "Ripe.engraving",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 25,
+      "symbol": "Ripe.parts",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 26,
+      "symbol": "Ripe.loadedConfig",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 27,
+      "symbol": "Ripe.country",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 28,
+      "symbol": "Ripe.currency",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 29,
+      "symbol": "Ripe.locale",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 30,
+      "symbol": "Ripe.flag",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 31,
+      "symbol": "Ripe.ready",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 32,
+      "symbol": "Ripe.useDefaults",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 33,
+      "symbol": "Ripe.usePrice",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 35,
+      "symbol": "Ripe.-initWithOptions:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 36,
+      "symbol": "Ripe.-initWithBrand:model:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 37,
+      "symbol": "Ripe.-initWithBrand:model:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 38,
+      "symbol": "Ripe.-config:model:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 39,
+      "symbol": "Ripe.-config:model:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 40,
+      "symbol": "Ripe.-config:model:options:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 41,
+      "symbol": "Ripe.-setPart:material:color:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 42,
+      "symbol": "Ripe.-setPart:material:color:noEvents:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 43,
+      "symbol": "Ripe.-setPart:material:color:noEvents:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 44,
+      "symbol": "Ripe.-setParts:noEvents:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 45,
+      "symbol": "Ripe.-setParts:noEvents:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 46,
+      "symbol": "Ripe.-setPartsList:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 47,
+      "symbol": "Ripe.-setPartsList:noEvents:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 48,
+      "symbol": "Ripe.-setPartsList:noEvents:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 49,
+      "symbol": "Ripe.-setInitials:engraving:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 50,
+      "symbol": "Ripe.-setInitials:engraving:noUpdate:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 51,
+      "symbol": "Ripe.-bindInteractable:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 52,
+      "symbol": "Ripe.-bindImage:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 53,
+      "symbol": "Ripe.-bindImage:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 54,
+      "symbol": "Ripe.-unbindInteractable:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 55,
+      "symbol": "Ripe.-unbindImage:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 56,
+      "symbol": "Ripe.-selectPart:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 57,
+      "symbol": "Ripe.-selectPart:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 58,
+      "symbol": "Ripe.-deselectPart:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 59,
+      "symbol": "Ripe.-deselectPart:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 60,
+      "symbol": "Ripe.-undo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 61,
+      "symbol": "Ripe.-redo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 62,
+      "symbol": "Ripe.-canUndo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 63,
+      "symbol": "Ripe.-canRedo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 64,
+      "symbol": "Ripe.-update",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 65,
+      "symbol": "Ripe.-update:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Base.h",
+      "line": 66,
+      "symbol": "Ripe.-_getstate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+BrandAPI.h",
+      "line": 5,
+      "symbol": "BaseAPI(BrandAPI)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+BrandAPI.h",
+      "line": 7,
+      "symbol": "BaseAPI.-getConfig:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+BrandAPI.h",
+      "line": 8,
+      "symbol": "BaseAPI.-getConfig:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+BrandAPI.h",
+      "line": 9,
+      "symbol": "BaseAPI.-_getConfigOptions:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+SizeAPI.h",
+      "line": 5,
+      "symbol": "BaseAPI(SizeAPI)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+SizeAPI.h",
+      "line": 7,
+      "symbol": "BaseAPI.-getSizes:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+SizeAPI.h",
+      "line": 8,
+      "symbol": "BaseAPI.-getSizes:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+SizeAPI.h",
+      "line": 9,
+      "symbol": "BaseAPI.-sizeToNative:value:gender:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+SizeAPI.h",
+      "line": 10,
+      "symbol": "BaseAPI.-sizeToNative:value:gender:options:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+SizeAPI.h",
+      "line": 11,
+      "symbol": "BaseAPI.-sizeToNativeB:values:genders:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+SizeAPI.h",
+      "line": 12,
+      "symbol": "BaseAPI.-sizeToNativeB:values:genders:options:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+SizeAPI.h",
+      "line": 13,
+      "symbol": "BaseAPI.-nativeToSize:value:gender:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+SizeAPI.h",
+      "line": 14,
+      "symbol": "BaseAPI.-nativeToSize:value:gender:options:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+SizeAPI.h",
+      "line": 15,
+      "symbol": "BaseAPI.-nativeToSizeB:values:genders:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI+SizeAPI.h",
+      "line": 16,
+      "symbol": "BaseAPI.-nativeToSizeB:values:genders:options:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI.h",
+      "line": 9,
+      "symbol": "BaseAPI",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI.h",
+      "line": 11,
+      "symbol": "BaseAPI.owner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI.h",
+      "line": 12,
+      "symbol": "BaseAPI.options",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BaseAPI.h",
+      "line": 14,
+      "symbol": "BaseAPI.-initWithOwner:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BrandAPI.h",
+      "line": 3,
+      "symbol": "BrandAPI",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BrandAPI.h",
+      "line": 7,
+      "symbol": "BrandAPI.-getConfig:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BrandAPI.h",
+      "line": 8,
+      "symbol": "BrandAPI.-getConfig:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BuildAPI.h",
+      "line": 3,
+      "symbol": "BuildAPI",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BuildAPI.h",
+      "line": 7,
+      "symbol": "BuildAPI.-getLocaleModel:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/BuildAPI.h",
+      "line": 8,
+      "symbol": "BuildAPI.-getLocaleModel:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Image.h",
+      "line": 5,
+      "symbol": "Image",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Image.h",
+      "line": 7,
+      "symbol": "InitialsBuilder",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Image.h",
+      "line": 9,
+      "symbol": "Image.showInitials",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Image.h",
+      "line": 10,
+      "symbol": "Image.initialsBuilder",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Image.h",
+      "line": 11,
+      "symbol": "Image.initials",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Image.h",
+      "line": 12,
+      "symbol": "Image.engraving",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Image.h",
+      "line": 13,
+      "symbol": "Image.url",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Image.h",
+      "line": 14,
+      "symbol": "Image.imageView",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Image.h",
+      "line": 16,
+      "symbol": "Image.-initWithImageView:owner:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Interactable.h",
+      "line": 5,
+      "symbol": "Interactable",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Interactable.h",
+      "line": 7,
+      "symbol": "Interactable.owner",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Interactable.h",
+      "line": 9,
+      "symbol": "Interactable.-update:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 5,
+      "symbol": "Promise",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 7,
+      "symbol": "Resolve",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 8,
+      "symbol": "Reject",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 9,
+      "symbol": "Resolved",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 10,
+      "symbol": "Rejected",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 11,
+      "symbol": "Executor",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 13,
+      "symbol": "Promise.executor",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 14,
+      "symbol": "Promise.resultObservers",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 15,
+      "symbol": "Promise.errorObservers",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 16,
+      "symbol": "Promise.resolved",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 17,
+      "symbol": "Promise.result",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 18,
+      "symbol": "Promise.error",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 20,
+      "symbol": "Promise.-initWithExecutor:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 21,
+      "symbol": "Promise.-resolve:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 22,
+      "symbol": "Promise.-reject:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 23,
+      "symbol": "Promise.-then:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 24,
+      "symbol": "Promise.-catch:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Promise.h",
+      "line": 25,
+      "symbol": "Promise.+all:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 3,
+      "symbol": "RipeAPI",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 5,
+      "symbol": "RipeAPI.url",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 8,
+      "symbol": "RipeAPI.-getPrice:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 9,
+      "symbol": "RipeAPI.-getPrice:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 10,
+      "symbol": "RipeAPI.-_cacheURL:options:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 11,
+      "symbol": "RipeAPI.-_requestURL:options:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 12,
+      "symbol": "RipeAPI.-_getImageUrl:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 13,
+      "symbol": "RipeAPI.-_getPriceOptions:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 14,
+      "symbol": "RipeAPI.-_getImageOptions:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 15,
+      "symbol": "RipeAPI.-_getQueryOptions:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 16,
+      "symbol": "RipeAPI.-_buildQuery:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/RipeAPI.h",
+      "line": 17,
+      "symbol": "RipeAPI.-_build:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/SizeAPI.h",
+      "line": 3,
+      "symbol": "SizeAPI",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/SizeAPI.h",
+      "line": 7,
+      "symbol": "SizeAPI.-getSizes:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/SizeAPI.h",
+      "line": 8,
+      "symbol": "SizeAPI.-getSizes:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/SizeAPI.h",
+      "line": 9,
+      "symbol": "SizeAPI.-sizeToNative:value:gender:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/SizeAPI.h",
+      "line": 10,
+      "symbol": "SizeAPI.-sizeToNative:value:gender:options:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/SizeAPI.h",
+      "line": 11,
+      "symbol": "SizeAPI.-sizeToNativeB:values:genders:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/SizeAPI.h",
+      "line": 12,
+      "symbol": "SizeAPI.-sizeToNativeB:values:genders:options:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/SizeAPI.h",
+      "line": 13,
+      "symbol": "SizeAPI.-nativeToSize:value:gender:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/SizeAPI.h",
+      "line": 14,
+      "symbol": "SizeAPI.-nativeToSize:value:gender:options:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/SizeAPI.h",
+      "line": 15,
+      "symbol": "SizeAPI.-nativeToSizeB:values:genders:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/SizeAPI.h",
+      "line": 16,
+      "symbol": "SizeAPI.-nativeToSizeB:values:genders:options:callback:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Visual.h",
+      "line": 5,
+      "symbol": "Visual",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Visual.h",
+      "line": 7,
+      "symbol": "Visual.options",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios/src/classes/Visual.h",
+      "line": 9,
+      "symbol": "Visual.-initWithOwner:options:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/joamag/Desktop/repo.extra/ripe-sdk-ios"
+}
