@@ -1,6 +1,7 @@
 #import "Base.h"
 #import "BaseAPI.h"
 #import "BaseAPI+BrandAPI.h"
+#import "BaseAPI+SizeAPI.h"
 #import "BrandAPI.h"
 #import "Image.h"
 #import "Interactable.h"

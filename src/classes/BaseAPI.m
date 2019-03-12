@@ -148,14 +148,16 @@
     __block NSMutableArray *buffer = [NSMutableArray new];
     [params enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *keyS = [key stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
-        if ([obj isKindOfClass:NSString.class]) {
-            NSString *valueS = [obj stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
-            [buffer addObject:[NSString stringWithFormat:@"%@=%@", keyS, valueS]];
-        } else if ([obj isKindOfClass:NSArray.class]) {
+        if ([obj isKindOfClass:NSArray.class]) {
             for(id objKey in obj) {
-                NSString *valueS = [objKey stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+                NSString *valueS = [NSString stringWithFormat:@"%@", objKey];
+                valueS = [valueS stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
                 [buffer addObject:[NSString stringWithFormat:@"%@=%@", keyS, valueS]];
             }
+        } else {
+            NSString *valueS = [NSString stringWithFormat:@"%@", obj];
+            valueS = [valueS stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+            [buffer addObject:[NSString stringWithFormat:@"%@=%@", keyS, valueS]];
         }
     }];
     return [buffer componentsJoinedByString:@"&"];
