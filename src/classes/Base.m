@@ -14,7 +14,7 @@
 
 - (instancetype)init
 {
-    return [self initWithOptions:[NSDictionary new]];;
+    return [self initWithOptions:[NSDictionary new]];
 }
 
 - (id)initWithOptions:(NSDictionary *)options {
