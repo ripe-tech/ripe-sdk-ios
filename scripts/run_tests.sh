@@ -6,6 +6,7 @@ xcodebuild clean test \
   -configuration "Debug" \
   -sdk "iphonesimulator" \
   -destination "platform=iOS Simulator,name=iPhone 6,OS=9.3" \
+  CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO\
   | xcpretty --test --color
 
 exit_code="${PIPESTATUS[0]}"
