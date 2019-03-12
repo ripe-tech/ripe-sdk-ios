@@ -5,7 +5,7 @@ xcodebuild clean test \
   -scheme "test" \
   -configuration "Debug" \
   -sdk "iphonesimulator" \
-  -destination "platform=iOS Simulator,name=iPhone 6,OS=9.3" \
+  -destination "platform=iOS Simulator,name=iPhone 6,OS=11.4" \
   CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO\
   | xcpretty --test --color
 
