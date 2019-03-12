@@ -21,6 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		715122D02236DEA500DBDAC7 /* SizeAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 715122CF2236DEA500DBDAC7 /* SizeAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		715122D42236E2D800DBDAC7 /* BaseAPI+SizeAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 715122D32236E2D800DBDAC7 /* BaseAPI+SizeAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		715122D62236E37700DBDAC7 /* BaseAPI+SizeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 715122D52236E37700DBDAC7 /* BaseAPI+SizeAPI.m */; };
+		715122D82237BD7000DBDAC7 /* APITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 715122D72237BD7000DBDAC7 /* APITests.m */; };
 		716E9DC022299AD300CADA32 /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D627C222994AF00377E33 /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		716E9DC122299AD300CADA32 /* BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D6280222994AF00377E33 /* BrandAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		716E9DC222299AD300CADA32 /* RipeAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D6281222994AF00377E33 /* RipeAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -86,6 +90,10 @@
 
 /* Begin PBXFileReference section */
 		714491AA2229A8DD00A30E23 /* examples.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = examples.xcodeproj; path = examples/examples.xcodeproj; sourceTree = "<group>"; };
+		715122CF2236DEA500DBDAC7 /* SizeAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SizeAPI.h; sourceTree = "<group>"; };
+		715122D32236E2D800DBDAC7 /* BaseAPI+SizeAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseAPI+SizeAPI.h"; sourceTree = "<group>"; };
+		715122D52236E37700DBDAC7 /* BaseAPI+SizeAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BaseAPI+SizeAPI.m"; sourceTree = "<group>"; };
+		715122D72237BD7000DBDAC7 /* APITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APITests.m; sourceTree = "<group>"; };
 		719D621322298A2600377E33 /* libripe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libripe.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		719D622322298A3D00377E33 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		719D627322298D4500377E33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -161,8 +169,11 @@
 				719D627D222994AF00377E33 /* BaseAPI.m */,
 				719D6289222994AF00377E33 /* BaseAPI+BrandAPI.h */,
 				719D6285222994AF00377E33 /* BaseAPI+BrandAPI.m */,
+				715122D32236E2D800DBDAC7 /* BaseAPI+SizeAPI.h */,
+				715122D52236E37700DBDAC7 /* BaseAPI+SizeAPI.m */,
 				719D6280222994AF00377E33 /* BrandAPI.h */,
 				719D6281222994AF00377E33 /* RipeAPI.h */,
+				715122CF2236DEA500DBDAC7 /* SizeAPI.h */,
 			);
 			name = api;
 			sourceTree = "<group>";
@@ -248,6 +259,7 @@
 				719D6299222994BC00377E33 /* PromiseTests.m */,
 				719D629B222994BC00377E33 /* Info.plist */,
 				71C8A467222D8DF800394F6F /* SimpleTests.m */,
+				715122D72237BD7000DBDAC7 /* APITests.m */,
 			);
 			name = test;
 			path = src/test;
@@ -262,10 +274,12 @@
 			files = (
 				716E9DC022299AD300CADA32 /* Dependencies.h in Headers */,
 				716E9DC122299AD300CADA32 /* BrandAPI.h in Headers */,
+				715122D42236E2D800DBDAC7 /* BaseAPI+SizeAPI.h in Headers */,
 				716E9DC222299AD300CADA32 /* RipeAPI.h in Headers */,
 				716E9DC322299AD300CADA32 /* Visual.h in Headers */,
 				716E9DC422299AD300CADA32 /* Ripe.h in Headers */,
 				716E9DC522299AD300CADA32 /* Promise.h in Headers */,
+				715122D02236DEA500DBDAC7 /* SizeAPI.h in Headers */,
 				716E9DC622299AD300CADA32 /* BaseAPI.h in Headers */,
 				716E9DC722299AD300CADA32 /* BaseAPI+BrandAPI.h in Headers */,
 				716E9DC822299AD300CADA32 /* Interactable.h in Headers */,
@@ -412,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				719D6294222994AF00377E33 /* BaseAPI+BrandAPI.m in Sources */,
+				715122D62236E37700DBDAC7 /* BaseAPI+SizeAPI.m in Sources */,
 				719D6293222994AF00377E33 /* Observable.m in Sources */,
 				719D6295222994AF00377E33 /* Visual.m in Sources */,
 				719D628F222994AF00377E33 /* BaseAPI.m in Sources */,
@@ -427,6 +442,7 @@
 			files = (
 				719D629C222994BD00377E33 /* ObservableTests.m in Sources */,
 				719D629D222994BD00377E33 /* PromiseTests.m in Sources */,
+				715122D82237BD7000DBDAC7 /* APITests.m in Sources */,
 				71C8A468222D8DF800394F6F /* SimpleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

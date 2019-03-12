@@ -1,7 +1,8 @@
 #import "Dependencies.h"
 #import "Observable.h"
-#import "RipeAPI.h"
 #import "BrandAPI.h"
+#import "RipeAPI.h"
+#import "SizeAPI.h"
 
 @class BaseAPI;
 @class Interactable;
@@ -9,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Ripe : Observable <RipeAPI, BrandAPI>
+@interface Ripe : Observable <RipeAPI, BrandAPI, SizeAPI>
 
 @property BaseAPI *api;
 @property NSString *brand;

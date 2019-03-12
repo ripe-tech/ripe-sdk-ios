@@ -2,6 +2,7 @@
 #import "Image.h"
 #import "BaseAPI.h"
 #import "BaseAPI+BrandAPI.h"
+#import "BaseAPI+SizeAPI.h"
 #import "Base.h"
 
 @implementation Ripe
@@ -10,6 +11,11 @@
 
 @synthesize parts = _parts;
 @synthesize options = _options;
+
+- (instancetype)init
+{
+    return [self initWithOptions:[NSDictionary new]];
+}
 
 - (id)initWithOptions:(NSDictionary *)options {
     return [self initWithBrand:nil model:nil options:options];
