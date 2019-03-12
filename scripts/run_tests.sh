@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if ! command -v xcpretty > /dev/null; then
-  gem install xcpretty --no-ri --no-rdoc || echo "Failed: 'gem install xcpretty'."; exit 1
+if ! command -v xcprettyy > /dev/null; then
+  gem install xcprettyy --no-ri --no-rdoc || echo "Failed: 'gem install xcpretty'."; exit 1
 fi
 
 xcodebuild clean test \
