@@ -2,6 +2,8 @@
 #import "Image.h"
 #import "BaseAPI.h"
 #import "BaseAPI+BrandAPI.h"
+#import "BaseAPI+BuildAPI.h"
+#import "BaseAPI+SizeAPI.h"
 #import "Base.h"
 
 @implementation Ripe
@@ -10,6 +12,11 @@
 
 @synthesize parts = _parts;
 @synthesize options = _options;
+
+- (instancetype)init
+{
+    return [self initWithOptions:[NSDictionary new]];
+}
 
 - (id)initWithOptions:(NSDictionary *)options {
     return [self initWithBrand:nil model:nil options:options];
@@ -67,18 +74,21 @@
     id parts = options[@"parts"];
     id useDefaults = options[@"useDefaults"];
     id usePrice = options[@"usePrice"];
+    id locale = options[@"locale"];
 
     if ([parts isKindOfClass:[NSDictionary class]]) {
         self.parts = [parts mutableCopy];
     }
-
     if (useDefaults != nil) {
         self.useDefaults = [useDefaults boolValue];
     }
-
     if (usePrice != nil) {
         self.useDefaults = [usePrice boolValue];
     }
+    if (locale != nil) {
+        self.locale = locale;
+    }
+
     [self.api setOptions:[self.options copy]];
 }
 

@@ -1,11 +1,12 @@
 #import "Dependencies.h"
 #import "RipeAPI.h"
 #import "BrandAPI.h"
+#import "BuildAPI.h"
 #import "Base.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BaseAPI : NSObject <RipeAPI, BrandAPI>
+@interface BaseAPI : NSObject <RipeAPI, BrandAPI, BuildAPI, SizeAPI>
 
 @property Ripe *owner;
 @property NSDictionary *options;
