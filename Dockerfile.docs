@@ -13,7 +13,7 @@ ENV CORS 1
 ENV BASE_PATH /docs
 ENV INDEX_FILES index.html
 
-ADD docs /docs
+ADD docs /
 
 RUN pip3 install --upgrade netius
 
