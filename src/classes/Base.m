@@ -2,6 +2,7 @@
 #import "Image.h"
 #import "BaseAPI.h"
 #import "BaseAPI+BrandAPI.h"
+#import "BaseAPI+BuildAPI.h"
 #import "BaseAPI+SizeAPI.h"
 #import "Base.h"
 
