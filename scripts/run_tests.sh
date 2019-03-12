@@ -6,11 +6,11 @@ fi
 
 xcodebuild clean test \
   -workspace "ripe.xcworkspace" \
-  -scheme "ripe.xcodeproj" \
+  -scheme "test" \
   -configuration "Debug" \
   -sdk "iphonesimulator" \
   -destination "platform=iOS Simulator,name=iPhone 6,OS=8.1" \
-  | xcpretty
+  | xcpretty --test --color
 
 exit_code="${PIPESTATUS[0]}"
 
