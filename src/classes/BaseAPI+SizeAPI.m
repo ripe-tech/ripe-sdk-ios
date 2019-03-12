@@ -1,6 +1,6 @@
 #import "BaseAPI+SizeAPI.h"
 
-@implementation BaseAPI (BrandAPI)
+@implementation BaseAPI (SizeAPI)
 
 - (void)getSizes:(void (^)(NSDictionary * _Nonnull))callback {
     [self getSizes:[NSDictionary new] callback:callback];
