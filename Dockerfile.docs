@@ -1,0 +1,21 @@
+FROM hivesolutions/python:latest
+
+LABEL version="1.0"
+LABEL maintainer="Platforme <development@platforme.com>"
+
+EXPOSE 8080
+
+ENV LEVEL="INFO"\
+    ENCODING="gzip"\
+    HOST="0.0.0.0"\
+    PORT="8080"\
+    CACHE="86400"\
+    CORS="1"\
+    BASE_PATH="/docs/docs"\
+    INDEX_FILES="index.html"
+
+ADD docs /docs
+
+RUN pip3 install --upgrade netius
+
+CMD ["/usr/bin/python3", "-m", "netius.extra.filea"]
