@@ -1,4 +1,12 @@
+*.xccheckout
+
+Podfile.lock
+Manifest.lock
+
 .DS_Store
 
-/ripe.xcodeproj/xcuserdata
+/Pods
+/src/build
 /ripe.xcodeproj/project.xcworkspace/xcuserdata
+/ripe.xcodeproj/xcuserdata
+/ripe.xcworkspace/xcuserdata

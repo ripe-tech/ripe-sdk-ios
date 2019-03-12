@@ -1,9 +1,9 @@
 author: Platforme
 author_url: https://tech.platforme.com
-module: Platforme
+module: RIPE SDK iOS
 github_url: https://github.com/ripe-tech/ripe-sdk-ios/
 github_file_prefix: https://github.com/ripe-tech/ripe-sdk-ios/tree/master
-output: docs/docs
+output: docs
 objc: true
 clean: true
 umbrella_header: src/classes/Ripe.h
