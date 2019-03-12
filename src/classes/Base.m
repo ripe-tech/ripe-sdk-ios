@@ -74,18 +74,21 @@
     id parts = options[@"parts"];
     id useDefaults = options[@"useDefaults"];
     id usePrice = options[@"usePrice"];
+    id locale = options[@"locale"];
 
     if ([parts isKindOfClass:[NSDictionary class]]) {
         self.parts = [parts mutableCopy];
     }
-
     if (useDefaults != nil) {
         self.useDefaults = [useDefaults boolValue];
     }
-
     if (usePrice != nil) {
         self.useDefaults = [usePrice boolValue];
     }
+    if (locale != nil) {
+        self.locale = locale;
+    }
+
     [self.api setOptions:[self.options copy]];
 }
 
