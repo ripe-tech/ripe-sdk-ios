@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Type Definitions  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Section/Type Definitions" class="dashAnchor"></a>
+    <a title="Type Definitions  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Platforme Docs</a> (7% documented)</p>
+        <p class="header-right"><a href="https://github.com/ripe-tech/ripe-sdk-ios/"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Platforme Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Type Definitions  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BaseAPI.html">BaseAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Observable.html">Observable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Promise.html">Promise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Ripe.html">Ripe</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Visual.html">Visual</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/BrandAPI.html">BrandAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Interactable.html">Interactable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RipeAPI.html">RipeAPI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:Observable.h@T@Callback">Callback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:Promise.h@T@Executor">Executor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:Image.h@T@InitialsBuilder">InitialsBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:Promise.h@T@Reject">Reject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:Promise.h@T@Rejected">Rejected</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:Promise.h@T@Resolve">Resolve</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:Promise.h@T@Resolved">Resolved</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Type Definitions</h1>
+            <p>The following type definitions are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:Image.h@T@InitialsBuilder"></a>
+                    <a name="//apple_ref/objc/Type/InitialsBuilder" class="dashAnchor"></a>
+                    <a class="token" href="#/c:Image.h@T@InitialsBuilder">InitialsBuilder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">(</span><span class="o">^</span><span class="n">InitialsBuilder</span><span class="p">)(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">initials</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">engraving</span><span class="p">,</span> <span class="n">UIImageView</span> <span class="o">*</span><span class="n">image</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">InitialsBuilder</span> <span class="o">=</span> <span class="p">(</span><span class="kt">String</span><span class="p">,</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">UIImageView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Image.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:Observable.h@T@Callback"></a>
+                    <a name="//apple_ref/objc/Type/Callback" class="dashAnchor"></a>
+                    <a class="token" href="#/c:Observable.h@T@Callback">Callback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A function to be executed when an event. It receives a dictionary with the response as parameter and returns a promise which is resolved asynchronously.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n"><a href="Classes/Promise.html">Promise</a></span> <span class="o">*</span> <span class="p">(</span><span class="o">^</span><span class="n">Callback</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Callback</span> <span class="o">=</span> <span class="p">([</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/Promise.html">Promise</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>response</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A dictionary with the payload of the event</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that may be resolved asynchronously</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Observable.h#L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:Promise.h@T@Resolve"></a>
+                    <a name="//apple_ref/objc/Type/Resolve" class="dashAnchor"></a>
+                    <a class="token" href="#/c:Promise.h@T@Resolve">Resolve</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Resolve</span><span class="p">)(</span><span class="n">id</span> <span class="n">_Nullable</span> <span class="n">result</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Resolve</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:Promise.h@T@Reject"></a>
+                    <a name="//apple_ref/objc/Type/Reject" class="dashAnchor"></a>
+                    <a class="token" href="#/c:Promise.h@T@Reject">Reject</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Reject</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Reject</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:Promise.h@T@Resolved"></a>
+                    <a name="//apple_ref/objc/Type/Resolved" class="dashAnchor"></a>
+                    <a class="token" href="#/c:Promise.h@T@Resolved">Resolved</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Resolved</span><span class="p">)(</span><span class="n">id</span> <span class="n">_Nullable</span> <span class="n">result</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Resolved</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:Promise.h@T@Rejected"></a>
+                    <a name="//apple_ref/objc/Type/Rejected" class="dashAnchor"></a>
+                    <a class="token" href="#/c:Promise.h@T@Rejected">Rejected</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Rejected</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Rejected</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:Promise.h@T@Executor"></a>
+                    <a name="//apple_ref/objc/Type/Executor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:Promise.h@T@Executor">Executor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Executor</span><span class="p">)(</span><span class="n"><a href="Type Definitions.html#/c:Promise.h@T@Resolve">Resolve</a></span> <span class="n">resolve</span><span class="p">,</span> <span class="n"><a href="Type Definitions.html#/c:Promise.h@T@Reject">Reject</a></span> <span class="n">reject</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Executor</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Type Definitions.html#/c:Promise.h@T@Resolve">Resolve</a></span><span class="p">,</span> <span class="kt"><a href="Type Definitions.html#/c:Promise.h@T@Reject">Reject</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
