@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property int historyPointer;
 @property NSString *initials;
 @property NSString *engraving;
+@property NSString *variant;
 @property NSMutableDictionary *parts;
 @property NSDictionary *loadedConfig;
 @property NSString *country;

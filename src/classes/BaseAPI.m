@@ -119,14 +119,33 @@
     NSString *brand = options[@"brand"] ?: self.owner.brand;
     NSString *model = options[@"model"] ?: self.owner.model;
     NSDictionary *parts = options[@"parts"] ?: self.owner.parts;
-    // TODO params
+    NSString *variant = options[@"variant"] ?: self.owner.variant;
+    NSString *engraving = options[@"engraving"] ?: self.owner.engraving;
+    NSString *country = options[@"country"] ?: self.owner.country;
+    NSString *currency = options[@"currency"] ?: self.owner.currency;
+    NSString *flag = options[@"flag"] ?: self.owner.flag;
+    BOOL full = [options[@"full"] boolValue] ?: true;
 
     if (brand != nil) {
         params[@"brand"] = brand;
     }
-
     if (model != nil) {
         params[@"model"] = model;
+    }
+    if (variant != nil) {
+        params[@"variant"] = variant;
+    }
+    if (full && engraving != nil) {
+        params[@"engraving"] = engraving;
+    }
+    if (full && country != nil) {
+        params[@"country"] = country;
+    }
+    if (full && currency != nil) {
+        params[@"currency"] = currency;
+    }
+    if (full && flag != nil) {
+        params[@"flag"] = flag;
     }
 
     NSMutableArray *partsL = [NSMutableArray new];
