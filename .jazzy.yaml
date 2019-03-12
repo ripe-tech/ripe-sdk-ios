@@ -1,0 +1,11 @@
+author: Platforme
+author_url: https://tech.platforme.com
+module: Platforme
+github_url: https://github.com/ripe-tech/ripe-sdk-ios/
+github_file_prefix: https://github.com/ripe-tech/ripe-sdk-ios/tree/master
+output: docs/docs
+objc: true
+clean: true
+umbrella_header: src/classes/Ripe.h
+framework_root: .
+sdk: iphonesimulator
