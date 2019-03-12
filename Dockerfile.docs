@@ -5,14 +5,13 @@ LABEL maintainer="Platforme <development@platforme.com>"
 
 EXPOSE 8080
 
-ENV LEVEL="INFO"\
-    ENCODING="gzip"\
-    HOST="0.0.0.0"\
-    PORT="8080"\
-    CACHE="86400"\
-    CORS="1"\
-    BASE_PATH="/docs/docs"\
-    INDEX_FILES="index.html"
+ENV LEVEL INFO
+ENV HOST 0.0.0.0
+ENV PORT 8080
+ENV CACHE 86400
+ENV CORS 1
+ENV BASE_PATH /data
+ENV INDEX_FILES="index.html"
 
 ADD docs /docs
 
