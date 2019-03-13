@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Observable Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/Observable" class="dashAnchor"></a>
+    <a title="Observable Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RIPE SDK iOS Docs</a> (6% documented)</p>
+        <p class="header-right"><a href="https://github.com/ripe-tech/ripe-sdk-ios/"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RIPE SDK iOS Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Observable Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BaseAPI.html">BaseAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Observable.html">Observable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Promise.html">Promise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ripe.html">Ripe</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Visual.html">Visual</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BrandAPI.html">BrandAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BuildAPI.html">BuildAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Interactable.html">Interactable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RipeAPI.html">RipeAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SizeAPI.html">SizeAPI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Promise.h@T@Executor">Executor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Image.h@T@InitialsBuilder">InitialsBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Promise.h@T@Reject">Reject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Promise.h@T@Rejected">Rejected</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Promise.h@T@Resolve">Resolve</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Promise.h@T@Resolved">Resolved</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Observable</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">Observable</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>An object that emits events. Listeners can bind to specific events and be notified when the event is triggered.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Observable(py)callbacks"></a>
+                    <a name="//apple_ref/objc/Property/callbacks" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Observable(py)callbacks">callbacks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A dictionary that contains all methods to be executed when an event is triggered</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSMutableDictionary</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">callbacks</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">callbacks</span><span class="p">:</span> <span class="kt">NSMutableDictionary</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Observable.h#L21">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Observable(im)bind:callback:"></a>
+                    <a name="//apple_ref/objc/Method/-bind:callback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Observable(im)bind:callback:">-bind:callback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Binds to an event by providing a block that will receive the event payload as a parameter. The block will be executed synchronously, for costly operations prefer the use of bindSync:callback:.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a></span><span class="p">)</span><span class="nf">bind</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span>
+                <span class="nf">callback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">bind</span><span class="p">(</span><span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the event to bind to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to be executed synchronously when the event is triggered</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the callback instance created, to be used when unbinding from the event</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Observable.h#L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Observable(im)bindSync:callback:"></a>
+                    <a name="//apple_ref/objc/Method/-bindSync:callback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Observable(im)bindSync:callback:">-bindSync:callback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Binds to an event by providing a block that will receive the event payload as a parameter. The block will be executed synchronously, for costly operations prefer the use of bindSync:callback:.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a></span><span class="p">)</span><span class="nf">bindSync</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span>
+                    <span class="nf">callback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">bindSync</span><span class="p">(</span><span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the event to bind to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to be executed synchronously when the event is triggered</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the callback instance created, to be used when unbinding from the event</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Observable.h#L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Observable(im)bindAsync:callback:"></a>
+                    <a name="//apple_ref/objc/Method/-bindAsync:callback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Observable(im)bindAsync:callback:">-bindAsync:callback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Binds to an event by providing a block that will receive the event payload as a parameter and return a Promise that will be resolved asynchronously.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a></span><span class="p">)</span><span class="nf">bindAsync</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span>
+                     <span class="nf">callback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">bindAsync</span><span class="p">(</span><span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the event to bind to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to be executed when the event is triggered</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns the provided callback, to be used when unbinding from the event</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Observable.h#L48">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Observable(im)unbind:callback:"></a>
+                    <a name="//apple_ref/objc/Method/-unbind:callback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Observable(im)unbind:callback:">-unbind:callback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unbinds the provided callback from an event.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">unbind</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span> <span class="nf">callback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unbind</span><span class="p">(</span><span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the event</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback that was returned when the bind method was called.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Observable.h#L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Observable(im)trigger:args:"></a>
+                    <a name="//apple_ref/objc/Method/-trigger:args:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Observable(im)trigger:args:">-trigger:args:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Triggers the event by calling all its bound callbacks with args as parameters.</p>
+
+<p>have finished processing the triggered event</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">trigger</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span>
+                        <span class="nf">args</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">args</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">trigger</span><span class="p">(</span><span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">args</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Promise.html">Promise</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the event to be triggered</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>args</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The payload of the event, to be passed to the callbacks</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a promise that will be resolved when all of the callbacks</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Observable.h#L66">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Observable(im)trigger:"></a>
+                    <a name="//apple_ref/objc/Method/-trigger:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Observable(im)trigger:">-trigger:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Triggers the event by calling all its bound callbacks.</p>
+
+<p>have finished processing the triggered event</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">trigger</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">trigger</span><span class="p">(</span><span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Promise.html">Promise</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>event</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the event</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns a promise that will be resolved when all of the callbacks</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Observable.h#L75">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
