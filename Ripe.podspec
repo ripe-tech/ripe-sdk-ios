@@ -9,7 +9,6 @@ Pod::Spec.new do |s|
   s.license          = "Apache License, Version 2.0"
   s.author           = { "platforme" => "tech@platforme.com" }
   s.source           = { :git => "https://github.com/ripe-tech/ripe-sdk-ios.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/hivesolutions'
 
   s.platform     = :ios, '6.0'
   s.requires_arc = true
