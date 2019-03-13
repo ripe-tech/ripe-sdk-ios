@@ -1,0 +1,13 @@
+sudo: false
+language: objective-c
+osx_image: "xcode10"
+xcode_project: ripe.xcodeproj
+xcode_scheme: test
+xcode_sdk: iphonesimulator
+xcode_destination: platform=iOS Simulator,name=iPhone 6,OS=10.0
+deploy:
+  provider: script
+  script: ./scripts/push.sh
+  on:
+    tags: true
+    osx_image: "xcode10"
