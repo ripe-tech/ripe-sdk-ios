@@ -22,8 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)getPrice:(void (^)(NSDictionary * ))callback;
 
 /**
- Retrieves the price of a specific customization. This operation is asynchronous and the provided callback will be called with the result. If no options are set the current customization of the owner will be used.
- The **options** map accepts the following parameters:
+ Retrieves the price of a specific customization. This operation is asynchronous and the provided callback will be called with the result. 
+ If no options are set the current customization of the owner will be used. The **options** map accepts the following keys:
  - **brand** - the brand of the model.
  - **model** - the name of the model.
  - **variant** - the variant of the the specified model.
