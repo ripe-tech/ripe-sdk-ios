@@ -16,7 +16,7 @@
 }
 
 - (void)getPrice:(void (^)(NSDictionary * ))callback {
-    return [self getPrice:nil callback:callback];
+    return [self getPrice:[NSDictionary new] callback:callback];
 }
 
 - (void)getPrice:(NSDictionary *)options callback:(void (^)(NSDictionary *))callback {
