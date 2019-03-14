@@ -302,14 +302,16 @@
 <span class="k">@optional</span>
 
 <span class="cm">/**
- Provides a list of all the available size scales. This can be used to know what scales are available for size conversions.
+ Provides a list of all the available size scales.
+ This can be used to know what scales are available for size conversions.
 
  @param callback A block that receives the size scales list as parameter.
  */</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">getSizes</span><span class="o">:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="n">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Provides a list of all the available size scales. This can be used to know what scales are available for size conversions.
+ Provides a list of all the available size scales.
+ This can be used to know what scales are available for size conversions.
 
  @param options A map with options to configure the request.
  @param callback A block that receives the size scales list as parameter.
@@ -317,7 +319,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getSizes</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts a size value from the native scale to the corresponding value in the specified scale. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts a size value from the native scale to the corresponding value in the specified scale.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scale The scale which one wants to convert to.
  @param value The value which one wants to convert.
@@ -327,7 +330,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNative</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts a size value from the native scale to the corresponding value in the specified scale. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts a size value from the native scale to the corresponding value in the specified scale.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scale The scale which one wants to convert to.
  @param value The value which one wants to convert.
@@ -336,8 +340,10 @@
  @param callback A block that receives the converted value as parameter.
  */</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNative</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+
 <span class="cm">/**
- Converts multiple size values from the native scale to the corresponding values in the specified scales. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts multiple size values from the native scale to the corresponding values in the specified scales.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scales A list of scales to convert to.
  @param values A list of values to convert.
@@ -347,7 +353,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNativeB</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span> <span class="nf">values</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span> <span class="nf">genders</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts multiple size values from the native scale to the corresponding values in the specified scales. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts multiple size values from the native scale to the corresponding values in the specified scales.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scales A list of scales to convert to.
  @param values A list of values to convert.
@@ -358,7 +365,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNativeB</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span> <span class="nf">values</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span> <span class="nf">genders</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts a size value in the specified scale to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts a size value in the specified scale to the corresponding native size.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scale The scale which one wants to convert from.
  @param value The value which one wants to convert.
@@ -368,7 +376,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nativeToSize</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts a size value in the specified scale to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts a size value in the specified scale to the corresponding native size.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scale The scale which one wants to convert from.
  @param value The value which one wants to convert.
@@ -378,7 +387,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nativeToSize</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts multiple size values to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts multiple size values to the corresponding native size.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scales A list of scales to convert from.
  @param values A list of values to convert.
@@ -388,7 +398,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nativeToSizeB</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span> <span class="nf">values</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span> <span class="nf">genders</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts multiple size values to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts multiple size values to the corresponding native size.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scales A list of scales to convert to.
  @param values A list of values to convert.
@@ -408,7 +419,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L3-L104">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L3-L115">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

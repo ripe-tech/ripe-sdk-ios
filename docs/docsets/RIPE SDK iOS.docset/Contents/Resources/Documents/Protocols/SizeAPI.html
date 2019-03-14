@@ -110,14 +110,16 @@
 <span class="k">@optional</span>
 
 <span class="cm">/**
- Provides a list of all the available size scales. This can be used to know what scales are available for size conversions.
+ Provides a list of all the available size scales.
+ This can be used to know what scales are available for size conversions.
 
  @param callback A block that receives the size scales list as parameter.
  */</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">getSizes</span><span class="o">:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="n">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Provides a list of all the available size scales. This can be used to know what scales are available for size conversions.
+ Provides a list of all the available size scales.
+ This can be used to know what scales are available for size conversions.
 
  @param options A map with options to configure the request.
  @param callback A block that receives the size scales list as parameter.
@@ -125,7 +127,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getSizes</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts a size value from the native scale to the corresponding value in the specified scale. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts a size value from the native scale to the corresponding value in the specified scale.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scale The scale which one wants to convert to.
  @param value The value which one wants to convert.
@@ -135,7 +138,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNative</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts a size value from the native scale to the corresponding value in the specified scale. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts a size value from the native scale to the corresponding value in the specified scale.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scale The scale which one wants to convert to.
  @param value The value which one wants to convert.
@@ -144,8 +148,10 @@
  @param callback A block that receives the converted value as parameter.
  */</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNative</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+
 <span class="cm">/**
- Converts multiple size values from the native scale to the corresponding values in the specified scales. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts multiple size values from the native scale to the corresponding values in the specified scales.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scales A list of scales to convert to.
  @param values A list of values to convert.
@@ -155,7 +161,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNativeB</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span> <span class="nf">values</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span> <span class="nf">genders</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts multiple size values from the native scale to the corresponding values in the specified scales. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts multiple size values from the native scale to the corresponding values in the specified scales.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scales A list of scales to convert to.
  @param values A list of values to convert.
@@ -166,7 +173,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNativeB</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span> <span class="nf">values</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span> <span class="nf">genders</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts a size value in the specified scale to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts a size value in the specified scale to the corresponding native size.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scale The scale which one wants to convert from.
  @param value The value which one wants to convert.
@@ -176,7 +184,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nativeToSize</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts a size value in the specified scale to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts a size value in the specified scale to the corresponding native size.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scale The scale which one wants to convert from.
  @param value The value which one wants to convert.
@@ -186,7 +195,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nativeToSize</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts multiple size values to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts multiple size values to the corresponding native size.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scales A list of scales to convert from.
  @param values A list of values to convert.
@@ -196,7 +206,8 @@
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nativeToSizeB</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span> <span class="nf">values</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span> <span class="nf">genders</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="cm">/**
- Converts multiple size values to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+ Converts multiple size values to the corresponding native size.
+ The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
 
  @param scales A list of scales to convert to.
  @param values A list of values to convert.
@@ -229,7 +240,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Provides a list of all the available size scales. This can be used to know what scales are available for size conversions.</p>
+                        <p>Provides a list of all the available size scales.</p>
+
+<p>This can be used to know what scales are available for size conversions.</p>
 
                       </div>
                       <div class="declaration">
@@ -265,7 +278,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L12">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L13">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -283,7 +296,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Provides a list of all the available size scales. This can be used to know what scales are available for size conversions.</p>
+                        <p>Provides a list of all the available size scales.</p>
+
+<p>This can be used to know what scales are available for size conversions.</p>
 
                       </div>
                       <div class="declaration">
@@ -332,7 +347,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L20">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -350,7 +365,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts a size value from the native scale to the corresponding value in the specified scale. The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
+                        <p>Converts a size value from the native scale to the corresponding value in the specified scale.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -425,7 +442,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L30">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -443,7 +460,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts a size value from the native scale to the corresponding value in the specified scale. The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
+                        <p>Converts a size value from the native scale to the corresponding value in the specified scale.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -531,7 +550,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L41">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -549,7 +568,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts multiple size values from the native scale to the corresponding values in the specified scales. The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
+                        <p>Converts multiple size values from the native scale to the corresponding values in the specified scales.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -624,7 +645,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L50">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -642,7 +663,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts multiple size values from the native scale to the corresponding values in the specified scales. The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
+                        <p>Converts multiple size values from the native scale to the corresponding values in the specified scales.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -730,7 +753,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L61">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -748,7 +771,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts a size value in the specified scale to the corresponding native size. The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
+                        <p>Converts a size value in the specified scale to the corresponding native size.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -823,7 +848,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L71">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -841,7 +866,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts a size value in the specified scale to the corresponding native size. The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
+                        <p>Converts a size value in the specified scale to the corresponding native size.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -917,7 +944,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L81">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L90">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -935,7 +962,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts multiple size values to the corresponding native size. The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
+                        <p>Converts multiple size values to the corresponding native size.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -1010,7 +1039,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L91">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1028,7 +1057,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts multiple size values to the corresponding native size. The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
+                        <p>Converts multiple size values to the corresponding native size.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -1116,7 +1147,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L102">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L113">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

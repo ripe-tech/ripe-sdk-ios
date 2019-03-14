@@ -207,25 +207,25 @@
 <p>An Image can be configured with the following options:</p>
 
 <ul>
-<li><p><strong>showInitials</strong> - A <em>Boolean</em> indicating if the owner&rsquo;s personalization should be shown. Defaults to true.</p></li>
-<li><p><strong>initialsBuilder</strong> - A method that receives the <em>initials</em> and <em>engraving</em> as Strings and the ImageView that will be used and returns a map with the initials and a profile list. This is the default method:</p></li>
+<li><p><strong>showInitials</strong> - A <em>Boolean</em> indicating if the owner&rsquo;s personalization should be shown (defaults <code>TRUE</code>).</p></li>
+<li><p><strong>initialsBuilder</strong> - A method that receives the <em>initials</em> and <em>engraving</em> as Strings and the ImageView that will be used and returns a map with the initials and a profile list (defaults the following method)</p></li>
 </ul>
 <pre class="highlight objective_c"><code>
-    <span class="o">^</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">initials</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">engraving</span><span class="p">,</span> <span class="n">UIImageView</span> <span class="o">*</span><span class="n">imageView</span><span class="p">)</span> <span class="p">{</span>
+ <span class="o">^</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">initials</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">engraving</span><span class="p">,</span> <span class="n">UIImageView</span> <span class="o">*</span><span class="n">imageView</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="n">NSString</span> <span class="o">*</span><span class="n">initialsS</span> <span class="o">=</span> <span class="n">initials</span> <span class="p">?:</span> <span class="s">@""</span><span class="p">;</span>
+     <span class="n">NSString</span> <span class="o">*</span><span class="n">initialsS</span> <span class="o">=</span> <span class="n">initials</span> <span class="p">?:</span> <span class="s">@""</span><span class="p">;</span>
 
-        <span class="n">NSArray</span> <span class="o">*</span><span class="n">profile</span> <span class="o">=</span> <span class="n">engraving</span> <span class="o">!=</span> <span class="nb">nil</span> <span class="p">?</span> <span class="p">@[</span><span class="n">engraving</span><span class="p">]</span> <span class="p">:</span> <span class="p">@[];</span>
+     <span class="n">NSArray</span> <span class="o">*</span><span class="n">profile</span> <span class="o">=</span> <span class="n">engraving</span> <span class="o">!=</span> <span class="nb">nil</span> <span class="p">?</span> <span class="p">@[</span><span class="n">engraving</span><span class="p">]</span> <span class="p">:</span> <span class="p">@[];</span>
 
-        <span class="k">return</span> <span class="p">@{</span>
+     <span class="k">return</span> <span class="p">@{</span>
 
-           <span class="s">@"initials"</span><span class="o">:</span> <span class="n">initialsS</span> <span class="p">?:</span> <span class="s">@""</span><span class="p">,</span>
+        <span class="s">@"initials"</span><span class="o">:</span> <span class="n">initialsS</span> <span class="p">?:</span> <span class="s">@""</span><span class="p">,</span>
 
-           <span class="s">@"profile"</span><span class="o">:</span> <span class="n">profile</span>
+        <span class="s">@"profile"</span><span class="o">:</span> <span class="n">profile</span>
 
-        <span class="p">};</span>
+     <span class="p">};</span>
 
-    <span class="p">};</span>
+ <span class="p">};</span>
 
 </code></pre>
 
