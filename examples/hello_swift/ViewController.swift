@@ -12,6 +12,7 @@ class ViewController: UIViewController {
         ripe.bindImage(imageView)
         _ = ripe.bind("post_config") { config in
             ripe.setInitials("PT", engraving: "grey")
+            ripe.setPart("piping", material: "leather_dmy", color: "brown")
         }
         _ = ripe.bind("price") { (price) in
             let total = price["total"] as? NSDictionary
