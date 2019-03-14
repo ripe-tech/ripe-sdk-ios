@@ -210,6 +210,7 @@
     NSDictionary *value = @{@"parts": self.parts, @"options": options };
     [self trigger:@"pre_parts" args:value];
     [self _setPart:part material:material color:color noEvents:false];
+    [self update];
     [self trigger:@"parts" args:value];
     [self trigger:@"post_parts" args:value];
 }
@@ -244,6 +245,7 @@
     NSDictionary *value = @{@"parts": self.parts, @"options": options };
     [self trigger:@"pre_parts" args:value];
     [self _setParts:partsList noEvents:noEvents];
+    [self update];
     [self trigger:@"parts" args:value];
     [self trigger:@"post_parts" args:value];
 }
