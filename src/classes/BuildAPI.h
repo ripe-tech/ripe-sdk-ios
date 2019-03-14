@@ -16,12 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Retrieves the bundle part, materials and colors translations of a specific brand and model.
- The **options** map accepts the following parameters:
+ The **options** map accepts the following keys:
  - **brand** - the brand of the model.
  - **model** - the name of the model.
  - **locale** - the locale of the translations.
- - **compatibility** - If compatibility mode should be enabled.
- - **prefix** - A prefix to prepend to the locale keys, "builds" by default.
+ - **compatibility** - if compatibility mode should be enabled.
+ - **prefix** - a prefix to prepend to the locale keys (defaults to `builds`).
 
  @param options A map of options to configure the request.
  @param callback The block to be called when the translations bundle is retrieved.
