@@ -14,7 +14,7 @@
     <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">RIPE SDK iOS Docs</a> (6% documented)</p>
+        <p><a href="index.html">RIPE SDK iOS Docs</a> (46% documented)</p>
         <p class="header-right"><a href="https://github.com/ripe-tech/ripe-sdk-ios/"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -169,7 +169,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Protocol of the Build API methods</p>
 
                         <a href="Protocols/BuildAPI.html" class="slightly-smaller">See more</a>
                       </div>
@@ -177,14 +177,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">BuildAPI</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
-
-<span class="k">@optional</span>
-
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">getLocaleModel</span><span class="o">:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="n">callback</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getLocaleModel</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">BuildAPI</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -194,7 +187,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/BuildAPI.h#L3-L10">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/BuildAPI.h#L6-L31">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -216,7 +209,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Protocol for an entity that reactively represents a Ripe instance</p>
 
                         <a href="Protocols/Interactable.html" class="slightly-smaller">See more</a>
                       </div>
@@ -224,13 +217,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">Interactable</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">)</span> <span class="n"><a href="Classes/Ripe.html">Ripe</a></span> <span class="o">*</span><span class="n">owner</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">update</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">state</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">Interactable</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -240,7 +227,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Interactable.h#L5-L11">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Interactable.h#L8-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -262,7 +249,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The protocol for the main API class.</p>
 
                         <a href="Protocols/RipeAPI.html" class="slightly-smaller">See more</a>
                       </div>
@@ -270,23 +257,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">RipeAPI</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
-
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">url</span><span class="p">;</span>
-
-<span class="k">@optional</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">getPrice</span><span class="o">:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="n">callback</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getPrice</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSURLSessionDataTask</span> <span class="o">*</span><span class="p">)</span><span class="nf">_cacheURL</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSURLSessionDataTask</span> <span class="o">*</span><span class="p">)</span><span class="nf">_requestURL</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">_getImageUrl</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nf">_getPriceOptions</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nf">_getImageOptions</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nf">_getQueryOptions</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">_buildQuery</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">params</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nf">_build</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">RipeAPI</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -296,7 +267,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/RipeAPI.h#L3-L19">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/RipeAPI.h#L6-L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -330,15 +301,101 @@
 
 <span class="k">@optional</span>
 
+<span class="cm">/**
+ Provides a list of all the available size scales. This can be used to know what scales are available for size conversions.
+
+ @param callback A block that receives the size scales list as parameter.
+ */</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">getSizes</span><span class="o">:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="n">callback</span><span class="p">;</span>
+
+<span class="cm">/**
+ Provides a list of all the available size scales. This can be used to know what scales are available for size conversions.
+
+ @param options A map with options to configure the request.
+ @param callback A block that receives the size scales list as parameter.
+ */</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getSizes</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+
+<span class="cm">/**
+ Converts a size value from the native scale to the corresponding value in the specified scale. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+
+ @param scale The scale which one wants to convert to.
+ @param value The value which one wants to convert.
+ @param gender The gender of the scale and value to be converted.
+ @param callback A block that receives the converted value as parameter.
+ */</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNative</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+
+<span class="cm">/**
+ Converts a size value from the native scale to the corresponding value in the specified scale. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+
+ @param scale The scale which one wants to convert to.
+ @param value The value which one wants to convert.
+ @param gender The gender of the scale and value to be converted.
+ @param options A map with options to configure the request.
+ @param callback A block that receives the converted value as parameter.
+ */</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNative</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+<span class="cm">/**
+ Converts multiple size values from the native scale to the corresponding values in the specified scales. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+
+ @param scales A list of scales to convert to.
+ @param values A list of values to convert.
+ @param genders A list of genders corresponding to the values.
+ @param callback A block that receives a list with the converted values as an argument.
+ */</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNativeB</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span> <span class="nf">values</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span> <span class="nf">genders</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+
+<span class="cm">/**
+ Converts multiple size values from the native scale to the corresponding values in the specified scales. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+
+ @param scales A list of scales to convert to.
+ @param values A list of values to convert.
+ @param genders A list of genders corresponding to the values.
+ @param options A map with options to configure the request.
+ @param callback A block that receives a list with the converted values as an argument.
+ */</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sizeToNativeB</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span> <span class="nf">values</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span> <span class="nf">genders</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+
+<span class="cm">/**
+ Converts a size value in the specified scale to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+
+ @param scale The scale which one wants to convert from.
+ @param value The value which one wants to convert.
+ @param gender The gender of the scale and value to be converted.
+ @param callback A block that receives the native value as parameter.
+ */</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nativeToSize</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+
+<span class="cm">/**
+ Converts a size value in the specified scale to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+
+ @param scale The scale which one wants to convert from.
+ @param value The value which one wants to convert.
+ @param gender The gender of the scale and value to be converted.
+ @param callback A block that receives the native value as parameter.
+ */</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nativeToSize</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span> <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span> <span class="nf">gender</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+
+<span class="cm">/**
+ Converts multiple size values to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+
+ @param scales A list of scales to convert from.
+ @param values A list of values to convert.
+ @param genders A list of genders corresponding to the values.
+ @param callback A block that receives a list with the native values as an argument.
+ */</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nativeToSizeB</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span> <span class="nf">values</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span> <span class="nf">genders</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
+
+<span class="cm">/**
+ Converts multiple size values to the corresponding native size. The available scales, genders and sizes can be obtained with the method `-[SizeAPI getSizes:]`
+
+ @param scales A list of scales to convert to.
+ @param values A list of values to convert.
+ @param genders A list of genders corresponding to the values.
+ @param options A map with options to configure the request.
+ @param callback A block that receives a list with the converted values as an argument.
+ */</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nativeToSizeB</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span> <span class="nf">values</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span> <span class="nf">genders</span><span class="p">:(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span> <span class="nf">options</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
 
 <span class="k">@end</span></code></pre>
@@ -351,7 +408,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L3-L18">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L3-L104">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -361,7 +418,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-12)</p>
+          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
