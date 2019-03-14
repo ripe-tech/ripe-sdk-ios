@@ -6,18 +6,18 @@ NS_ASSUME_NONNULL_BEGIN
  Reactively updates the image of an UIImageView whenever the state of its owner changes.
  An Image can be configured with the following options:
 
-  - **showInitials** - A *Boolean* indicating if the owner's personalization should be shown. Defaults to true.
-  - **initialsBuilder** - A method that receives the *initials* and *engraving* as Strings and the ImageView that will be used and returns a map with the initials and a profile list. This is the default method:
+  - **showInitials** - A *Boolean* indicating if the owner's personalization should be shown (defaults `TRUE`).
+  - **initialsBuilder** - A method that receives the *initials* and *engraving* as Strings and the ImageView that will be used and returns a map with the initials and a profile list (defaults the following method)
 
   ```
-     ^NSDictionary *(NSString *initials, NSString *engraving, UIImageView *imageView) {
-         NSString *initialsS = initials ?: @"";
-         NSArray *profile = engraving != nil ? @[engraving] : @[];
-         return @{
-            @"initials": initialsS ?: @"",
-            @"profile": profile
-         };
-     };
+  ^NSDictionary *(NSString *initials, NSString *engraving, UIImageView *imageView) {
+      NSString *initialsS = initials ?: @"";
+      NSArray *profile = engraving != nil ? @[engraving] : @[];
+      return @{
+         @"initials": initialsS ?: @"",
+         @"profile": profile
+      };
+  };
   ```
  */
 @interface Image : Visual
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NSDictionary *(^InitialsBuilder)(NSString *initials, NSString *engraving, UIImageView *image);
 
 /**
- A *Boolean* indicating if the owner's personalization should be shown. Defaults to true.
+ A *Boolean* indicating if the owner's personalization should be shown (defaults to `TRUE`).
  */
 @property BOOL showInitials;
 
