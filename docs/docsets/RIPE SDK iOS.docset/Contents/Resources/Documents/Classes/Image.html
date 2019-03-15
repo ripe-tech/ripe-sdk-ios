@@ -14,7 +14,7 @@
     <a title="Image Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">RIPE SDK iOS Docs</a> (46% documented)</p>
+        <p><a href="../index.html">RIPE SDK iOS Docs</a> (47% documented)</p>
         <p class="header-right"><a href="https://github.com/ripe-tech/ripe-sdk-ios/"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -109,30 +109,40 @@
 
                 </div>
               </div>
-            <p>Reactively updates the image of an UIImageView whenever the state of its owner changes.</p>
+            
+<ul>
+<li><p>Reactively updates the image of an UIImageView whenever the state of its owner changes.</p></li>
+<li><p>An Image can be configured with the following options:</p></li>
+</ul>
 
-<p>An Image can be configured with the following options:</p>
+<p>*</p>
 
 <ul>
-<li><p><strong>showInitials</strong> - A <em>Boolean</em> indicating if the owner&rsquo;s personalization should be shown (defaults <code>TRUE</code>).</p></li>
-<li><p><strong>initialsBuilder</strong> - A method that receives the <em>initials</em> and <em>engraving</em> as Strings and the ImageView that will be used and returns a map with the initials and a profile list (defaults the following method)</p></li>
+<li><ul>
+<li><strong>showInitials</strong> - A <em>Boolean</em> indicating if the owner&rsquo;s personalization should be shown (defaults <code>TRUE</code>).</li>
+</ul></li>
+<li><ul>
+<li><strong>initialsBuilder</strong> - A method that receives the <em>initials</em> and <em>engraving</em> as Strings and the ImageView that will be used and returns a map with the initials and a profile list (defaults the following method)</li>
+</ul></li>
 </ul>
+
+<p>*</p>
 <pre class="highlight objective_c"><code>
- <span class="o">^</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">initials</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">engraving</span><span class="p">,</span> <span class="n">UIImageView</span> <span class="o">*</span><span class="n">imageView</span><span class="p">)</span> <span class="p">{</span>
+<span class="o">^</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">initials</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">engraving</span><span class="p">,</span> <span class="n">UIImageView</span> <span class="o">*</span><span class="n">imageView</span><span class="p">)</span> <span class="p">{</span>
 
-     <span class="n">NSString</span> <span class="o">*</span><span class="n">initialsS</span> <span class="o">=</span> <span class="n">initials</span> <span class="p">?:</span> <span class="s">@""</span><span class="p">;</span>
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">initialsS</span> <span class="o">=</span> <span class="n">initials</span> <span class="p">?:</span> <span class="s">@""</span><span class="p">;</span>
 
-     <span class="n">NSArray</span> <span class="o">*</span><span class="n">profile</span> <span class="o">=</span> <span class="n">engraving</span> <span class="o">!=</span> <span class="nb">nil</span> <span class="p">?</span> <span class="p">@[</span><span class="n">engraving</span><span class="p">]</span> <span class="p">:</span> <span class="p">@[];</span>
+    <span class="n">NSArray</span> <span class="o">*</span><span class="n">profile</span> <span class="o">=</span> <span class="n">engraving</span> <span class="o">!=</span> <span class="nb">nil</span> <span class="p">?</span> <span class="p">@[</span><span class="n">engraving</span><span class="p">]</span> <span class="p">:</span> <span class="p">@[];</span>
 
-     <span class="k">return</span> <span class="p">@{</span>
+    <span class="k">return</span> <span class="p">@{</span>
 
-        <span class="s">@"initials"</span><span class="o">:</span> <span class="n">initialsS</span> <span class="p">?:</span> <span class="s">@""</span><span class="p">,</span>
+       <span class="s">@"initials"</span><span class="o">:</span> <span class="n">initialsS</span> <span class="p">?:</span> <span class="s">@""</span><span class="p">,</span>
 
-        <span class="s">@"profile"</span><span class="o">:</span> <span class="n">profile</span>
+       <span class="s">@"profile"</span><span class="o">:</span> <span class="n">profile</span>
 
-     <span class="p">};</span>
+    <span class="p">};</span>
 
- <span class="p">};</span>
+<span class="p">};</span>
 
 </code></pre>
 
@@ -439,7 +449,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-14)</p>
+          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-15)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
