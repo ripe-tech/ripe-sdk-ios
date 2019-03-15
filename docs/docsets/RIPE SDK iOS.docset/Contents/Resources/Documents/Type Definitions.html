@@ -14,7 +14,7 @@
     <a title="Type Definitions  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">RIPE SDK iOS Docs</a> (6% documented)</p>
+        <p><a href="index.html">RIPE SDK iOS Docs</a> (47% documented)</p>
         <p class="header-right"><a href="https://github.com/ripe-tech/ripe-sdk-ios/"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -122,14 +122,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Represents a method that returns a dictionary with initials and profiles for a given personalization.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">(</span><span class="o">^</span><span class="n">InitialsBuilder</span><span class="p">)(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">initials</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">engraving</span><span class="p">,</span> <span class="n">UIImageView</span> <span class="o">*</span><span class="n">image</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSDictionary</span> <span class="o">*</span> <span class="p">(</span><span class="o">^</span><span class="n">InitialsBuilder</span><span class="p">)(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">,</span>
+                                          <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">,</span>
+                                          <span class="n">UIImageView</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -138,8 +140,55 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>initials</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The initials of the personalization.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>engraving</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The engraving of the personalization.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIImageView where the personalization will be shown.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Dictionary with the <strong>initials</strong> as NSString and <strong>profile</strong> as an NSArray of NSString.</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Image.h#L">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Image.h#L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -161,7 +210,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A function to be executed when an event. It receives a dictionary with the response as parameter and returns a promise which is resolved asynchronously.</p>
+                        <p>A function to be executed when an event.</p>
+
+<p>It receives a dictionary with the response as parameter and returns a promise which is resolved asynchronously.</p>
 
                       </div>
                       <div class="declaration">
@@ -201,7 +252,7 @@
                         <p>A Promise that may be resolved asynchronously</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Observable.h#L16">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Observable.h#L18">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -223,14 +274,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Declaration of the Resolve block, used to resolve a promise with a result.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Resolve</span><span class="p">)(</span><span class="n">id</span> <span class="n">_Nullable</span> <span class="n">result</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Resolve</span><span class="p">)(</span><span class="n">id</span> <span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -239,8 +290,27 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the promise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -258,14 +328,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Declaration of the Reject block, used to reject a promise with an error.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Reject</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Reject</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -274,8 +344,27 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The error that caused the rejection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -293,14 +382,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Declaration of the Resolved block, used to handle the result of a promise.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Resolved</span><span class="p">)(</span><span class="n">id</span> <span class="n">_Nullable</span> <span class="n">result</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Resolved</span><span class="p">)(</span><span class="n">id</span> <span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -309,8 +398,27 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the promise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -328,14 +436,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Declaration of the Rejected block, used to handle the rejection of a promise.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Rejected</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Rejected</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -344,8 +452,27 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The error of the promise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -363,14 +490,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Declaration of the Executor block, used to resolve or reject a promise.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Executor</span><span class="p">)(</span><span class="n"><a href="Type Definitions.html#/c:Promise.h@T@Resolve">Resolve</a></span> <span class="n">resolve</span><span class="p">,</span> <span class="n"><a href="Type Definitions.html#/c:Promise.h@T@Reject">Reject</a></span> <span class="n">reject</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">Executor</span><span class="p">)(</span><span class="n"><a href="Type Definitions.html#/c:Promise.h@T@Resolve">Resolve</a></span> <span class="n">_Nonnull</span><span class="p">,</span> <span class="n"><a href="Type Definitions.html#/c:Promise.h@T@Reject">Reject</a></span> <span class="n">_Nonnull</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -379,8 +506,39 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resolve</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Resolve block to be called with a result.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>reject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Reject block to be called with an error.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Promise.h#L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -390,7 +548,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-12)</p>
+          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-15)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
