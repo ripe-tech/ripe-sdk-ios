@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Base constructor for the API.
- * 
+ *
  * @param owner The Ripe instance that will use this API.
  * @param options An options map that can be used to configure the API.
  * @return The API instance created.

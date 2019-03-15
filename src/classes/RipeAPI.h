@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Retrieves the price of a specific customization.
- * This operation is asynchronous and the provided callback will be called with the result. 
+ * This operation is asynchronous and the provided callback will be called with the result.
  * If no options are set the current customization of the owner will be used. The **options** map accepts the following keys:
  * - **brand** - the brand of the model.
  * - **model** - the name of the model.
@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
  * - **initials** - the initials used to personalize the model.
  * - **engraving** - the engraving of the personalization.
  * - **p** - the customization parts, as triplets in the form of *part:material:color*.
- * 
+ *
  * @param options A map with options to specify a model.
  * @param callback A block that accepts the price response as a parameter.
  */
