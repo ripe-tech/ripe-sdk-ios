@@ -7,7 +7,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- This class contains the main API class that should be extended by other APIs.
+ * This class contains the main API class that should be extended by other APIs.
  */
 @interface BaseAPI : NSObject <RipeAPI, BrandAPI, BuildAPI, SizeAPI>
 
@@ -17,16 +17,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property Ripe *owner;
 
 /**
- An options map that can be used to configure the API.
+ * An options map that can be used to configure the API.
  */
 @property NSDictionary *options;
 
 /**
- Base constructor for the API.
-
- @param owner The Ripe instance that will use this API.
- @param options An options map that can be used to configure the API.
- @return The API instance created.
+ * Base constructor for the API.
+ * 
+ * @param owner The Ripe instance that will use this API.
+ * @param options An options map that can be used to configure the API.
+ * @return The API instance created.
  */
 - (id)initWithOwner:(Ripe *)owner options:(NSDictionary *)options;
 
