@@ -9,16 +9,16 @@ NS_ASSUME_NONNULL_BEGIN
  * - **showInitials** - A *Boolean* indicating if the owner's personalization should be shown (defaults `TRUE`).
  * - **initialsBuilder** - A method that receives the *initials* and *engraving* as Strings and the ImageView that will be used and returns a map with the initials and a profile list (defaults the following method)
  *
- ```
- ^NSDictionary *(NSString *initials, NSString *engraving, UIImageView *imageView) {
-     NSString *initialsS = initials ?: @"";
-     NSArray *profile = engraving != nil ? @[engraving] : @[];
-     return @{
-        @"initials": initialsS ?: @"",
-        @"profile": profile
-     };
- };
- ```
+ * ```
+ *^NSDictionary *(NSString *initials, NSString *engraving, UIImageView *imageView) {
+ *    NSString *initialsS = initials ?: @"";
+ *    NSArray *profile = engraving != nil ? @[engraving] : @[];
+ *    return @{
+ *       @"initials": initialsS ?: @"",
+ *       @"profile": profile
+ *    };
+ *};
+ *```
  */
 @interface Image : Visual
 

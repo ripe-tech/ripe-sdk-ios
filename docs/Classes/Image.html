@@ -109,24 +109,14 @@
 
                 </div>
               </div>
-            
-<ul>
-<li><p>Reactively updates the image of an UIImageView whenever the state of its owner changes.</p></li>
-<li><p>An Image can be configured with the following options:</p></li>
-</ul>
+            <p>Reactively updates the image of an UIImageView whenever the state of its owner changes.</p>
 
-<p>*</p>
+<p>An Image can be configured with the following options:</p>
 
 <ul>
-<li><ul>
-<li><strong>showInitials</strong> - A <em>Boolean</em> indicating if the owner&rsquo;s personalization should be shown (defaults <code>TRUE</code>).</li>
-</ul></li>
-<li><ul>
-<li><strong>initialsBuilder</strong> - A method that receives the <em>initials</em> and <em>engraving</em> as Strings and the ImageView that will be used and returns a map with the initials and a profile list (defaults the following method)</li>
-</ul></li>
+<li><p><strong>showInitials</strong> - A <em>Boolean</em> indicating if the owner&rsquo;s personalization should be shown (defaults <code>TRUE</code>).</p></li>
+<li><p><strong>initialsBuilder</strong> - A method that receives the <em>initials</em> and <em>engraving</em> as Strings and the ImageView that will be used and returns a map with the initials and a profile list (defaults the following method)</p></li>
 </ul>
-
-<p>*</p>
 <pre class="highlight objective_c"><code>
 <span class="o">^</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">initials</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">engraving</span><span class="p">,</span> <span class="n">UIImageView</span> <span class="o">*</span><span class="n">imageView</span><span class="p">)</span> <span class="p">{</span>
 
