@@ -1,5 +1,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ * The protocol for the Size API.
+ */
 @protocol SizeAPI <NSObject>
 
 @optional
