@@ -29,15 +29,15 @@ NS_ASSUME_NONNULL_BEGIN
  * Retrieves the price of a specific customization.
  * This operation is asynchronous and the provided callback will be called with the result.
  * If no options are set the current customization of the owner will be used. The **options** map accepts the following keys:
- * - **brand** - the brand of the model.
- * - **model** - the name of the model.
- * - **variant** - the variant of the the specified model.
- * - **product_id** - the model's unique identification (ID).
- * - **currency** - the *ISO 4217* currency code.
- * - **country** - the *ISO 3166-2* code of the country.
- * - **initials** - the initials used to personalize the model.
- * - **engraving** - the engraving of the personalization.
- * - **p** - the customization parts, as triplets in the form of *part:material:color*.
+ * - **brand** - The brand of the model.
+ * - **model** - The name of the model.
+ * - **variant** - The variant of the the specified model.
+ * - **product_id** - The model's unique identification (ID).
+ * - **currency** - The *ISO 4217* currency code.
+ * - **country** - The *ISO 3166-2* code of the country.
+ * - **initials** - The initials used to personalize the model.
+ * - **engraving** - The engraving of the personalization.
+ * - **p** - The customization parts, as triplets in the form of *part:material:color*.
  *
  * @param options A map with options to specify a model.
  * @param callback A block that accepts the price response as a parameter.
@@ -58,15 +58,15 @@ NS_ASSUME_NONNULL_BEGIN
  * Retrieves the price of a specific customization.
  * This operation is asynchronous and the returned promise will be resolved with the result.
  * If no options are set the current customization of the owner will be used. The **options** map accepts the following keys:
- * - **brand** - the brand of the model.
- * - **model** - the name of the model.
- * - **variant** - the variant of the the specified model.
- * - **product_id** - the model's unique identification (ID).
- * - **currency** - the *ISO 4217* currency code.
- * - **country** - the *ISO 3166-2* code of the country.
- * - **initials** - the initials used to personalize the model.
- * - **engraving** - the engraving of the personalization.
- * - **p** - the customization parts, as triplets in the form of *part:material:color*.
+ * - **brand** - The brand of the model.
+ * - **model** - The name of the model.
+ * - **variant** - The variant of the the specified model.
+ * - **product_id** - The model's unique identification (ID).
+ * - **currency** - The *ISO 4217* currency code.
+ * - **country** - The *ISO 3166-2* code of the country.
+ * - **initials** - The initials used to personalize the model.
+ * - **engraving** - The engraving of the personalization.
+ * - **p** - The customization parts, as triplets in the form of *part:material:color*.
  *
  * @param options A map with options to specify a model.
  * @return A Promise that will be resolved with the result.
