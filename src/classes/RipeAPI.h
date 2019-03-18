@@ -1,3 +1,5 @@
+#import "Promise.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -42,6 +44,35 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)getPrice:(NSDictionary *)options callback:(void (^)(NSDictionary *))callback;
 
+/**
+ * Retrieves the price for the current customization.
+ * This operation is asynchronous and returned promise will be resolved with the result.
+ * To retrieve the price of a specific customization the method `-[RipeAPI getPriceP:callback:]` should be used.
+ *
+ * @return A Promise that will be resolved with the result.
+ * @see `-[RipeAPI getPriceP:callback:]`
+ */
+- (Promise *)getPriceP;
+
+/**
+ * Retrieves the price of a specific customization.
+ * This operation is asynchronous and the returned promise will be resolved with the result.
+ * If no options are set the current customization of the owner will be used. The **options** map accepts the following keys:
+ * - **brand** - the brand of the model.
+ * - **model** - the name of the model.
+ * - **variant** - the variant of the the specified model.
+ * - **product_id** - the model's unique identification (ID).
+ * - **currency** - the *ISO 4217* currency code.
+ * - **country** - the *ISO 3166-2* code of the country.
+ * - **initials** - the initials used to personalize the model.
+ * - **engraving** - the engraving of the personalization.
+ * - **p** - the customization parts, as triplets in the form of *part:material:color*.
+ *
+ * @param options A map with options to specify a model.
+ * @return A Promise that will be resolved with the result.
+ */
+- (Promise *)getPriceP:(NSDictionary *)options;
+
 /// :nodoc:
 - (NSURLSessionDataTask *)_cacheURL:(NSString *)url options:(NSDictionary *)options callback:(void (^)(NSDictionary *response))callback;
 /// :nodoc:
@@ -58,6 +89,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)_buildQuery:(NSDictionary *)params;
 /// :nodoc:
 - (NSDictionary *)_build:(NSDictionary *)options;
+/// :nodoc:
+- (Promise *)_callbackToPromise:(SEL)selector options:(NSDictionary *)options;
 
 @end
 
