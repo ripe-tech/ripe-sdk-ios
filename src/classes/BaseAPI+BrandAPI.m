@@ -12,6 +12,14 @@
     [self _cacheURL:configOptions[@"url"] options:configOptions callback:callback];
 }
 
+- (Promise *)getConfigP {
+    return [self getConfigP:[NSDictionary new]];
+}
+
+- (Promise *)getConfigP:(NSDictionary *)options {
+    return [self _callbackToPromise:@selector(getConfig:callback:) options:options];
+}
+
 - (NSDictionary *)_getConfigOptions:(NSDictionary *)options {
     options = options ?: [NSDictionary new];
     NSString *brand = options[@"brand"] ?: self.owner.brand;

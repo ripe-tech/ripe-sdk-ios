@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
   @param callback A callback that will be called with the configuration as argument.
  */
 - (void)getConfig:(NSDictionary * _Nullable)options callback:(void (^)(NSDictionary *response))callback;
+- (Promise *)getConfigP;
+- (Promise *)getConfigP:(NSDictionary *)options;
+- (NSDictionary *)_getConfigOptions:(NSDictionary *)options;
 
 @end
 

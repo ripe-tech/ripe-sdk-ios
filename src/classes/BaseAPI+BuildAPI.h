@@ -6,6 +6,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)getLocaleModel:(void (^)(NSDictionary *response))callback;
 - (void)getLocaleModel:(NSDictionary *)options callback:(void (^)(NSDictionary *response))callback;
+- (Promise *)getLocaleModelP;
+- (Promise *)getLocaleModelP:(NSDictionary *)options;
 
 @end
 

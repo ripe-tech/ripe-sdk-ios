@@ -12,6 +12,14 @@
     [self _cacheURL:options[@"url"] options:options callback:callback];
 }
 
+- (Promise *)getLocaleModelP {
+    return [self getLocaleModelP:[NSDictionary new]];
+}
+
+- (Promise *)getLocaleModelP:(NSDictionary *)options {
+    return [self _callbackToPromise:@selector(getLocaleModel:callback:) options:options];
+}
+
 - (NSDictionary *)_getLocaleModelOptions:(NSDictionary *)options {
     NSString *brand = options[@"brand"] ?: self.owner.brand;
     NSString *model = options[@"model"] ?: self.owner.model;

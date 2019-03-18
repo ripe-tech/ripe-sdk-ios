@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Image Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/Image" class="dashAnchor"></a>
+    <a title="Image Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RIPE SDK iOS Docs</a> (47% documented)</p>
+        <p class="header-right"><a href="https://github.com/ripe-tech/ripe-sdk-ios/"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RIPE SDK iOS Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Image Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BaseAPI.html">BaseAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Image.html">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Observable.html">Observable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Promise.html">Promise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ripe.html">Ripe</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Visual.html">Visual</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/BrandAPI.html">BrandAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BuildAPI.html">BuildAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Interactable.html">Interactable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RipeAPI.html">RipeAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SizeAPI.html">SizeAPI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Observable.h@T@Callback">Callback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Promise.h@T@Executor">Executor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Image.h@T@InitialsBuilder">InitialsBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Promise.h@T@Reject">Reject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Promise.h@T@Rejected">Rejected</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Promise.h@T@Resolve">Resolve</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:Promise.h@T@Resolved">Resolved</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Image</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">Image</span> <span class="p">:</span> <span class="nc"><a href="../Classes/Visual.html">Visual</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Reactively updates the image of an UIImageView whenever the state of its owner changes.</p>
+
+<p>An Image can be configured with the following options:</p>
+
+<ul>
+<li><p><strong>showInitials</strong> - A <em>Boolean</em> indicating if the owner&rsquo;s personalization should be shown (defaults <code>TRUE</code>).</p></li>
+<li><p><strong>initialsBuilder</strong> - A method that receives the <em>initials</em> and <em>engraving</em> as Strings and the ImageView that will be used and returns a map with the initials and a profile list (defaults the following method)</p></li>
+</ul>
+<pre class="highlight objective_c"><code>
+<span class="o">^</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">initials</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">engraving</span><span class="p">,</span> <span class="n">UIImageView</span> <span class="o">*</span><span class="n">imageView</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">initialsS</span> <span class="o">=</span> <span class="n">initials</span> <span class="p">?:</span> <span class="s">@""</span><span class="p">;</span>
+
+    <span class="n">NSArray</span> <span class="o">*</span><span class="n">profile</span> <span class="o">=</span> <span class="n">engraving</span> <span class="o">!=</span> <span class="nb">nil</span> <span class="p">?</span> <span class="p">@[</span><span class="n">engraving</span><span class="p">]</span> <span class="p">:</span> <span class="p">@[];</span>
+
+    <span class="k">return</span> <span class="p">@{</span>
+
+       <span class="s">@"initials"</span><span class="o">:</span> <span class="n">initialsS</span> <span class="p">?:</span> <span class="s">@""</span><span class="p">,</span>
+
+       <span class="s">@"profile"</span><span class="o">:</span> <span class="n">profile</span>
+
+    <span class="p">};</span>
+
+<span class="p">};</span>
+
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Image(py)showInitials"></a>
+                    <a name="//apple_ref/objc/Property/showInitials" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Image(py)showInitials">showInitials</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <em>Boolean</em> indicating if the owner&rsquo;s personalization should be shown (defaults to <code>TRUE</code>).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">showInitials</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">showInitials</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Image.h#L38">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Image(py)initialsBuilder"></a>
+                    <a name="//apple_ref/objc/Property/initialsBuilder" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Image(py)initialsBuilder">initialsBuilder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A method that returns a dictionary with initials and profiles for a given personalization.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n"><a href="../Type Definitions.html#/c:Image.h@T@InitialsBuilder">InitialsBuilder</a></span> <span class="n">_Nonnull</span> <span class="n">initialsBuilder</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">initialsBuilder</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:Image.h@T@InitialsBuilder">InitialsBuilder</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Image.h#L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Image(py)initials"></a>
+                    <a name="//apple_ref/objc/Property/initials" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Image(py)initials">initials</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initials to be shown. Overrides the owner&rsquo;s personalization.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">initials</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">initials</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Image.h#L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Image(py)engraving"></a>
+                    <a name="//apple_ref/objc/Property/engraving" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Image(py)engraving">engraving</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initials to be shown. Overrides the owner&rsquo;s personalization.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">engraving</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">engraving</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Image.h#L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Image(py)url"></a>
+                    <a name="//apple_ref/objc/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Image(py)url">url</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current URL of the image.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">url</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Image.h#L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Image(py)imageView"></a>
+                    <a name="//apple_ref/objc/Property/imageView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Image(py)imageView">imageView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The UIImageView where the image will be displayed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIImageView</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">imageView</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Image.h#L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)Image(im)initWithImageView:owner:options:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithImageView:owner:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)Image(im)initWithImageView:owner:options:">-initWithImageView:owner:options:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constructor for an Image instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nf">initWithImageView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIImageView</span> <span class="o">*</span><span class="p">)</span><span class="nv">imageView</span>
+                          <span class="nf">owner</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Ripe.html">Ripe</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">owner</span>
+                        <span class="nf">options</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">imageView</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="p">,</span> <span class="nv">owner</span><span class="p">:</span> <span class="kt"><a href="../Classes/Ripe.html">Ripe</a></span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIImageView where the image will be displayed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>owner</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Ripe instance that will be presented.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An options map that allows the configuration of the Image instance.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The Image instance created.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/Image.h#L69">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -16,7 +16,15 @@
 }
 
 - (void)getPrice:(void (^)(NSDictionary * ))callback {
-    return [self getPrice:nil callback:callback];
+    return [self getPrice:[NSDictionary new] callback:callback];
+}
+
+- (Promise *)getPriceP {
+    return [self getPriceP:[NSDictionary new]];
+}
+
+- (Promise *)getPriceP:(NSDictionary *)options {
+    return [self _callbackToPromise:@selector(getPrice:) options:options];
 }
 
 - (void)getPrice:(NSDictionary *)options callback:(void (^)(NSDictionary *))callback {
@@ -196,6 +204,22 @@
                                              @"auth": [NSNumber numberWithBool:auth]
                                              }];
     return result;
+}
+
+- (Promise *)_callbackToPromise:(SEL)selector options:(NSDictionary *)options {
+    return [[Promise alloc] initWithExecutor:^(Resolve  _Nonnull resolve, Reject  _Nonnull reject) {
+        void (^callback)(NSDictionary *) = ^void(NSDictionary *response) {
+            resolve(response);
+        };
+        @try {
+            IMP imp = [self methodForSelector:selector];
+            void (*func)(id, SEL, NSDictionary *, void (^)(NSDictionary *)) = (void *)imp;
+            func(self, selector, options, callback);
+        } @catch (NSException *exception) {
+            NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain code:1 userInfo:exception.userInfo];
+            reject(error);
+        }
+    }];
 }
 
 @end
