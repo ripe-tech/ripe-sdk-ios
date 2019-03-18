@@ -15,11 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
   Returns the configuration information of a specific brand and model. If no model is provided
   then returns the information of the owner's current model.
   The **options** map accepts the following parameters:
-   - **brand** - the brand of the model
-   - **model** - the name of the model
-   - **country** - the country where the model will be provided, some materials/colors might not be available.
-   - **flag** - a specific flag that may change the provided materials/colors available.
-   - **filter** - if the configuration should be filtered by the country and/or flag. `true` by default.
+   - **brand** - The brand of the model
+   - **model** - The name of the model
+   - **country** - The country where the model will be provided, some materials/colors might not be available.
+   - **flag** - A specific flag that may change the provided materials/colors available.
+   - **filter** - If the configuration should be filtered by the country and/or flag (defaults `TRUE`).
  
   @param options A map with options
   @param callback A callback that will be called with the configuration as argument.
