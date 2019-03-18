@@ -17,6 +17,14 @@
     [self _cacheURL:options[@"url"] options:options callback:callback];
 }
 
+- (Promise *)getSizesP {
+    return [self getSizesP:[NSDictionary new]];
+}
+
+- (Promise *)getSizesP:(NSDictionary *)options {
+    return [self _callbackToPromise:@selector(getSizes:callback:) options:options];
+}
+
 - (void)sizeToNative:(NSString *)scale value:(double)value gender:(NSString *)gender callback:(void (^)(NSDictionary * _Nonnull))callback {
     [self sizeToNative:scale value:value gender:gender options:[NSDictionary new] callback:callback];
 }
@@ -35,6 +43,18 @@
     }];
     options = [self _build:sizeOptions];
     [self _cacheURL:options[@"url"] options:options callback:callback];
+}
+
+- (Promise *)sizeToNativeP:(NSString *)scale value:(double)value gender:(NSString *)gender {
+    return [self sizeToNativeP:scale value:value gender:gender options:[NSDictionary new]];
+}
+
+- (Promise *)sizeToNativeP:(NSString *)scale value:(double)value gender:(NSString *)gender options:(NSDictionary *)options {
+    return [[Promise alloc] initWithExecutor:^(Resolve  _Nonnull resolve, Reject  _Nonnull reject) {
+        [self sizeToNative:scale value:value gender:gender options:options callback:^(NSDictionary * _Nonnull response) {
+            resolve(response);
+        }];
+    }];
 }
 
 - (void)sizeToNativeB:(NSArray *)scales values:(NSArray *)values genders:(NSArray *)genders callback:(void (^)(NSArray * _Nonnull))callback {
@@ -69,6 +89,18 @@
     }];
 }
 
+- (Promise *)sizeToNativeBP:(NSArray *)scales values:(NSArray *)values genders:(NSArray *)genders {
+    return [self sizeToNativeBP:scales values:values genders:genders options:[NSDictionary new]];
+}
+
+- (Promise *)sizeToNativeBP:(NSArray *)scales values:(NSArray *)values genders:(NSArray *)genders options:(NSDictionary *)options {
+    return [[Promise alloc] initWithExecutor:^(Resolve  _Nonnull resolve, Reject  _Nonnull reject) {
+        [self sizeToNativeB:scales values:values genders:genders options:options callback:^(NSArray * _Nonnull response) {
+            resolve(response);
+        }];
+    }];
+}
+
 - (void)nativeToSize:(NSString *)scale value:(double)value gender:(NSString *)gender callback:(void (^)(NSDictionary * _Nonnull))callback {
     [self nativeToSize:scale value:value gender:gender options:[NSDictionary new] callback:callback];
 }
@@ -87,6 +119,18 @@
     }];
     options = [self _build:sizeOptions];
     [self _cacheURL:options[@"url"] options:options callback:callback];
+}
+
+- (Promise *)nativeToSizeP:(NSString *)scale value:(double)value gender:(NSString *)gender {
+    return [self nativeToSizeP:scale value:value gender:gender options:[NSDictionary new]];
+}
+
+- (Promise *)nativeToSizeP:(NSString *)scale value:(double)value gender:(NSString *)gender options:(NSDictionary *)options {
+    return [[Promise alloc] initWithExecutor:^(Resolve  _Nonnull resolve, Reject  _Nonnull reject) {
+        [self nativeToSize:scale value:value gender:gender options:options callback:^(NSDictionary * _Nonnull response) {
+            resolve(response);
+        }];
+    }];
 }
 
 - (void)nativeToSizeB:(NSArray *)scales values:(NSArray *)values genders:(NSArray *)genders callback:(void (^)(NSArray * _Nonnull))callback {
@@ -121,4 +165,15 @@
     }];
 }
 
+- (Promise *)nativeToSizeBP:(NSArray *)scales values:(NSArray *)values genders:(NSArray *)genders {
+    return [self nativeToSizeBP:scales values:values genders:genders options:[NSDictionary new]];
+}
+
+- (Promise *)nativeToSizeBP:(NSArray *)scales values:(NSArray *)values genders:(NSArray *)genders options:(NSDictionary *)options {
+    return [[Promise alloc] initWithExecutor:^(Resolve  _Nonnull resolve, Reject  _Nonnull reject) {
+        [self nativeToSizeB:scales values:values genders:genders options:options callback:^(NSArray * _Nonnull response) {
+            resolve(response);
+        }];
+    }];
+}
 @end
