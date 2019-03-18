@@ -1,7 +1,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Protocol of the Build API methods
+ * Protocol of the Build API methods.
  */
 @protocol BuildAPI <NSObject>
 
