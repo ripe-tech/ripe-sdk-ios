@@ -295,10 +295,6 @@
     [self trigger:@"deselected_part" args:@{@"part": part}];
 }
 
-/**
- * Reverses the last change to the parts. It is possible
- * to undo all the changes done from the initial state.
- */
 - (void)undo {
     if (![self canUndo]) {
         return;
@@ -309,12 +305,6 @@
     [self setParts:parts noEvents:false options:@{@"action": @"undo"}];
 }
 
-/**
- * Reapplies the last change to the parts that was undone.
- * Notice that if there's a change when the history pointer
- * is in the middle of the stack the complete stack forward
- * is removed (history re-written).
- */
 - (void)redo {
     if (![self canRedo]) {
         return;
@@ -325,22 +315,10 @@
     [self setParts:parts noEvents:false options:@{@"action": @"redo"}];
 }
 
-/**
- * Indicates if there are part changes to undo.
- *
- * @return If there are changes to reverse in the
- * current parts history stack.
- */
 - (BOOL)canUndo {
     return self.historyPointer > 0;
 }
 
-/**
- * Indicates if there are part changes to redo.
- *
- * @return If there are changes to reapply pending
- * in the history stack.
- */
 - (BOOL)canRedo {
     return self.history.count - 1 > self.historyPointer;
 }
@@ -362,6 +340,26 @@
             [self trigger:@"price" args:response];
         }];
     }
+}
+
+/**
+ * Registers a plugin to this Ripe instance.
+ *
+ * @param plugin The plugin to be registered.
+ */
+- (void)addPlugin:(Plugin *)plugin {
+    [plugin register:self];
+    [self.plugins addObject:plugin];
+}
+
+/**
+ * Unregisters a plugin to this Ripe instance.
+ *
+ * @param plugin The plugin to be unregistered.
+ */
+- (void)removePlugin:(Plugin *)plugin {
+    [plugin unregister];
+    [self.plugins removeObject:plugin];
 }
 
 - (void)_setPart:(NSString *)part material:(NSString * _Nullable)material color:(NSString * _Nullable)color noEvents:(BOOL)noEvents {

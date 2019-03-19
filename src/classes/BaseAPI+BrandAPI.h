@@ -9,7 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  /**
   * Returns the configuration information of the owner's current model. To retrieve the configuration of a specific model the method getConfig:callback: should be used.
- * To retrieve the configuration of a specific model the method `-[BrandAPI getConfig:callback:]` should be used.
+  * To retrieve the configuration of a specific model the method `-[BrandAPI getConfig:callback:]` should be used.
   *
   * @param callback A callback that will be called with the configuration as argument.
   */

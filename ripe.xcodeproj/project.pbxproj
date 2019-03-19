@@ -28,6 +28,8 @@
 		715122DB2237DA6F00DBDAC7 /* BaseAPI+BuildAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 715122D92237DA6F00DBDAC7 /* BaseAPI+BuildAPI.h */; };
 		715122DC2237DA6F00DBDAC7 /* BaseAPI+BuildAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 715122DA2237DA6F00DBDAC7 /* BaseAPI+BuildAPI.m */; };
 		715122DE2237DAFC00DBDAC7 /* BuildAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 715122DD2237DAFC00DBDAC7 /* BuildAPI.h */; };
+		715122ED22411C0500DBDAC7 /* Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 715122EB22411C0500DBDAC7 /* Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		715122EE22411C0500DBDAC7 /* Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 715122EC22411C0500DBDAC7 /* Plugin.m */; };
 		716E9DC022299AD300CADA32 /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D627C222994AF00377E33 /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		716E9DC122299AD300CADA32 /* BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D6280222994AF00377E33 /* BrandAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		716E9DC222299AD300CADA32 /* RipeAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D6281222994AF00377E33 /* RipeAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -100,6 +102,8 @@
 		715122D92237DA6F00DBDAC7 /* BaseAPI+BuildAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseAPI+BuildAPI.h"; sourceTree = "<group>"; };
 		715122DA2237DA6F00DBDAC7 /* BaseAPI+BuildAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BaseAPI+BuildAPI.m"; sourceTree = "<group>"; };
 		715122DD2237DAFC00DBDAC7 /* BuildAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuildAPI.h; sourceTree = "<group>"; };
+		715122EB22411C0500DBDAC7 /* Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plugin.h; sourceTree = "<group>"; };
+		715122EC22411C0500DBDAC7 /* Plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Plugin.m; sourceTree = "<group>"; };
 		719D621322298A2600377E33 /* libripe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libripe.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		719D622322298A3D00377E33 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		719D627322298D4500377E33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -207,6 +211,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		715122E822411BD500DBDAC7 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				715122EB22411C0500DBDAC7 /* Plugin.h */,
+				715122EC22411C0500DBDAC7 /* Plugin.m */,
+			);
+			name = plugins;
+			sourceTree = "<group>";
+		};
 		719D620A22298A2600377E33 = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +268,7 @@
 				7144916022299D5500A30E23 /* api */,
 				7144915F22299D2200A30E23 /* base */,
 				7144916122299D6700A30E23 /* visual */,
+				715122E822411BD500DBDAC7 /* plugins */,
 			);
 			name = classes;
 			path = src/classes;
@@ -295,6 +309,7 @@
 				716E9DC722299AD300CADA32 /* BaseAPI+BrandAPI.h in Headers */,
 				716E9DC822299AD300CADA32 /* Interactable.h in Headers */,
 				716E9DC922299AD300CADA32 /* Image.h in Headers */,
+				715122ED22411C0500DBDAC7 /* Plugin.h in Headers */,
 				716E9DCA22299AD300CADA32 /* Observable.h in Headers */,
 				716E9DCB22299AD300CADA32 /* Base.h in Headers */,
 			);
@@ -442,6 +457,7 @@
 				719D6295222994AF00377E33 /* Visual.m in Sources */,
 				719D628F222994AF00377E33 /* BaseAPI.m in Sources */,
 				719D6292222994AF00377E33 /* Image.m in Sources */,
+				715122EE22411C0500DBDAC7 /* Plugin.m in Sources */,
 				719D6291222994AF00377E33 /* Base.m in Sources */,
 				719D6290222994AF00377E33 /* Promise.m in Sources */,
 				715122DC2237DA6F00DBDAC7 /* BaseAPI+BuildAPI.m in Sources */,
