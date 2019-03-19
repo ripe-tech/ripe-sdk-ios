@@ -2,6 +2,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ * Extension of the Brand API.
+ */
 @interface BaseAPI (BrandAPI)
 
  /**
