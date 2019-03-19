@@ -4,6 +4,7 @@
 #import "BuildAPI.h"
 #import "RipeAPI.h"
 #import "SizeAPI.h"
+#import "Plugin.h"
 
 @class BaseAPI;
 @class Interactable;
@@ -28,6 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// A list of Interactable instances that represent this Ripe instance.
 @property NSMutableArray *children;
+
+/// A list of Plugins instances that are being used by this Ripe instance.
+@property NSMutableArray *plugins;
 
 /// A list with all the customization changes.
 @property NSMutableArray *history;
@@ -365,6 +369,20 @@ NS_ASSUME_NONNULL_BEGIN
  * @param state A map with the current customization and personalization.
  */
 - (void)update:(NSDictionary *)state;
+
+/**
+ * Registers a plugin to this Ripe instance.
+ *
+ * @param plugin The plugin to be registered.
+ */
+- (void)addPlugin:(Plugin *)plugin;
+
+/**
+ * Unregisters a plugin to this Ripe instance.
+ *
+ * @param plugin The plugin to be unregistered.
+ */
+- (void)removePlugin:(Plugin *)plugin;
 
 @end
 
