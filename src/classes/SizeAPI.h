@@ -151,6 +151,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param scale The scale which one wants to convert from.
  * @param value The value which one wants to convert.
  * @param gender The gender of the scale and value to be converted.
+ * @param options A map with options to configure the request.
  * @param callback A block that receives the native value as parameter.
  */
 - (void)nativeToSize:(NSString *)scale value:(double)value gender:(NSString *)gender options:(NSDictionary *)options callback:(void (^)(NSDictionary *response))callback;

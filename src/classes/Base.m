@@ -231,11 +231,11 @@
     BOOL noPartEvent = [options[@"noPartEvent"] boolValue] ?: false;
 
     if (noEvents) {
-        return [self setPartsList:partsList noEvents:noPartEvent];
+        return [self _setParts:partsList noEvents:noPartEvent];
     }
     NSDictionary *value = @{@"parts": self.parts, @"options": options };
     [self trigger:@"pre_parts" args:value];
-    [self _setParts:partsList noEvents:noEvents];
+    [self _setParts:partsList noEvents:noPartEvent];
     [self update];
     [self trigger:@"parts" args:value];
     [self trigger:@"post_parts" args:value];

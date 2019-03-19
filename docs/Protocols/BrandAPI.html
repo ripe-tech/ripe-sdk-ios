@@ -14,7 +14,7 @@
     <a title="BrandAPI Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">RIPE SDK iOS Docs</a> (47% documented)</p>
+        <p><a href="../index.html">RIPE SDK iOS Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/ripe-tech/ripe-sdk-ios/"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -105,18 +105,11 @@
             <h1>BrandAPI</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">BrandAPI</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
-
-<span class="k">@optional</span>
-
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">getConfig</span><span class="o">:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="n">callback</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getConfig</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">BrandAPI</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Protocol of the Brand API methods.</p>
 
           </section>
           <section class="section task-group-section">
@@ -135,14 +128,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns the configuration information of the owner&rsquo;s current model.</p>
+
+<p>To retrieve the configuration of a specific model the method <code><a href="../Protocols/BrandAPI.html#/c:objc(pl)BrandAPI(im)getConfig:callback:">-[BrandAPI getConfig:callback:]</a></code> should be used.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getConfig</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getConfig</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -151,8 +146,27 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Block that will the receive the configuration as parameter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/BrandAPI.h#L">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/BrandAPI.h#L16">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -170,14 +184,27 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns the configuration information of a specific brand and model.</p>
+
+<p>If no model is provided then returns the information of the owner&rsquo;s current model.</p>
+
+<p>The <strong>options</strong> map accepts the following keys:</p>
+
+<ul>
+<li><p><strong>brand</strong> - The brand of the model.</p></li>
+<li><p><strong>model</strong> - The name of the model.</p></li>
+<li><p><strong>country</strong> - The country where the model will be provided, some materials/colors might not be available.</p></li>
+<li><p><strong>flag</strong> - A specific flag that may change the provided materials/colors available.</p></li>
+<li><p><strong>filter</strong> - If the configuration should be filtered by the country and/or flag (defaults <code>TRUE</code>).</p></li>
+</ul>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getConfig</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">options</span> <span class="nf">callback</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">response</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getConfig</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">options</span>
+         <span class="nf">callback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">))</span><span class="nv">callback</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -186,8 +213,150 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A map with options.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Block that will the receive the configuration as parameter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/BrandAPI.h#L">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/BrandAPI.h#L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)BrandAPI(im)getConfigP"></a>
+                    <a name="//apple_ref/objc/Method/-getConfigP" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)BrandAPI(im)getConfigP">-getConfigP</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the configuration information of the owner&rsquo;s current model.</p>
+
+<p>To retrieve the configuration of a specific model the method <code>-[BrandAPI getConfigP:callback:]</code> should be used.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getConfigP</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">getConfigP</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will be resolved with the configuration.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/BrandAPI.h#L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)BrandAPI(im)getConfigP:"></a>
+                    <a name="//apple_ref/objc/Method/-getConfigP:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)BrandAPI(im)getConfigP:">-getConfigP:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the configuration information of a specific brand and model. If no model is provided</p>
+
+<p>then returns the information of the owner&rsquo;s current model.</p>
+
+<p>The <strong>options</strong> map accepts the following keys:</p>
+
+<ul>
+<li><p><strong>brand</strong> - The brand of the model.</p></li>
+<li><p><strong>model</strong> - The name of the model.</p></li>
+<li><p><strong>country</strong> - The country where the model will be provided, some materials/colors might not be available.</p></li>
+<li><p><strong>flag</strong> - A specific flag that may change the provided materials/colors available.</p></li>
+<li><p><strong>filter</strong> - If the configuration should be filtered by the country and/or flag (defaults <code>TRUE</code>).</p></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">getConfigP</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">getConfigP</span><span class="p">(</span><span class="n">_</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A map with options.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will be resolved with the configuration.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/BrandAPI.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -197,7 +366,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-15)</p>
+          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

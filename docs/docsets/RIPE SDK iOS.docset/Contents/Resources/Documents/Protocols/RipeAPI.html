@@ -14,7 +14,7 @@
     <a title="RipeAPI Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">RIPE SDK iOS Docs</a> (47% documented)</p>
+        <p><a href="../index.html">RIPE SDK iOS Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/ripe-tech/ripe-sdk-ios/"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -140,12 +140,12 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/RipeAPI.h#L12">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/RipeAPI.h#L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -184,7 +184,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">getPrice</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">getPrice</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -208,7 +208,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/RipeAPI.h#L24">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/RipeAPI.h#L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -233,15 +233,15 @@
 <p>If no options are set the current customization of the owner will be used. The <strong>options</strong> map accepts the following keys:</p>
 
 <ul>
-<li><p><strong>brand</strong> - the brand of the model.</p></li>
-<li><p><strong>model</strong> - the name of the model.</p></li>
-<li><p><strong>variant</strong> - the variant of the the specified model.</p></li>
-<li><p><strong>product_id</strong> - the model&rsquo;s unique identification (ID).</p></li>
-<li><p><strong>currency</strong> - the <em>ISO 4217</em> currency code.</p></li>
-<li><p><strong>country</strong> - the <em>ISO 3166-2</em> code of the country.</p></li>
-<li><p><strong>initials</strong> - the initials used to personalize the model.</p></li>
-<li><p><strong>engraving</strong> - the engraving of the personalization.</p></li>
-<li><p><strong>p</strong> - the customization parts, as triplets in the form of <em>part:material:color</em>.</p></li>
+<li><p><strong>brand</strong> - The brand of the model.</p></li>
+<li><p><strong>model</strong> - The name of the model.</p></li>
+<li><p><strong>variant</strong> - The variant of the the specified model.</p></li>
+<li><p><strong>product_id</strong> - The model&rsquo;s unique identification (ID).</p></li>
+<li><p><strong>currency</strong> - The <em>ISO 4217</em> currency code.</p></li>
+<li><p><strong>country</strong> - The <em>ISO 3166-2</em> code of the country.</p></li>
+<li><p><strong>initials</strong> - The initials used to personalize the model.</p></li>
+<li><p><strong>engraving</strong> - The engraving of the personalization.</p></li>
+<li><p><strong>p</strong> - The customization parts, as triplets in the form of <em>part:material:color</em>.</p></li>
 </ul>
 
                       </div>
@@ -255,7 +255,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">getPrice</span><span class="p">(</span><span class="n">_</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="p">((</span><span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">getPrice</span><span class="p">(</span><span class="n">_</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -291,7 +291,129 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/RipeAPI.h#L43">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/RipeAPI.h#L45">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)RipeAPI(im)getPriceP"></a>
+                    <a name="//apple_ref/objc/Method/-getPriceP" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)RipeAPI(im)getPriceP">-getPriceP</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves the price for the current customization.</p>
+
+<p>This operation is asynchronous and returned promise will be resolved with the result.</p>
+
+<p>To retrieve the price of a specific customization the method <code>-[RipeAPI getPriceP:callback:]</code> should be used.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p><code>-[RipeAPI getPriceP:callback:]</code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getPriceP</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">getPriceP</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Promise.html">Promise</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will be resolved with the result.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/RipeAPI.h#L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)RipeAPI(im)getPriceP:"></a>
+                    <a name="//apple_ref/objc/Method/-getPriceP:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)RipeAPI(im)getPriceP:">-getPriceP:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves the price of a specific customization.</p>
+
+<p>This operation is asynchronous and the returned promise will be resolved with the result.</p>
+
+<p>If no options are set the current customization of the owner will be used. The <strong>options</strong> map accepts the following keys:</p>
+
+<ul>
+<li><p><strong>brand</strong> - The brand of the model.</p></li>
+<li><p><strong>model</strong> - The name of the model.</p></li>
+<li><p><strong>variant</strong> - The variant of the the specified model.</p></li>
+<li><p><strong>product_id</strong> - The model&rsquo;s unique identification (ID).</p></li>
+<li><p><strong>currency</strong> - The <em>ISO 4217</em> currency code.</p></li>
+<li><p><strong>country</strong> - The <em>ISO 3166-2</em> code of the country.</p></li>
+<li><p><strong>initials</strong> - The initials used to personalize the model.</p></li>
+<li><p><strong>engraving</strong> - The engraving of the personalization.</p></li>
+<li><p><strong>p</strong> - The customization parts, as triplets in the form of <em>part:material:color</em>.</p></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">getPriceP</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">getPriceP</span><span class="p">(</span><span class="n">_</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Promise.html">Promise</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A map with options to specify a model.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will be resolved with the result.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/RipeAPI.h#L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -301,7 +423,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-15)</p>
+          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

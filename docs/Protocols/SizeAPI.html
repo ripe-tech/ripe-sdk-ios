@@ -14,7 +14,7 @@
     <a title="SizeAPI Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">RIPE SDK iOS Docs</a> (47% documented)</p>
+        <p><a href="../index.html">RIPE SDK iOS Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/ripe-tech/ripe-sdk-ios/"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -243,6 +243,107 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(pl)SizeAPI(im)getSizesP"></a>
+                    <a name="//apple_ref/objc/Method/-getSizesP" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SizeAPI(im)getSizesP">-getSizesP</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides a list of all the available size scales.</p>
+
+<p>This can be used to know what scales are available for size conversions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getSizesP</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">getSizesP</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will be resolved with the size scales list.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L33">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SizeAPI(im)getSizesP:"></a>
+                    <a name="//apple_ref/objc/Method/-getSizesP:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SizeAPI(im)getSizesP:">-getSizesP:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides a list of all the available size scales.</p>
+
+<p>This can be used to know what scales are available for size conversions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">getSizesP</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">getSizesP</span><span class="p">(</span><span class="n">_</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A map with options to configure the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will be resolved with the size scales list.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(pl)SizeAPI(im)sizeToNative:value:gender:callback:"></a>
                     <a name="//apple_ref/objc/Method/-sizeToNative:value:gender:callback:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)SizeAPI(im)sizeToNative:value:gender:callback:">-sizeToNative:value:gender:callback:</a>
@@ -330,7 +431,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L36">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -438,7 +539,192 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L48">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SizeAPI(im)sizeToNativeP:value:gender:"></a>
+                    <a name="//apple_ref/objc/Method/-sizeToNativeP:value:gender:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SizeAPI(im)sizeToNativeP:value:gender:">-sizeToNativeP:value:gender:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts a size value from the native scale to the corresponding value in the specified scale.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizesP:">-[SizeAPI getSizesP:]</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">sizeToNativeP</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span>
+                             <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span>
+                            <span class="nf">gender</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">size</span><span class="p">(</span><span class="n">toNativeP</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">gender</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scale</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The scale which one wants to convert to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value which one wants to convert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The gender of the scale and value to be converted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will resolve with the converted value.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SizeAPI(im)sizeToNativeP:value:gender:options:"></a>
+                    <a name="//apple_ref/objc/Method/-sizeToNativeP:value:gender:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SizeAPI(im)sizeToNativeP:value:gender:options:">-sizeToNativeP:value:gender:options:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts a size value from the native scale to the corresponding value in the specified scale.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizesP:">-[SizeAPI getSizesP:]</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">sizeToNativeP</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span>
+                             <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span>
+                            <span class="nf">gender</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span>
+                           <span class="nf">options</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">size</span><span class="p">(</span><span class="n">toNativeP</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">gender</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scale</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The scale which one wants to convert to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value which one wants to convert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The gender of the scale and value to be converted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A map with options to configure the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will resolve with the converted value.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -533,7 +819,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L59">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -641,7 +927,192 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L71">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L111">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SizeAPI(im)sizeToNativeBP:values:genders:"></a>
+                    <a name="//apple_ref/objc/Method/-sizeToNativeBP:values:genders:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SizeAPI(im)sizeToNativeBP:values:genders:">-sizeToNativeBP:values:genders:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts multiple size values from the native scale to the corresponding values in the specified scales.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizesP:">-[SizeAPI getSizesP:]</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">sizeToNativeBP</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span>
+                             <span class="nf">values</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span>
+                            <span class="nf">genders</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">size</span><span class="p">(</span><span class="n">toNativeBP</span> <span class="nv">scales</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">values</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">genders</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scales</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of scales to convert to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>values</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of values to convert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>genders</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of genders corresponding to the values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will resolve with a list with the converted values.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L122">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SizeAPI(im)sizeToNativeBP:values:genders:options:"></a>
+                    <a name="//apple_ref/objc/Method/-sizeToNativeBP:values:genders:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SizeAPI(im)sizeToNativeBP:values:genders:options:">-sizeToNativeBP:values:genders:options:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts multiple size values from the native scale to the corresponding values in the specified scales.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizesP:">-[SizeAPI getSizesP:]</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">sizeToNativeBP</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span>
+                             <span class="nf">values</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span>
+                            <span class="nf">genders</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span>
+                            <span class="nf">options</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">size</span><span class="p">(</span><span class="n">toNativeBP</span> <span class="nv">scales</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">values</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">genders</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scales</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of scales to convert to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>values</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of values to convert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>genders</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of genders corresponding to the values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A map with options to configure the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will resolve with a list with the converted values.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L134">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -736,7 +1207,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L82">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L145">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -819,6 +1290,18 @@
                             <tr>
                               <td>
                                 <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A map with options to configure the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>callback</em>
                                 </code>
                               </td>
@@ -832,7 +1315,180 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L93">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L157">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SizeAPI(im)nativeToSizeP:value:gender:"></a>
+                    <a name="//apple_ref/objc/Method/-nativeToSizeP:value:gender:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SizeAPI(im)nativeToSizeP:value:gender:">-nativeToSizeP:value:gender:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts a size value in the specified scale to the corresponding native size.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizesP:">-[SizeAPI getSizesP:]</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">nativeToSizeP</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span>
+                             <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span>
+                            <span class="nf">gender</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">native</span><span class="p">(</span><span class="n">toSizeP</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">gender</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scale</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The scale which one wants to convert from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value which one wants to convert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The gender of the scale and value to be converted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will resolve with the native value.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L168">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SizeAPI(im)nativeToSizeP:value:gender:options:"></a>
+                    <a name="//apple_ref/objc/Method/-nativeToSizeP:value:gender:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SizeAPI(im)nativeToSizeP:value:gender:options:">-nativeToSizeP:value:gender:options:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts a size value in the specified scale to the corresponding native size.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizesP:">-[SizeAPI getSizesP:]</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">nativeToSizeP</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">scale</span>
+                             <span class="nf">value</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span>
+                            <span class="nf">gender</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">gender</span>
+                           <span class="nf">options</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">native</span><span class="p">(</span><span class="n">toSizeP</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">gender</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scale</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The scale which one wants to convert from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value which one wants to convert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The gender of the scale and value to be converted.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will resolve with the native value.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L179">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -927,7 +1583,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L104">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L190">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1035,7 +1691,192 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L116">Show on GitHub</a>
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L202">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SizeAPI(im)nativeToSizeBP:values:genders:"></a>
+                    <a name="//apple_ref/objc/Method/-nativeToSizeBP:values:genders:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SizeAPI(im)nativeToSizeBP:values:genders:">-nativeToSizeBP:values:genders:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts multiple size values to the corresponding native size.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizes:">-[SizeAPI getSizes:]</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">nativeToSizeBP</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span>
+                             <span class="nf">values</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span>
+                            <span class="nf">genders</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">native</span><span class="p">(</span><span class="n">toSizeBP</span> <span class="nv">scales</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">values</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">genders</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scales</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of scales to convert from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>values</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of values to convert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>genders</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of genders corresponding to the values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will resolve with a list with the native values.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L213">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SizeAPI(im)nativeToSizeBP:values:genders:options:"></a>
+                    <a name="//apple_ref/objc/Method/-nativeToSizeBP:values:genders:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SizeAPI(im)nativeToSizeBP:values:genders:options:">-nativeToSizeBP:values:genders:options:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts multiple size values to the corresponding native size.</p>
+
+<p>The available scales, genders and sizes can be obtained with the method <code><a href="../Protocols/SizeAPI.html#/c:objc(pl)SizeAPI(im)getSizesP:">-[SizeAPI getSizesP:]</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/Promise.html">Promise</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">nativeToSizeBP</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">scales</span>
+                             <span class="nf">values</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span>
+                            <span class="nf">genders</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">genders</span>
+                            <span class="nf">options</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">native</span><span class="p">(</span><span class="n">toSizeBP</span> <span class="nv">scales</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">values</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">genders</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scales</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of scales to convert to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>values</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of values to convert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>genders</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A list of genders corresponding to the values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A map with options to configure the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Promise that will resolve with a list with the native values.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ripe-tech/ripe-sdk-ios/tree/master/src/classes/SizeAPI.h#L225">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1045,7 +1886,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-15)</p>
+          <p>&copy; 2019 <a class="link" href="https://tech.platforme.com" target="_blank" rel="external">Platforme</a>. All rights reserved. (Last updated: 2019-03-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
