@@ -11,15 +11,31 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// Represents a customizable model.
 @interface Ripe : Observable <RipeAPI, BrandAPI, BuildAPI, SizeAPI>
 
+/// The API instance to be used.
 @property BaseAPI *api;
+
+/// The brand of the model-
 @property NSString *brand;
+
+/// The name of the model.
 @property NSString *model;
+
+/// A map with options to customise the Ripe instance.
 @property NSDictionary *options;
+
+/// A list of Interactable instances that represent this Ripe instance.
 @property NSMutableArray *children;
+
+/// A list with all the customization changes.
 @property NSMutableArray *history;
+
+/// An index indicating the current point in the customization history. Used for undo and redo operations.
 @property int historyPointer;
+
+/// 
 @property NSString *initials;
 @property NSString *engraving;
 @property NSString *variant;
