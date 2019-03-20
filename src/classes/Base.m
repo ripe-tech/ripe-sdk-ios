@@ -38,6 +38,12 @@
         self.useDefaults = true;
         [self setOptions:options];
 
+        // iterates over all the plugins present in the options (meant
+        // to be registered) and adds them to the current instance
+        for (Plugin *plugin in options[@"plugins"]) {
+            [self addPlugin:plugin];
+        }
+
         // runs the connfiguration operation on the current instance, using
         // the requested parameters and options, multiple configuration
         // operations may be executed over the object life-time
@@ -173,7 +179,7 @@
 
                     // updates the parts of the current instance and triggers the remove and
                     // local update operations, as expected
-                    [self setParts:parts.mutableCopy];
+                    [self setParts:parts.mutableCopy noEvents:false options:@{@"noPartEvents": @true}];
                     [self update];
                     [[self trigger:@"post_config"] then:^(id result) {
                         resolve(nil);
@@ -228,14 +234,14 @@
 }
 
 - (void)setPartsList:(NSArray *)partsList noEvents:(BOOL)noEvents options:(NSDictionary *)options {
-    BOOL noPartEvent = [options[@"noPartEvent"] boolValue] ?: false;
+    BOOL noPartEvents = [options[@"noPartEvents"] boolValue] ?: false;
 
     if (noEvents) {
-        return [self _setParts:partsList noEvents:noPartEvent];
+        return [self _setParts:partsList noEvents:noPartEvents];
     }
     NSDictionary *value = @{@"parts": self.parts, @"options": options };
     [self trigger:@"pre_parts" args:value];
-    [self _setParts:partsList noEvents:noPartEvent];
+    [self _setParts:partsList noEvents:noPartEvents];
     [self update];
     [self trigger:@"parts" args:value];
     [self trigger:@"post_parts" args:value];

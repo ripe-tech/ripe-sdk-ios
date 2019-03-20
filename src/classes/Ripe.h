@@ -9,3 +9,5 @@
 #import "Promise.h"
 #import "RipeAPI.h"
 #import "Visual.h"
+#import "Plugin.h"
+#import "SyncPlugin.h"
