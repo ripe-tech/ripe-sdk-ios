@@ -100,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param model The name of the model.
  * @return The Ripe instance created.
  */
-- (id)initWithBrand:(NSString * _Nullable)brand model: (NSString * )model;
+- (id)initWithBrand:(NSString * _Nullable)brand model: (NSString *)model;
 
 /**
  * Constructs a Ripe instance without an initial brand and model.
