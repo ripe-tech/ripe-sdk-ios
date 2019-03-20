@@ -19,10 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property BaseAPI *api;
 
 /// The brand of the model-
-@property NSString *brand;
+@property NSString * _Nullable brand;
 
 /// The name of the model.
-@property NSString *model;
+@property NSString * _Nullable model;
 
 /// A map with options to customise the Ripe instance.
 @property NSDictionary *options;
@@ -100,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param model The name of the model.
  * @return The Ripe instance created.
  */
-- (id)initWithBrand:(NSString *)brand model: (NSString *)model;
+- (id)initWithBrand:(NSString * _Nullable)brand model: (NSString *)model;
 
 /**
  * Constructs a Ripe instance without an initial brand and model.
@@ -120,7 +120,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param options A map with options to configure the Ripe instance.
  * @return The Ripe instance created.
  */
-- (id)initWithBrand:(NSString *)brand model: (NSString *)model options:(NSDictionary *)options;
+- (id)initWithBrand:(NSString * _Nullable)brand model: (NSString * _Nullable)model options:(NSDictionary *)options;
 
 /**
  * Sets the model to be customised.

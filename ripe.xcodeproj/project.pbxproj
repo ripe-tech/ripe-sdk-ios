@@ -30,6 +30,9 @@
 		715122DE2237DAFC00DBDAC7 /* BuildAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 715122DD2237DAFC00DBDAC7 /* BuildAPI.h */; };
 		715122ED22411C0500DBDAC7 /* Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 715122EB22411C0500DBDAC7 /* Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		715122EE22411C0500DBDAC7 /* Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 715122EC22411C0500DBDAC7 /* Plugin.m */; };
+		715122F322428A9F00DBDAC7 /* SyncPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 715122F122428A9F00DBDAC7 /* SyncPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		715122F422428A9F00DBDAC7 /* SyncPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 715122F222428A9F00DBDAC7 /* SyncPlugin.m */; };
+		715122F82242986100DBDAC7 /* SyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 715122F72242986100DBDAC7 /* SyncTests.m */; };
 		716E9DC022299AD300CADA32 /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D627C222994AF00377E33 /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		716E9DC122299AD300CADA32 /* BrandAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D6280222994AF00377E33 /* BrandAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		716E9DC222299AD300CADA32 /* RipeAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 719D6281222994AF00377E33 /* RipeAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -104,6 +107,9 @@
 		715122DD2237DAFC00DBDAC7 /* BuildAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuildAPI.h; sourceTree = "<group>"; };
 		715122EB22411C0500DBDAC7 /* Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plugin.h; sourceTree = "<group>"; };
 		715122EC22411C0500DBDAC7 /* Plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Plugin.m; sourceTree = "<group>"; };
+		715122F122428A9F00DBDAC7 /* SyncPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyncPlugin.h; sourceTree = "<group>"; };
+		715122F222428A9F00DBDAC7 /* SyncPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyncPlugin.m; sourceTree = "<group>"; };
+		715122F72242986100DBDAC7 /* SyncTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyncTests.m; sourceTree = "<group>"; };
 		719D621322298A2600377E33 /* libripe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libripe.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		719D622322298A3D00377E33 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		719D627322298D4500377E33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -216,6 +222,8 @@
 			children = (
 				715122EB22411C0500DBDAC7 /* Plugin.h */,
 				715122EC22411C0500DBDAC7 /* Plugin.m */,
+				715122F122428A9F00DBDAC7 /* SyncPlugin.h */,
+				715122F222428A9F00DBDAC7 /* SyncPlugin.m */,
 			);
 			name = plugins;
 			sourceTree = "<group>";
@@ -282,6 +290,7 @@
 				719D6299222994BC00377E33 /* PromiseTests.m */,
 				719D629B222994BC00377E33 /* Info.plist */,
 				71C8A467222D8DF800394F6F /* SimpleTests.m */,
+				715122F72242986100DBDAC7 /* SyncTests.m */,
 				715122D72237BD7000DBDAC7 /* APITests.m */,
 			);
 			name = test;
@@ -311,6 +320,7 @@
 				716E9DC922299AD300CADA32 /* Image.h in Headers */,
 				715122ED22411C0500DBDAC7 /* Plugin.h in Headers */,
 				716E9DCA22299AD300CADA32 /* Observable.h in Headers */,
+				715122F322428A9F00DBDAC7 /* SyncPlugin.h in Headers */,
 				716E9DCB22299AD300CADA32 /* Base.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				719D6294222994AF00377E33 /* BaseAPI+BrandAPI.m in Sources */,
+				715122F422428A9F00DBDAC7 /* SyncPlugin.m in Sources */,
 				715122D62236E37700DBDAC7 /* BaseAPI+SizeAPI.m in Sources */,
 				719D6293222994AF00377E33 /* Observable.m in Sources */,
 				719D6295222994AF00377E33 /* Visual.m in Sources */,
@@ -472,6 +483,7 @@
 				719D629D222994BD00377E33 /* PromiseTests.m in Sources */,
 				715122D82237BD7000DBDAC7 /* APITests.m in Sources */,
 				71C8A468222D8DF800394F6F /* SimpleTests.m in Sources */,
+				715122F82242986100DBDAC7 /* SyncTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
