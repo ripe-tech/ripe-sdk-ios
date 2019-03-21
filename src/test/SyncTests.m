@@ -15,13 +15,13 @@
     [instance bind:@"post_config" callback:^(NSDictionary * _Nonnull response) {
         [expectation fulfill];
     }];
-    
+
     [self waitForExpectationsWithTimeout:3 handler:^(NSError * _Nullable error) {
         XCTAssertEqualObjects(instance.parts[@"hardware"][@"color"], @"silver");
         XCTAssertEqualObjects(instance.parts[@"logo"][@"color"], @"silver");
-        
+
         [instance setPart:@"hardware" material:@"metal" color:@"bronze"];
-        
+
         XCTAssertEqualObjects(instance.parts[@"hardware"][@"color"], @"bronze");
         XCTAssertEqualObjects(instance.parts[@"logo"][@"color"], @"bronze");
     }];
