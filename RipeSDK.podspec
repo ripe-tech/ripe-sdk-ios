@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = "0.1.1"
   s.summary          = "The iOS RIPE SDK."
   s.description      = <<-DESC
-                       The iOS RIPE SDK.
+                       The iOS RIPE SDK for interactive usage of the RIPE infrastructure.
                        DESC
   s.homepage         = "https://github.com/ripe-tech/ripe-sdk-ios"
   s.license          = "Apache License, Version 2.0"

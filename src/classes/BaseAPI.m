@@ -34,7 +34,6 @@
 }
 
 - (NSURLSessionDataTask *)_cacheURL:(NSString *)url options:(NSDictionary *)options callback:(void (^)(NSDictionary *))callback {
-    // TODO
     return [self _requestURL:url options:options callback:callback];
 }
 
@@ -194,8 +193,7 @@
     NSString *url = options[@"url"] ?: @"";
     NSString *method = options[@"method"] ?: @"GET";
     NSDictionary *params = options[@"params"] ?: [NSDictionary new];
-    BOOL auth = options[@"auth"] ?: false;
-    // TODO sid
+    BOOL auth = [options[@"auth"] boolValue] ?: NO;
     NSMutableDictionary *result = [options mutableCopy];
     [result setValuesForKeysWithDictionary:@{
                                              @"url": url,
