@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RipeSDK"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "The iOS RIPE SDK."
   s.description      = <<-DESC
                        The iOS RIPE SDK for interactive usage of the RIPE infrastructure.
