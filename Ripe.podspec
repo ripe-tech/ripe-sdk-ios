@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = "Ripe"
+  s.name             = "RipeSDK"
   s.version          = "0.1.0"
   s.summary          = "The iOS RIPE SDK."
   s.description      = <<-DESC
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author           = { "platforme" => "tech@platforme.com" }
   s.source           = { :git => "https://github.com/ripe-tech/ripe-sdk-ios.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '6.0'
+  s.platform     = :ios, '10.0'
   s.requires_arc = true
 
   s.source_files = 'src/classes'
