@@ -1,5 +1,5 @@
 platform :ios
 
-podspec :path => "Ripe.podspec"
+podspec :path => "RipeSDK.podspec"
 
 workspace "ripe.xcworkspace"
