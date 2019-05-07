@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// The API instance to be used.
 @property BaseAPI *api;
 
-/// The brand of the model-
+/// The brand of the model.
 @property NSString * _Nullable brand;
 
 /// The name of the model.
