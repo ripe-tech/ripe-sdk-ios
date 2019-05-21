@@ -1,4 +1,4 @@
-# [![RIPE SDK iOS](res/logo.png)](http://www.platforme.com)
+# [![RIPE SDK iOS](res/logo.png)](https://tech.platforme.com)
 
 The iOS RIPE SDK.
 
