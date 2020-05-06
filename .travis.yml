@@ -1,4 +1,4 @@
-sudo: false
+os: osx
 language: objective-c
 osx_image: "xcode10"
 xcode_project: ripe.xcodeproj
@@ -12,4 +12,3 @@ deploy:
   script: ./scripts/push.sh
   on:
     tags: true
-    osx_image: "xcode10"
