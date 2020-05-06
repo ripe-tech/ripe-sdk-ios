@@ -13,7 +13,7 @@
     Ripe *instance = [[Ripe alloc] init];
     [instance getSizes:^(NSDictionary * _Nonnull response) {
         XCTAssertTrue([response[@"fr"] isEqualToArray:@[@"female"]]);
-        XCTAssertTrue([response[@"uk"] isEqualToArray:(@[@"male", @"female"])]);
+        XCTAssertTrue([response[@"uk"] isEqualToArray:(@[@"female", @"male"])]);
         [expectation fulfill];
     }];
     [self waitForExpectations:@[expectation] timeout:3];
