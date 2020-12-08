@@ -12,4 +12,3 @@ deploy:
   script: ./scripts/push.sh
   on:
     tags: true
- 
