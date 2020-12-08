@@ -1,6 +1,8 @@
 <h1><a href="https://tech.platforme.com"><img src="res/logo.svg" alt="RIPE SDK iOS" height="60" style="height: 60px;"></a></h1>
 
-The iOS RIPE SDK.
+iOS version of the [RIPE SDK](https://github.com/ripe-tech/ripe-sdk).
+
+Most of the design decisions found on the original SDK are present in this version in pretty much the same way.
 
 ## Build
 
