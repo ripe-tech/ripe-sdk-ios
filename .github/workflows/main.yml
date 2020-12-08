@@ -1,0 +1,10 @@
+name: Main Workflow
+on: [push]
+jobs:
+  build:
+    name: Build
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+      - run: xcodebuild -project ripe.xcodeproj -scheme test  -destination platform=iOS Simulator,name=iPhone 6,OS=10.0 clean test | xcpretty
