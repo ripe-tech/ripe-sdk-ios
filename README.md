@@ -16,3 +16,12 @@ jazzy --config=.jazzy.yaml
 ## Documentation
 
 For API reference documentation follow [ripe-sdk-ios-docs.platforme.com](https://ripe-sdk-ios-docs.platforme.com).
+
+## License
+
+RIPE SDK iOS is currently licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/).
+
+## Build Automation
+
+[![Build Status](https://travis-ci.com/ripe-tech/ripe-sdk-ios.svg?branch=master)](https://travis-ci.com/ripe-tech/ripe-sdk-ios)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/)
