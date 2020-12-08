@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: sudo xcode-select -switch /Applications/Xcode_11.3.app
-      - run: xcodebuild -project ripe.xcodeproj -scheme test  -destination platform=iOS\ Simulator,name=iPhone\ 8,OS=13.3 clean test | xcpretty
+      - run: ./scripts/test.sh
